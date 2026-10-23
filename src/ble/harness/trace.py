@@ -95,7 +95,26 @@ class Run:
                 err = e
                 attempt += 1
                 if attempt > retries:
-                    self.traces.append(StepTrace(SCHEMA_VERSION, self.run_id, uuid.uuid4().hex[:16], self.workflow, name, inputs or [], {}, [], code_version(), config_version(), model, started, round(time.perf_counter() - t0, 4), 0.0, "error", repr(e)))
+                    self.traces.append(
+                        StepTrace(
+                            SCHEMA_VERSION,
+                            self.run_id,
+                            uuid.uuid4().hex[:16],
+                            self.workflow,
+                            name,
+                            inputs or [],
+                            {},
+                            [],
+                            code_version(),
+                            config_version(),
+                            model,
+                            started,
+                            round(time.perf_counter() - t0, 4),
+                            0.0,
+                            "error",
+                            repr(e),
+                        )
+                    )
                     raise
         decisions: list[Decision] = []
         cost = 0.0
@@ -103,7 +122,25 @@ class Run:
         if isinstance(out, tuple) and len(out) == 3 and isinstance(out[1], list):
             result, decisions, cost = out
         summary = _summary(result)
-        self.traces.append(StepTrace(SCHEMA_VERSION, self.run_id, uuid.uuid4().hex[:16], self.workflow, name, inputs or [], summary, decisions, code_version(), config_version(), model, started, round(time.perf_counter() - t0, 4), round(float(cost), 6), "ok" if err is None else f"ok after {attempt} retries"))
+        self.traces.append(
+            StepTrace(
+                SCHEMA_VERSION,
+                self.run_id,
+                uuid.uuid4().hex[:16],
+                self.workflow,
+                name,
+                inputs or [],
+                summary,
+                decisions,
+                code_version(),
+                config_version(),
+                model,
+                started,
+                round(time.perf_counter() - t0, 4),
+                round(float(cost), 6),
+                "ok" if err is None else f"ok after {attempt} retries",
+            )
+        )
         return result
 
     def write(self, path: Path) -> None:
@@ -125,7 +162,13 @@ class Run:
                         "traceId": self.run_id,
                         "name": t.step,
                         "startTime": time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime(t.started_at)) + "Z",
-                        "metadata": {"code": t.code_version, "config": t.config_version, "model": t.model, "cost_eur": t.cost_eur, "decisions": len(t.decisions)},
+                        "metadata": {
+                            "code": t.code_version,
+                            "config": t.config_version,
+                            "model": t.model,
+                            "cost_eur": t.cost_eur,
+                            "decisions": len(t.decisions),
+                        },
                         "input": t.inputs,
                         "output": t.outputs,
                         "level": "ERROR" if t.status == "error" else "DEFAULT",

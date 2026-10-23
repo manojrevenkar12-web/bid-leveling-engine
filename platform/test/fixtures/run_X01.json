@@ -1,0 +1,1342 @@
+{
+ "tender_id": "X01",
+ "project": "Neubau Kita Beispielstraße",
+ "run_id": "fixture0001",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "2026-09-01",
+   "label": "LV v1",
+   "doc_id": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+   "positions": [
+    {
+     "oz": "01.0010",
+     "trade": "01",
+     "short": "Baustelle einrichten",
+     "long": "Baustelleneinrichtung vorhalten und räumen.",
+     "qty": 1,
+     "unit": "psch",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 10,
+      "text": "Baustelle einrichten"
+     }
+    },
+    {
+     "oz": "02.0010",
+     "trade": "02",
+     "short": "Oberboden abtragen",
+     "long": "Oberboden abtragen, seitlich lagern, Dicke 30 cm.",
+     "qty": 840,
+     "unit": "m2",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 11,
+      "text": "Oberboden abtragen"
+     }
+    },
+    {
+     "oz": "02.0020",
+     "trade": "02",
+     "short": "Baugrube ausheben",
+     "long": "Boden der Homogenbereich 2 lösen und laden.",
+     "qty": 1250,
+     "unit": "m3",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 12,
+      "text": "Baugrube ausheben"
+     }
+    },
+    {
+     "oz": "03.0010",
+     "trade": "03",
+     "short": "Sauberkeitsschicht C8/10",
+     "long": "Sauberkeitsschicht aus Beton C8/10, Dicke 5 cm.",
+     "qty": 288,
+     "unit": "m2",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 13,
+      "text": "Sauberkeitsschicht C8/10"
+     }
+    },
+    {
+     "oz": "03.0020",
+     "trade": "03",
+     "short": "Stahlbetonwand C30/37",
+     "long": "Wand aus Stahlbeton C30/37, Dicke 24 cm, Sichtbeton SB2.",
+     "qty": 410,
+     "unit": "m2",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 14,
+      "text": "Stahlbetonwand C30/37"
+     }
+    },
+    {
+     "oz": "03.0030",
+     "trade": "03",
+     "short": "Betonstahl B500B",
+     "long": "Betonstahl B500B liefern, schneiden, biegen, verlegen.",
+     "qty": 38,
+     "unit": "t",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 15,
+      "text": "Betonstahl B500B"
+     }
+    },
+    {
+     "oz": "04.0010",
+     "trade": "04",
+     "short": "Trockenbauwand EI 90",
+     "long": "Ständerwand, Feuerwiderstand EI 90, Leitfabrikat: Knauf W112 oder gleichwertig.",
+     "qty": 520,
+     "unit": "m2",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 16,
+      "text": "Trockenbauwand EI 90"
+     }
+    },
+    {
+     "oz": "04.0020",
+     "trade": "04",
+     "short": "Trittschalldämmung",
+     "long": "Trittschalldämmung, Dicke 30 mm, Steifigkeit 20 MN/m3.",
+     "qty": 960,
+     "unit": "m2",
+     "evidence": {
+      "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+      "xml_line": 17,
+      "text": "Trittschalldämmung"
+     }
+    }
+   ]
+  }
+ ],
+ "trades": {
+  "01": "Baustelle",
+  "02": "Erdarbeiten",
+  "03": "Beton",
+  "04": "Ausbau"
+ },
+ "bids": [
+  {
+   "bid_id": "X01-B1",
+   "company": "Schulte Bau GmbH",
+   "route": "pdf_text",
+   "pages": 2,
+   "cost_eur": 0.0,
+   "seconds": 0.1,
+   "stated_total": null,
+   "priced_version": "v1",
+   "version_scores": {
+    "v1": 1.0
+   },
+   "doc_ids": [
+    "X01/bids/B/angebot.pdf@bbbbbbbbbbbb"
+   ],
+   "warnings": [],
+   "lines": [
+    {
+     "idx": 0,
+     "shown_no": "01.0010",
+     "short": "Baustelle einrichten",
+     "long": "Baustelleneinrichtung vorhalten und räumen.",
+     "qty": 1,
+     "unit": "psch",
+     "ep": null,
+     "gp": null,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       100.0,
+       550.0,
+       110.0
+      ],
+      "text": "Baustelle einrichten"
+     },
+     "oz": "01.0010",
+     "match_p": 0.9998,
+     "runner_up": "02.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 1,
+     "shown_no": "02.0010",
+     "short": "Oberboden abtragen",
+     "long": "Oberboden abtragen, seitlich lagern, Dicke 30 cm.",
+     "qty": 840,
+     "unit": "m2",
+     "ep": 4.66,
+     "gp": 3914.4,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       112.0,
+       550.0,
+       122.0
+      ],
+      "text": "Oberboden abtragen"
+     },
+     "oz": "02.0010",
+     "match_p": 0.9998,
+     "runner_up": "02.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 2,
+     "shown_no": "02.0020",
+     "short": "Baugrube ausheben",
+     "long": "Boden der Homogenbereich 2 lösen und laden.",
+     "qty": 1250,
+     "unit": "m3",
+     "ep": 14.06,
+     "gp": 17575.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       124.0,
+       550.0,
+       134.0
+      ],
+      "text": "Baugrube ausheben"
+     },
+     "oz": "02.0020",
+     "match_p": 0.9998,
+     "runner_up": "02.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 3,
+     "shown_no": "03.0010",
+     "short": "Sauberkeitsschicht C8/10",
+     "long": "Sauberkeitsschicht aus Beton C8/10, Dicke 5 cm.",
+     "qty": 288,
+     "unit": "m2",
+     "ep": 13.77,
+     "gp": 3965.76,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       136.0,
+       550.0,
+       146.0
+      ],
+      "text": "Sauberkeitsschicht C8/10"
+     },
+     "oz": "03.0010",
+     "match_p": 0.9998,
+     "runner_up": "03.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 4,
+     "shown_no": "03.0020",
+     "short": "Stahlbetonwand C30/37",
+     "long": "Wand aus Stahlbeton C30/37, Dicke 24 cm, Sichtbeton SB2.",
+     "qty": 410,
+     "unit": "m2",
+     "ep": 124.16,
+     "gp": 50905.6,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       148.0,
+       550.0,
+       158.0
+      ],
+      "text": "Stahlbetonwand C30/37"
+     },
+     "oz": "03.0020",
+     "match_p": 0.9998,
+     "runner_up": "03.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 5,
+     "shown_no": "03.0030",
+     "short": "Betonstahl B500B",
+     "long": "Betonstahl B500B liefern, schneiden, biegen, verlegen.",
+     "qty": 38,
+     "unit": "t",
+     "ep": 1600.5,
+     "gp": 60819.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       160.0,
+       550.0,
+       170.0
+      ],
+      "text": "Betonstahl B500B"
+     },
+     "oz": "03.0030",
+     "match_p": 0.9998,
+     "runner_up": "03.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 6,
+     "shown_no": "04.0010",
+     "short": "Trockenbauwand EI 90",
+     "long": "Ständerwand, Feuerwiderstand EI 90, Leitfabrikat: Knauf W112 oder gleichwertig.",
+     "qty": 520,
+     "unit": "m2",
+     "ep": 71.78,
+     "gp": 37325.6,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       172.0,
+       550.0,
+       182.0
+      ],
+      "text": "Trockenbauwand EI 90"
+     },
+     "oz": "04.0010",
+     "match_p": 0.9998,
+     "runner_up": "04.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 7,
+     "shown_no": "04.0020",
+     "short": "Trittschalldämmung",
+     "long": "Trittschalldämmung, Dicke 30 mm, Steifigkeit 20 MN/m3.",
+     "qty": 960,
+     "unit": "m2",
+     "ep": 9.31,
+     "gp": 8937.6,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       184.0,
+       550.0,
+       194.0
+      ],
+      "text": "Trittschalldämmung"
+     },
+     "oz": "04.0020",
+     "match_p": 0.9998,
+     "runner_up": "04.0010",
+     "match_needs_review": false
+    }
+   ],
+   "letter": [
+    {
+     "text": "Wir danken für Ihre Anfrage.",
+     "evidence": {
+      "doc": "X01/bids/B/anschreiben.pdf@cccccccccccc",
+      "page": 1,
+      "bbox": [
+       40,
+       200,
+       500,
+       210
+      ],
+      "text": "Wir danken für Ihre Anfrage."
+     }
+    },
+    {
+     "text": "Unsere Preise gelten nur bis zum 31.12.2026.",
+     "evidence": {
+      "doc": "X01/bids/B/anschreiben.pdf@cccccccccccc",
+      "page": 1,
+      "bbox": [
+       40,
+       214,
+       500,
+       224
+      ],
+      "text": "Unsere Preise gelten nur bis zum 31.12.2026."
+     }
+    }
+   ]
+  },
+  {
+   "bid_id": "X01-B2",
+   "company": "Hoffmann Hochbau GmbH",
+   "route": "pdf_text",
+   "pages": 2,
+   "cost_eur": 0.0,
+   "seconds": 0.1,
+   "stated_total": null,
+   "priced_version": "v1",
+   "version_scores": {
+    "v1": 1.0
+   },
+   "doc_ids": [
+    "X01/bids/B/angebot.pdf@bbbbbbbbbbbb"
+   ],
+   "warnings": [],
+   "lines": [
+    {
+     "idx": 0,
+     "shown_no": "01.0010",
+     "short": "Baustelle einrichten",
+     "long": "Baustelleneinrichtung vorhalten und räumen.",
+     "qty": 1,
+     "unit": "psch",
+     "ep": 18500.0,
+     "gp": 18500.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       100.0,
+       550.0,
+       110.0
+      ],
+      "text": "Baustelle einrichten"
+     },
+     "oz": "01.0010",
+     "match_p": 0.9998,
+     "runner_up": "02.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 1,
+     "shown_no": "02.0010",
+     "short": "Oberboden abtragen",
+     "long": "Oberboden abtragen, seitlich lagern, Dicke 30 cm.",
+     "qty": 840,
+     "unit": "m2",
+     "ep": 4.8,
+     "gp": 4032.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       112.0,
+       550.0,
+       122.0
+      ],
+      "text": "Oberboden abtragen"
+     },
+     "oz": "02.0010",
+     "match_p": 0.9998,
+     "runner_up": "02.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 2,
+     "shown_no": "02.0020",
+     "short": "Baugrube ausheben",
+     "long": "Boden der Homogenbereich 2 lösen und laden.",
+     "qty": 1250,
+     "unit": "m3",
+     "ep": 14.5,
+     "gp": 18125.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       124.0,
+       550.0,
+       134.0
+      ],
+      "text": "Baugrube ausheben"
+     },
+     "oz": "02.0020",
+     "match_p": 0.9998,
+     "runner_up": "02.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 3,
+     "shown_no": "03.0010",
+     "short": "Sauberkeitsschicht C8/10",
+     "long": "Sauberkeitsschicht aus Beton C8/10, Dicke 5 cm.",
+     "qty": 288,
+     "unit": "m2",
+     "ep": 14.2,
+     "gp": 4089.6,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       136.0,
+       550.0,
+       146.0
+      ],
+      "text": "Sauberkeitsschicht C8/10"
+     },
+     "oz": "03.0010",
+     "match_p": 0.9998,
+     "runner_up": "03.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 4,
+     "shown_no": "03.0020",
+     "short": "Stahlbetonwand C30/37",
+     "long": "Wand aus Stahlbeton C30/37, Dicke 24 cm, Sichtbeton SB2.",
+     "qty": 410,
+     "unit": "m2",
+     "ep": 128.0,
+     "gp": 52480.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       148.0,
+       550.0,
+       158.0
+      ],
+      "text": "Stahlbetonwand C30/37"
+     },
+     "oz": "03.0020",
+     "match_p": 0.9998,
+     "runner_up": "03.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 5,
+     "shown_no": "03.0030",
+     "short": "Betonstahl B500B",
+     "long": "Betonstahl B500B liefern, schneiden, biegen, verlegen.",
+     "qty": 38,
+     "unit": "t",
+     "ep": 1650.0,
+     "gp": 62700.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       160.0,
+       550.0,
+       170.0
+      ],
+      "text": "Betonstahl B500B"
+     },
+     "oz": "03.0030",
+     "match_p": 0.9998,
+     "runner_up": "03.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 6,
+     "shown_no": "04.0010",
+     "short": "Trockenbauwand EI 90",
+     "long": "Ständerwand, Feuerwiderstand EI 90, Leitfabrikat: Knauf W112 oder gleichwertig.",
+     "qty": 520,
+     "unit": "m2",
+     "ep": 74.0,
+     "gp": 38480.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       172.0,
+       550.0,
+       182.0
+      ],
+      "text": "Trockenbauwand EI 90"
+     },
+     "oz": "04.0010",
+     "match_p": 0.9998,
+     "runner_up": "04.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 7,
+     "shown_no": "04.0020",
+     "short": "Trittschalldämmung",
+     "long": "Trittschalldämmung, Dicke 30 mm, Steifigkeit 20 MN/m3.",
+     "qty": 960,
+     "unit": "m2",
+     "ep": 9.6,
+     "gp": 9216.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       184.0,
+       550.0,
+       194.0
+      ],
+      "text": "Trittschalldämmung"
+     },
+     "oz": "04.0020",
+     "match_p": 0.9998,
+     "runner_up": "04.0010",
+     "match_needs_review": false
+    }
+   ],
+   "letter": []
+  },
+  {
+   "bid_id": "X01-B3",
+   "company": "Krüger & Partner Bauunternehmung",
+   "route": "pdf_text",
+   "pages": 2,
+   "cost_eur": 0.0,
+   "seconds": 0.1,
+   "stated_total": null,
+   "priced_version": "v1",
+   "version_scores": {
+    "v1": 1.0
+   },
+   "doc_ids": [
+    "X01/bids/B/angebot.pdf@bbbbbbbbbbbb"
+   ],
+   "warnings": [],
+   "lines": [
+    {
+     "idx": 0,
+     "shown_no": "01.0010",
+     "short": "Baustelle einrichten",
+     "long": "Baustelleneinrichtung vorhalten und räumen.",
+     "qty": 1,
+     "unit": "psch",
+     "ep": 18870.0,
+     "gp": 18870.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       100.0,
+       550.0,
+       110.0
+      ],
+      "text": "Baustelle einrichten"
+     },
+     "oz": "01.0010",
+     "match_p": 0.9998,
+     "runner_up": "02.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 1,
+     "shown_no": "02.0010",
+     "short": "Oberboden abtragen",
+     "long": "Oberboden abtragen, seitlich lagern, Dicke 30 cm.",
+     "qty": 840,
+     "unit": "m2",
+     "ep": 4.9,
+     "gp": 4116.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       112.0,
+       550.0,
+       122.0
+      ],
+      "text": "Oberboden abtragen"
+     },
+     "oz": "02.0010",
+     "match_p": 0.9998,
+     "runner_up": "02.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 2,
+     "shown_no": "02.0020",
+     "short": "Baugrube ausheben",
+     "long": "Boden der Homogenbereich 2 lösen und laden.",
+     "qty": 1250,
+     "unit": "m3",
+     "ep": 14.79,
+     "gp": 18487.5,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       124.0,
+       550.0,
+       134.0
+      ],
+      "text": "Baugrube ausheben"
+     },
+     "oz": "02.0020",
+     "match_p": 0.9998,
+     "runner_up": "02.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 3,
+     "shown_no": "03.0010",
+     "short": "Sauberkeitsschicht C8/10",
+     "long": "Sauberkeitsschicht aus Beton C8/10, Dicke 5 cm.",
+     "qty": 288,
+     "unit": "m2",
+     "ep": 14.48,
+     "gp": 4170.24,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       136.0,
+       550.0,
+       146.0
+      ],
+      "text": "Sauberkeitsschicht C8/10"
+     },
+     "oz": "03.0010",
+     "match_p": 0.9998,
+     "runner_up": "03.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 4,
+     "shown_no": "03.0020",
+     "short": "Stahlbetonwand C30/37",
+     "long": "Wand aus Stahlbeton C30/37, Dicke 24 cm, Sichtbeton SB2.",
+     "qty": 410,
+     "unit": "m2",
+     "ep": 130.56,
+     "gp": 53529.6,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       148.0,
+       550.0,
+       158.0
+      ],
+      "text": "Stahlbetonwand C30/37"
+     },
+     "oz": "03.0020",
+     "match_p": 0.9998,
+     "runner_up": "03.0010",
+     "match_needs_review": false
+    },
+    {
+     "idx": 5,
+     "shown_no": "03.0030",
+     "short": "Betonstahl B500B",
+     "long": "Betonstahl B500B liefern, schneiden, biegen, verlegen.",
+     "qty": 38,
+     "unit": "t",
+     "ep": 1683.0,
+     "gp": 63954.0,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       160.0,
+       550.0,
+       170.0
+      ],
+      "text": "Betonstahl B500B"
+     },
+     "oz": "03.0030",
+     "match_p": 0.9998,
+     "runner_up": "03.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 6,
+     "shown_no": "04.0010",
+     "short": "Trockenbauwand EI 90",
+     "long": "Ständerwand, Feuerwiderstand EI 90, Leitfabrikat: Knauf W112 oder gleichwertig.",
+     "qty": 520,
+     "unit": "m2",
+     "ep": 75.48,
+     "gp": 39249.6,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       172.0,
+       550.0,
+       182.0
+      ],
+      "text": "Trockenbauwand EI 90"
+     },
+     "oz": "04.0010",
+     "match_p": 0.9998,
+     "runner_up": "04.0020",
+     "match_needs_review": false
+    },
+    {
+     "idx": 7,
+     "shown_no": "04.0020",
+     "short": "Trittschalldämmung",
+     "long": "Trittschalldämmung, Dicke 30 mm, Steifigkeit 20 MN/m3.",
+     "qty": 960,
+     "unit": "m2",
+     "ep": 9.79,
+     "gp": 9398.4,
+     "included": false,
+     "product": null,
+     "confidence": 1.0,
+     "evidence": {
+      "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+      "page": 1,
+      "bbox": [
+       40.0,
+       184.0,
+       550.0,
+       194.0
+      ],
+      "text": "Trittschalldämmung"
+     },
+     "oz": "04.0020",
+     "match_p": 0.9998,
+     "runner_up": "04.0010",
+     "match_needs_review": false
+    }
+   ],
+   "letter": []
+  }
+ ],
+ "findings": [
+  {
+   "id": "5c94322b5913",
+   "tender_id": "X01",
+   "bid_id": "X01-B1",
+   "type": "missing_price",
+   "oz": "01.0010",
+   "severity": "high",
+   "message": "No price for 01.0010 “Baustelle einrichten”.",
+   "expected": null,
+   "found": null,
+   "evidence": [
+    {
+     "doc": "X01/bids/B/angebot.pdf@bbbbbbbbbbbb",
+     "page": 1,
+     "bbox": [
+      40.0,
+      100.0,
+      550.0,
+      110.0
+     ],
+     "text": "Baustelle einrichten"
+    },
+    {
+     "doc": "X01/tender/LV_v1.x83@aaaaaaaaaaaa",
+     "xml_line": 10,
+     "text": "Baustelle einrichten"
+    }
+   ],
+   "confidence": 0.96,
+   "needs_review": false,
+   "rule": "missing_price@1",
+   "detail": {
+    "key": "01.0010",
+    "line": 0,
+    "match_p": 0.9998
+   }
+  },
+  {
+   "id": "0b2ec180103e",
+   "tender_id": "X01",
+   "bid_id": "X01-B1",
+   "type": "reservation",
+   "oz": null,
+   "severity": "high",
+   "message": "Cover letter: “Unsere Preise gelten nur bis zum 31.12.2026.”",
+   "expected": null,
+   "found": "price_validity",
+   "evidence": [
+    {
+     "doc": "X01/bids/B/anschreiben.pdf@cccccccccccc",
+     "page": 1,
+     "bbox": [
+      40,
+      214,
+      500,
+      224
+     ],
+     "text": "Unsere Preise gelten nur bis zum 31.12.2026."
+    }
+   ],
+   "confidence": 0.97,
+   "needs_review": false,
+   "rule": "reservation@1",
+   "detail": {
+    "key": 1,
+    "kinds": [
+     "price_validity"
+    ],
+    "sentence": "Unsere Preise gelten nur bis zum 31.12.2026."
+   }
+  }
+ ],
+ "sheet": {
+  "tender_id": "X01",
+  "version": "v1",
+  "positions": [
+   {
+    "oz": "01.0010",
+    "trade": "01",
+    "short": "Baustelle einrichten",
+    "qty": 1,
+    "unit": "psch"
+   },
+   {
+    "oz": "02.0010",
+    "trade": "02",
+    "short": "Oberboden abtragen",
+    "qty": 840,
+    "unit": "m2"
+   },
+   {
+    "oz": "02.0020",
+    "trade": "02",
+    "short": "Baugrube ausheben",
+    "qty": 1250,
+    "unit": "m3"
+   },
+   {
+    "oz": "03.0010",
+    "trade": "03",
+    "short": "Sauberkeitsschicht C8/10",
+    "qty": 288,
+    "unit": "m2"
+   },
+   {
+    "oz": "03.0020",
+    "trade": "03",
+    "short": "Stahlbetonwand C30/37",
+    "qty": 410,
+    "unit": "m2"
+   },
+   {
+    "oz": "03.0030",
+    "trade": "03",
+    "short": "Betonstahl B500B",
+    "qty": 38,
+    "unit": "t"
+   },
+   {
+    "oz": "04.0010",
+    "trade": "04",
+    "short": "Trockenbauwand EI 90",
+    "qty": 520,
+    "unit": "m2"
+   },
+   {
+    "oz": "04.0020",
+    "trade": "04",
+    "short": "Trittschalldämmung",
+    "qty": 960,
+    "unit": "m2"
+   }
+  ],
+  "bidders": [
+   {
+    "bid_id": "X01-B1",
+    "company": "Schulte Bau GmbH",
+    "route": "pdf_text",
+    "priced_version": "v1",
+    "stated_total": 183442.96,
+    "comparable_total": 202312.96,
+    "added_positions_total": 0,
+    "positions_valued_at_highest_other_price": 1,
+    "bid_level_flags": [
+     "reservation"
+    ]
+   },
+   {
+    "bid_id": "X01-B2",
+    "company": "Hoffmann Hochbau GmbH",
+    "route": "pdf_text",
+    "priced_version": "v1",
+    "stated_total": 207622.6,
+    "comparable_total": 207622.6,
+    "added_positions_total": 0,
+    "positions_valued_at_highest_other_price": 0,
+    "bid_level_flags": []
+   },
+   {
+    "bid_id": "X01-B3",
+    "company": "Krüger & Partner Bauunternehmung",
+    "route": "pdf_text",
+    "priced_version": "v1",
+    "stated_total": 211775.34,
+    "comparable_total": 211775.34,
+    "added_positions_total": 0,
+    "positions_valued_at_highest_other_price": 0,
+    "bid_level_flags": []
+   }
+  ],
+  "cells": {
+   "01.0010": {
+    "X01-B1": {
+     "ep": null,
+     "gp_stated": null,
+     "gp_comparable": 18870.0,
+     "filled": true,
+     "flags": [
+      "missing_price"
+     ]
+    },
+    "X01-B2": {
+     "ep": 18500.0,
+     "gp_stated": 18500.0,
+     "gp_comparable": 18500.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 18870.0,
+     "gp_stated": 18870.0,
+     "gp_comparable": 18870.0,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "02.0010": {
+    "X01-B1": {
+     "ep": 4.66,
+     "gp_stated": 3914.4,
+     "gp_comparable": 3914.4,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 4.8,
+     "gp_stated": 4032.0,
+     "gp_comparable": 4032.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 4.9,
+     "gp_stated": 4116.0,
+     "gp_comparable": 4116.0,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "02.0020": {
+    "X01-B1": {
+     "ep": 14.06,
+     "gp_stated": 17575.0,
+     "gp_comparable": 17575.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 14.5,
+     "gp_stated": 18125.0,
+     "gp_comparable": 18125.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 14.79,
+     "gp_stated": 18487.5,
+     "gp_comparable": 18487.5,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "03.0010": {
+    "X01-B1": {
+     "ep": 13.77,
+     "gp_stated": 3965.76,
+     "gp_comparable": 3965.76,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 14.2,
+     "gp_stated": 4089.6,
+     "gp_comparable": 4089.6,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 14.48,
+     "gp_stated": 4170.24,
+     "gp_comparable": 4170.24,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "03.0020": {
+    "X01-B1": {
+     "ep": 124.16,
+     "gp_stated": 50905.6,
+     "gp_comparable": 50905.6,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 128.0,
+     "gp_stated": 52480.0,
+     "gp_comparable": 52480.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 130.56,
+     "gp_stated": 53529.6,
+     "gp_comparable": 53529.6,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "03.0030": {
+    "X01-B1": {
+     "ep": 1600.5,
+     "gp_stated": 60819.0,
+     "gp_comparable": 60819.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 1650.0,
+     "gp_stated": 62700.0,
+     "gp_comparable": 62700.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 1683.0,
+     "gp_stated": 63954.0,
+     "gp_comparable": 63954.0,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "04.0010": {
+    "X01-B1": {
+     "ep": 71.78,
+     "gp_stated": 37325.6,
+     "gp_comparable": 37325.6,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 74.0,
+     "gp_stated": 38480.0,
+     "gp_comparable": 38480.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 75.48,
+     "gp_stated": 39249.6,
+     "gp_comparable": 39249.6,
+     "filled": false,
+     "flags": []
+    }
+   },
+   "04.0020": {
+    "X01-B1": {
+     "ep": 9.31,
+     "gp_stated": 8937.6,
+     "gp_comparable": 8937.6,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B2": {
+     "ep": 9.6,
+     "gp_stated": 9216.0,
+     "gp_comparable": 9216.0,
+     "filled": false,
+     "flags": []
+    },
+    "X01-B3": {
+     "ep": 9.79,
+     "gp_stated": 9398.4,
+     "gp_comparable": 9398.4,
+     "filled": false,
+     "flags": []
+    }
+   }
+  },
+  "ranking": [
+   {
+    "rank": 1,
+    "bid_id": "X01-B1",
+    "company": "Schulte Bau GmbH",
+    "comparable_total": 202312.96,
+    "stated_rank": 1
+   },
+   {
+    "rank": 2,
+    "bid_id": "X01-B2",
+    "company": "Hoffmann Hochbau GmbH",
+    "comparable_total": 207622.6,
+    "stated_rank": 2
+   },
+   {
+    "rank": 3,
+    "bid_id": "X01-B3",
+    "company": "Krüger & Partner Bauunternehmung",
+    "comparable_total": 211775.34,
+    "stated_rank": 3
+   }
+  ]
+ },
+ "traces": [
+  {
+   "schema": "decision-trace/1",
+   "run_id": "fixture0001",
+   "trace_id": "38bd7d2eadbc4d97",
+   "workflow": "bid-leveling",
+   "step": "resolve_positions",
+   "inputs": [],
+   "outputs": {
+    "items": 3
+   },
+   "decisions": [],
+   "code_version": "0617aa3",
+   "config_version": "49aeb3785747",
+   "model": "rules",
+   "started_at": 1792782491.2262602,
+   "seconds": 0.0264,
+   "cost_eur": 0.0,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "schema": "decision-trace/1",
+   "run_id": "fixture0001",
+   "trace_id": "8ff6dfd691b34701",
+   "workflow": "bid-leveling",
+   "step": "detect_deviations",
+   "inputs": [],
+   "outputs": {
+    "items": 2
+   },
+   "decisions": [],
+   "code_version": "0617aa3",
+   "config_version": "49aeb3785747",
+   "model": "rules",
+   "started_at": 1792782491.2526507,
+   "seconds": 0.004,
+   "cost_eur": 0.0,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "schema": "decision-trace/1",
+   "run_id": "fixture0001",
+   "trace_id": "e01e456fa5b341df",
+   "workflow": "bid-leveling",
+   "step": "level_bids",
+   "inputs": [],
+   "outputs": {
+    "tender_id": "X01",
+    "version": "v1",
+    "positions": 8,
+    "bidders": 3,
+    "cells": 8,
+    "ranking": 3
+   },
+   "decisions": [],
+   "code_version": "0617aa3",
+   "config_version": "49aeb3785747",
+   "model": "rules",
+   "started_at": 1792782491.2566726,
+   "seconds": 0.0002,
+   "cost_eur": 0.0,
+   "status": "ok",
+   "error": null
+  }
+ ],
+ "graph": {
+  "nodes": 50,
+  "edges": 82
+ }
+}

@@ -75,6 +75,7 @@ def find_anchors(line: list[Word]) -> Anchors | None:
     tw, qw, uw, ew, gw = get(TEXT_HDR), get(QTY_HDR), get(UNIT_HDR), get(EP_HDR), get(GP_HDR)
     if not (tw and qw and ew):
         return None
+
     # "EP €" / "GP €": the column's right edge is the last token of the label
     def right(w: Word) -> float:
         i = line.index(w)
@@ -130,6 +131,7 @@ def parse_table(words: list[Word], doc_id: str, scale_tol: float = 1.0) -> tuple
         T = 22 * scale_tol
         ln = _split_merged(ln, anchors)
         no = [w for w in ln if w.x1 < anchors.text_left - 2]
+
         def is_cell(w: Word) -> bool:
             t = w.text.strip().lower().strip(".")
             return de_num(w.text) is not None or t in UNITS or t in ("enthalten", "enth", "inkl")
@@ -215,7 +217,12 @@ def letter_sentences(words: list[Word], doc_id: str) -> tuple[list[Sentence], fl
             if not cur:
                 cur_ev = ev
             cur = (cur + " " + tok).strip()
-            if tok.endswith((".", "!", "?")) and tok.lower() not in ABBR_END and not re.match(r"^\d{1,2}\.$", tok) and not re.match(r"^\d{1,2}\.\d{1,2}\.$", tok):
+            if (
+                tok.endswith((".", "!", "?"))
+                and tok.lower() not in ABBR_END
+                and not re.match(r"^\d{1,2}\.$", tok)
+                and not re.match(r"^\d{1,2}\.\d{1,2}\.$", tok)
+            ):
                 sentences.append(Sentence(cur, Evidence(cur_ev.doc, cur_ev.page, cur_ev.bbox, text=cur)))  # type: ignore[union-attr]
                 cur = ""
     if cur and cur_ev:

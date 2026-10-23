@@ -151,7 +151,7 @@ def make_boq(tender_id: str, rng: np.random.Generator) -> list[BoQ]:
                 short=t["short"],
                 long=_fill(t["long"], attrs),
                 unit=t["unit"],
-                qty=_qty(rng, *t["qty"], t["unit"]),
+                qty=_qty(rng, t["qty"][0], t["qty"][1], t["unit"]),
                 attrs=attrs,
                 product=product,
                 risk=float(t["risk"]),
@@ -196,7 +196,7 @@ def _addendum(v1: BoQ, pool: list[dict[str, Any]], chosen: list[dict[str, Any]],
                 short=t["short"],
                 long=_fill(t["long"], attrs),
                 unit=t["unit"],
-                qty=_qty(rng, *t["qty"], t["unit"]),
+                qty=_qty(rng, t["qty"][0], t["qty"][1], t["unit"]),
                 attrs=attrs,
                 product=product,
                 risk=float(t["risk"]),
@@ -287,7 +287,11 @@ def make_bids(boqs: list[BoQ], rng: np.random.Generator, first_bid_no: int = 1) 
             product = None
             if p.product:
                 if rng.random() < P["product_alt"]:
-                    alts = [v for v in lib[p.template]["attrs"][next(s for s, sp in lib[p.template]["attrs"].items() if sp.get("product"))]["values"] if v != p.product]
+                    alts = [
+                        v
+                        for v in lib[p.template]["attrs"][next(s for s, sp in lib[p.template]["attrs"].items() if sp.get("product"))]["values"]
+                        if v != p.product
+                    ]
                     product = alts[0] if alts else None
                     if product:
                         devs.append(Deviation("product_alternative", p.oz, f"{p.product} -> {product}"))
@@ -304,7 +308,7 @@ def make_bids(boqs: list[BoQ], rng: np.random.Generator, first_bid_no: int = 1) 
                 ep_out, gp, included = 0.0, 0.0, True
                 devs.append(Deviation("included_price", p.oz))
             elif rng.random() < P["arithmetic"]:
-                wrong = _arith_error(gp, rng)
+                wrong = _arith_error(gp or 0.0, rng)
                 devs.append(Deviation("arithmetic_error", p.oz, f"GP {wrong:.2f} instead of {gp:.2f}"))
                 gp = wrong
             lines.append(BidLine(p.oz, p.oz, p.trade, p.short, long_ if layout["include_long_text"] else None, unit, qty, ep_out, gp, included, product))
@@ -341,7 +345,9 @@ def make_bids(boqs: list[BoQ], rng: np.random.Generator, first_bid_no: int = 1) 
             mid = letter[1:]
             rng.shuffle(mid)
             letter = [letter[0], *mid]
-        bids.append(Bid(f"{latest.tender_id}-B{first_bid_no + k}", latest.tender_id, company, persona, fmt, boq.version, layout, lines, reservations, letter, devs))
+        bids.append(
+            Bid(f"{latest.tender_id}-B{first_bid_no + k}", latest.tender_id, company, persona, fmt, boq.version, layout, lines, reservations, letter, devs)
+        )
     return bids
 
 

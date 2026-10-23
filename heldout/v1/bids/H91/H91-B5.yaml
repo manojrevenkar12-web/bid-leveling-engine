@@ -1,0 +1,336 @@
+company: Wolff Bauausführung GmbH
+format: pdf
+priced_version: v1
+include_long_text: true
+letter:
+- Wir danken für Ihre Anfrage und bieten die Leistungen gemäß beiliegendem Leistungsverzeichnis an.
+- Die Arbeiten führen wir mit eigenem Stammpersonal aus, lediglich die Tischlerarbeiten vergeben wir an einen langjährigen Partnerbetrieb.
+- Unsere Haftung für mittelbare Schäden und Folgeschäden beschränken wir, soweit gesetzlich zulässig, auf die Höhe der Auftragssumme.
+- Über eine positive Rückmeldung würden wir uns sehr freuen.
+lines:
+- shown_no: '02.0010'
+  prices_oz: '02.0010'
+  short: Oberboden abtragen und seitlich lagern
+  long: Oberboden in einer Stärke von 30 cm abtragen und auf der Baustelle seitlich in Mieten lagern.
+  qty: 1703
+  unit: m2
+  ep: 4.1
+  gp: 6982.3
+  included: false
+  product: null
+- shown_no: '02.0020'
+  prices_oz: '02.0020'
+  short: Baugrube ausheben, Boden laden und abfahren
+  long: Baugrube ausheben, Homogenbereich B2, Boden laden und zur Deponie abfahren, einschließlich Deponiegebühren.
+  qty: 2361.1
+  unit: m3
+  ep: 33.8
+  gp: 79805.18
+  included: false
+  product: null
+- shown_no: '02.0030'
+  prices_oz: '02.0030'
+  short: Arbeitsraum verfüllen und verdichten
+  long: Arbeitsraum lagenweise mit Liefermaterial verfüllen und auf Dpr 100 % verdichten.
+  qty: 540.5
+  unit: m3
+  ep: 38.7
+  gp: 20917.35
+  included: false
+  product: null
+- shown_no: '02.0040'
+  prices_oz: '02.0040'
+  short: Schottertragschicht 0/32 herstellen
+  long: Schottertragschicht aus Mineralgemisch 0/32, Dicke 30 cm, einbauen und verdichten, Ev2 mindestens 120 MN/m².
+  qty: 119.8
+  unit: m3
+  ep: 58.3
+  gp: 6984.34
+  included: false
+  product: null
+- shown_no: '02.0050'
+  prices_oz: '02.0050'
+  short: Offene Wasserhaltung betreiben
+  long: Offene Wasserhaltung mit Tauchpumpen einschließlich Pumpensumpf betreiben, abgerechnet nach Betriebsstunden.
+  qty: 393.3
+  unit: h
+  ep: 19.05
+  gp: 7492.37
+  included: false
+  product: null
+- shown_no: '02.0060'
+  prices_oz: '02.0060'
+  short: Belasteten Boden Z2 entsorgen
+  long: Boden der Zuordnungsklasse Z2 nach LAGA laden, abfahren und fachgerecht entsorgen, einschließlich Nachweisen.
+  qty: 210.7
+  unit: t
+  ep: 58.6
+  gp: 12347.02
+  included: false
+  product: null
+- shown_no: '03.0010'
+  prices_oz: '03.0010'
+  short: Sauberkeitsschicht aus Beton C8/10
+  long: Sauberkeitsschicht aus unbewehrtem Beton C8/10, Dicke 5 cm, herstellen.
+  qty: 360
+  unit: m2
+  ep: 14.3
+  gp: 5148.0
+  included: false
+  product: null
+- shown_no: '03.0020'
+  prices_oz: '03.0020'
+  short: Bodenplatte aus Stahlbeton herstellen
+  long: Bodenplatte aus Stahlbeton, Festigkeitsklasse C30/37, Expositionsklasse XC2, Dicke 25 cm, herstellen, einschließlich Abschalung.
+  qty: 270.7
+  unit: m3
+  ep: 209.4
+  gp: 56684.58
+  included: false
+  product: null
+- shown_no: '03.0030'
+  prices_oz: '03.0030'
+  short: Stahlbetonwand außen herstellen
+  long: Außenwand aus Stahlbeton, Festigkeitsklasse C30/37, Dicke 25 cm, einschließlich zweiseitiger Schalung, glatt.
+  qty: 719
+  unit: m2
+  ep: 156.1
+  gp: 112235.9
+  included: false
+  product: null
+- shown_no: '03.0040'
+  prices_oz: '03.0040'
+  short: Stahlbetonwand innen herstellen
+  long: Innenwand aus Stahlbeton, Festigkeitsklasse C25/30, Dicke 20 cm, Sichtbetonklasse SB2.
+  qty: 623
+  unit: m2
+  ep: 137.2
+  gp: 85475.6
+  included: false
+  product: null
+- shown_no: '03.0050'
+  prices_oz: '03.0050'
+  short: Stahlbetondecke als Ortbetondecke herstellen
+  long: Stahlbetondecke als Ortbetondecke, Festigkeitsklasse C30/37, Dicke 24 cm, Feuerwiderstandsklasse REI 60, einschließlich Schalung.
+  qty: 1045
+  unit: m2
+  ep: 117.8
+  gp: 123101.0
+  included: false
+  product: null
+- shown_no: '03.0060'
+  prices_oz: '03.0060'
+  short: Stahlbetonstütze rechteckig herstellen
+  long: Stahlbetonstütze, Querschnitt 30/30 cm, Festigkeitsklasse C35/45, einschließlich Schalung.
+  qty: 41
+  unit: m
+  ep: 120.8
+  gp: 4952.8
+  included: false
+  product: null
+- shown_no: '03.0070'
+  prices_oz: '03.0070'
+  short: Betonstahl B500B liefern und verlegen
+  long: Betonstahl B500B als Stabstahl und Matten liefern, schneiden, biegen und verlegen.
+  qty: 185.9
+  unit: t
+  ep: 1600.0
+  gp: 297440.0
+  included: false
+  product: null
+- shown_no: '03.0080'
+  prices_oz: '03.0080'
+  short: Fertigteiltreppe einbauen
+  long: Treppenlauf als Stahlbeton-Fertigteil, gerade, liefern und einbauen, Trittschalldämmung mit Elastomerlager, Schallschutz 30 dB.
+  qty: 3
+  unit: St
+  ep: 4092.0
+  gp: 12276.0
+  included: false
+  product: null
+- shown_no: '03.0090'
+  prices_oz: '03.0090'
+  short: Fugenband in Arbeitsfugen einbauen
+  long: Innenliegendes Fugenband in Arbeitsfugen der wasserundurchlässigen Konstruktion liefern und einbauen, Leitfabrikat Sika Waterbar oder gleichwertig.
+  qty: 365
+  unit: m
+  ep: 33.1
+  gp: 12081.5
+  included: false
+  product: Sika Waterbar
+- shown_no: '04.0010'
+  prices_oz: '04.0010'
+  short: Kalksandstein-Innenwand mauern
+  long: Innenwand aus Kalksandstein KS 20-2,0, Dicke 17,5 cm, im Dünnbettmörtel mauern.
+  qty: 603
+  unit: m2
+  ep: 64.5
+  gp: 38893.5
+  included: false
+  product: null
+- shown_no: '04.0020'
+  prices_oz: '04.0020'
+  short: Ziegelmauerwerk außen, wärmedämmend
+  long: Außenwand aus wärmedämmenden Hochlochziegeln, Dicke 42,5 cm, Wärmeleitfähigkeit λ = 0,09 W/(mK), mauern.
+  qty: 706
+  unit: m2
+  ep: 120.0
+  gp: 84720.0
+  included: false
+  product: null
+- shown_no: '04.0030'
+  prices_oz: '04.0030'
+  short: Fertigteilsturz einbauen
+  long: Fertigteilsturz für Öffnungsbreiten bis 1,51 m liefern und einbauen.
+  qty: 60
+  unit: St
+  ep: 71.8
+  gp: 4308.0
+  included: false
+  product: null
+- shown_no: '04.0040'
+  prices_oz: '04.0040'
+  short: Schlitze in Mauerwerk herstellen
+  long: Schlitze für Installationen in Mauerwerk fräsen, Querschnitt bis 5 x 5 cm, Schutt beseitigen.
+  qty: 280
+  unit: m
+  ep: 14.15
+  gp: 3962.0
+  included: false
+  product: null
+- shown_no: '04.0050'
+  prices_oz: '04.0050'
+  short: Brandwand aus Kalksandstein mauern
+  long: Brandwand aus Kalksandstein, Dicke 24 cm, Feuerwiderstandsklasse F 60-A, nach DIN 4102-4 mauern.
+  qty: 285
+  unit: m2
+  ep: 88.0
+  gp: 25080.0
+  included: false
+  product: null
+- shown_no: '09.0010'
+  prices_oz: '09.0010'
+  short: Bauwerksabdichtung mit Bitumenbahnen
+  long: Abdichtung erdberührter Wände mit Polymerbitumen-Schweißbahnen, Wassereinwirkungsklasse W2.1-E, 2-lagig.
+  qty: 935
+  unit: m2
+  ep: 48.5
+  gp: 45347.5
+  included: false
+  product: null
+- shown_no: '09.0020'
+  prices_oz: '09.0020'
+  short: Perimeterdämmung aus XPS verlegen
+  long: Perimeterdämmung aus XPS-Platten, Dicke 160 mm, Wärmeleitfähigkeit λ = 0,035 W/(mK), verkleben.
+  qty: 864
+  unit: m2
+  ep: 54.1
+  gp: 46742.4
+  included: false
+  product: null
+- shown_no: '09.0030'
+  prices_oz: '09.0030'
+  short: Flachdachabdichtung mit Kunststoffbahn
+  long: Flachdachabdichtung mit FPO-Kunststoffbahn, Dicke 2,0 mm, mechanisch befestigt, Leitfabrikat Sika Sarnafil TG 66 oder gleichwertig.
+  qty: 1328
+  unit: m2
+  ep: 40.1
+  gp: 53252.8
+  included: false
+  product: Bauder THERMOFIN F 20
+- shown_no: '09.0040'
+  prices_oz: '09.0040'
+  short: Gefälledämmung Flachdach verlegen
+  long: Gefälledämmung aus EPS DAA dh, mittlere Dicke 200 mm, Wärmeleitfähigkeit λ = 0,031 W/(mK).
+  qty: 656
+  unit: m2
+  ep: 45.9
+  gp: 30110.4
+  included: false
+  product: null
+- shown_no: '09.0050'
+  prices_oz: '09.0050'
+  short: Hohlkehle und Anschluss abdichten
+  long: Hohlkehle aus Dichtschlämme an Wand-Boden-Anschlüssen herstellen und Abdichtung anschließen.
+  qty: 227
+  unit: m
+  ep: 17.7
+  gp: 4017.9
+  included: false
+  product: null
+- shown_no: '10.0010'
+  prices_oz: '10.0010'
+  short: Innentür mit Stahlzarge liefern und montieren
+  long: Innentür, Röhrenspanplatte, Oberfläche CPL, Klimaklasse III, mit Stahlumfassungszarge, Leitfabrikat Hörmann ZK oder gleichwertig.
+  qty: 118
+  unit: St
+  ep: 768.0
+  gp: 90624.0
+  included: false
+  product: Hörmann ZK
+- shown_no: '10.0020'
+  prices_oz: '10.0020'
+  short: Brandschutztür T30 liefern und montieren
+  long: Feuerhemmende Tür T30-1-RS, einflügelig, selbstschließend, mit Zulassung, liefern und montieren.
+  qty: 25
+  unit: St
+  ep: 1863.0
+  gp: 46575.0
+  included: false
+  product: null
+- shown_no: '10.0030'
+  prices_oz: '10.0030'
+  short: Innenfensterbank aus Holzwerkstoff
+  long: Innenfensterbank aus Holzwerkstoff, Dicke 25 mm, Tiefe bis 30 cm, liefern und einbauen.
+  qty: 75
+  unit: m
+  ep: 189.0
+  gp: 14175.0
+  included: false
+  product: null
+- shown_no: '10.0040'
+  prices_oz: '10.0040'
+  short: Einbauschrank nach Zeichnung herstellen
+  long: Einbauschrank nach Zeichnung des Architekten, Korpus melaminharzbeschichtet, Fronten HPL, herstellen und montieren.
+  qty: 16
+  unit: St
+  ep: 2522.0
+  gp: 40352.0
+  included: false
+  product: null
+- shown_no: '10.0050'
+  prices_oz: '10.0050'
+  short: Sockelleisten aus Holz montieren
+  long: Sockelleisten aus Massivholz, Höhe 60 mm, lackiert, montieren.
+  qty: 554
+  unit: m
+  ep: 10.85
+  gp: 6010.9
+  included: false
+  product: null
+- shown_no: '99.0010'
+  prices_oz: null
+  short: Stundenlohnarbeiten Facharbeiter
+  long: Stundenlohnarbeiten nach Anordnung der Bauleitung, Facharbeiter einschließlich Kleingerät.
+  qty: 40
+  unit: h
+  ep: 62.5
+  gp: 2500.0
+  included: false
+  product: null
+deviations:
+- type: spec_downgrade
+  oz: '10.0020'
+  detail: T90-1-RS -> T30-1-RS
+- type: product_alternative
+  oz: '09.0030'
+  detail: Sika Sarnafil TG 66 -> Bauder THERMOFIN F 20
+- type: price_outlier
+  oz: '10.0030'
+  detail: EP 189,00 EUR/m, marktüblich ca. 50-60 EUR
+- type: extra_position
+  oz: null
+  detail: Stundenlohnarbeiten Facharbeiter (40 h)
+- type: reservation
+  oz: null
+  detail: 'liability: Haftung für Folgeschäden auf Auftragssumme begrenzt'

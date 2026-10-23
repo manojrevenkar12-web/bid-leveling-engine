@@ -22,7 +22,11 @@ def run(tenders: list[TenderDoc]) -> dict[str, Any]:
         h1 = h3 = n = 0
         failures = []
         for t in tenders:
-            tpl = {p["oz"]: p["template"] for p in json.loads((TRUTH / "tenders" / t.tender_id / f"boq_{t.version}.json").read_text())["positions"]} if (TRUTH / "tenders" / t.tender_id / f"boq_{t.version}.json").exists() else {}
+            tpl = (
+                {p["oz"]: p["template"] for p in json.loads((TRUTH / "tenders" / t.tender_id / f"boq_{t.version}.json").read_text())["positions"]}
+                if (TRUTH / "tenders" / t.tender_id / f"boq_{t.version}.json").exists()
+                else {}
+            )
             docs = [tok.tokens(p.short) * 2 + tok.tokens(p.long) for p in t.positions]
             idx = BM25(docs)
             for q in queries:

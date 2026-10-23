@@ -53,17 +53,67 @@ def _fid(*parts: object) -> str:
 def _make(bid: BidDoc, typ: str, oz: str | None, msg: str, ev: list[Evidence], conf: float, **kw: Any) -> Finding:
     sev = load("rules")["severity"][typ]
     review = conf < load("rules")["review"]["auto_confirm_above"]
-    return Finding(_fid(bid.bid_id, typ, oz, kw.get("detail", {}).get("key", "")), bid.tender_id, bid.bid_id, typ, oz, sev["severity"], msg, evidence=[e.as_dict() for e in ev], confidence=round(conf, 3), needs_review=review, rule=f"{typ}@1", **kw)
+    return Finding(
+        _fid(bid.bid_id, typ, oz, kw.get("detail", {}).get("key", "")),
+        bid.tender_id,
+        bid.bid_id,
+        typ,
+        oz,
+        sev["severity"],
+        msg,
+        evidence=[e.as_dict() for e in ev],
+        confidence=round(conf, 3),
+        needs_review=review,
+        rule=f"{typ}@1",
+        **kw,
+    )
 
 
 # -- long-text specification comparison ----------------------------------------------------------
-HIGHER = ["dicke", "starke", "festigkeitsklasse", "feuerwiderstand", "schalldamm", "rw", "lastklasse", "rutschhemmung", "querschnitt", "hohe", "breite", "lagig", "ubedeckung", "rohruberdeckung", "dpr", "klimaklasse", "format", "abhangehohe", "oberflachenqualitat", "schichtdicke", "wassereinwirkungsklasse", "absorptionsgrad", "gefalle", "homogenbereich"]
+HIGHER = [
+    "dicke",
+    "starke",
+    "festigkeitsklasse",
+    "feuerwiderstand",
+    "schalldamm",
+    "rw",
+    "lastklasse",
+    "rutschhemmung",
+    "querschnitt",
+    "hohe",
+    "breite",
+    "lagig",
+    "ubedeckung",
+    "rohruberdeckung",
+    "dpr",
+    "klimaklasse",
+    "format",
+    "abhangehohe",
+    "oberflachenqualitat",
+    "schichtdicke",
+    "wassereinwirkungsklasse",
+    "absorptionsgrad",
+    "gefalle",
+    "homogenbereich",
+]
 LOWER = ["warmeleitfahigkeit", "λ", "steifigkeit", "nassabriebklasse"]
+_HIGHER, _LOWER = [fold(k) for k in HIGHER], [fold(k) for k in LOWER]  # compared on folded text
 CODE = re.compile(r"(?:c(\d{2})/\d{2}|rei\s?(\d{2,3})|ei\s?(\d{2,3})|f\s?(\d{2,3})|t(\d{2})|r(\d{1,2})\b|w(\d)(?:\.\d)?-|q(\d)|(?<![a-z])([ivx]+)$)")
 
 
+# classes are kept as one token ("c30/37", "rei 90") so a changed class is compared as a class
+TOK = re.compile(
+    r"c\d{2}/\d{2}|rei\s?\d{2,3}|ei\s?\d{2,3}|f\s?\d{2,3}(?:-a)?\b|t\d{2}\b|r\d{1,2}\b|w\d(?:\.\d)?-[ie]\b|q\d\b|[a-zäöüß]+|\d+(?:[.,]\d+)?(?:/\d+)?|[λα]"
+)
+
+
 def _toks(s: str) -> list[str]:
-    return re.findall(r"[a-zäöüß]+|\d+(?:[.,]\d+)?(?:/\d+)?|[λα]", fold(s))
+    return TOK.findall(fold(s))
+
+
+def _nearest(ctx: str, words: list[str]) -> int:
+    """Position of the last of these keywords in the context (-1 if none)."""
+    return max((ctx.rfind(k) for k in words), default=-1)
 
 
 def _level(tok: str) -> float | None:
@@ -97,9 +147,11 @@ def compare_spec(boq_long: str, bid_long: str) -> list[dict[str, Any]]:
         lv_was, lv_now = _level(was) if was else None, _level(now) if now else None
         direction = "changed"
         if lv_was is not None and lv_now is not None and lv_was != lv_now:
-            hib = any(k in ctx for k in HIGHER) or bool(CODE.search(was))
-            lob = any(k in ctx for k in LOWER)
-            if lob and not hib:
+            # the keyword nearest the changed value says which way is better
+            h, lo = _nearest(ctx, _HIGHER), _nearest(ctx, _LOWER)
+            hib = h > lo or (h == lo == -1 and bool(CODE.search(was)))
+            lob = lo > h
+            if lob:
                 direction = "worse" if lv_now > lv_was else "better"
             elif hib:
                 direction = "worse" if lv_now < lv_was else "better"
@@ -140,7 +192,18 @@ def detect_bid(bid: BidDoc, res: Resolution, versions: list[TenderDoc]) -> list[
         ln = bid.lines[m.line]
         conf = base * (ln.confidence if bid.route == "ocr" else 1.0) * (m.p if m.oz else max(m.p, 0.5))
         if m.oz is None:
-            out.append(_make(bid, "extra_position", None, f"Added position not in the BoQ: “{ln.short}”.", [ln.evidence], conf, found=ln.short, detail={"key": ln.idx, "line": ln.idx}))
+            out.append(
+                _make(
+                    bid,
+                    "extra_position",
+                    None,
+                    f"Added position not in the BoQ: “{ln.short}”.",
+                    [ln.evidence],
+                    conf,
+                    found=ln.short,
+                    detail={"key": ln.idx, "line": ln.idx},
+                )
+            )
             continue
         p = pos[m.oz]
         evs = [ln.evidence, p.evidence]
@@ -150,14 +213,32 @@ def detect_bid(bid: BidDoc, res: Resolution, versions: list[TenderDoc]) -> list[
         elif ln.ep is None and ln.gp is None:
             out.append(_make(bid, "missing_price", m.oz, f"No price for {m.oz} “{p.short}”.", evs, conf, detail=dk))
         if ln.qty is not None and p.qty and abs(ln.qty - p.qty) > R["quantity"]["rel_tolerance"] * p.qty:
-            out.append(_make(bid, "qty_changed", m.oz, f"Quantity for {m.oz} changed from {p.qty:g} to {ln.qty:g}.", evs, conf, expected=p.qty, found=ln.qty, detail=dk))
+            out.append(
+                _make(
+                    bid, "qty_changed", m.oz, f"Quantity for {m.oz} changed from {p.qty:g} to {ln.qty:g}.", evs, conf, expected=p.qty, found=ln.qty, detail=dk
+                )
+            )
         if ln.unit and unit(ln.unit) != unit(p.unit):
-            out.append(_make(bid, "unit_changed", m.oz, f"Unit for {m.oz} changed from {p.unit} to {ln.unit}.", evs, conf, expected=p.unit, found=ln.unit, detail=dk))
+            out.append(
+                _make(bid, "unit_changed", m.oz, f"Unit for {m.oz} changed from {p.unit} to {ln.unit}.", evs, conf, expected=p.unit, found=ln.unit, detail=dk)
+            )
         if ln.ep is not None and ln.gp is not None and ln.qty is not None and not ln.included:
             calc = round(ln.ep * ln.qty, 2)
             tol = max(R["arithmetic"]["abs_tolerance_eur"], R["arithmetic"]["rel_tolerance"] * abs(calc))
             if abs(calc - ln.gp) > tol:
-                out.append(_make(bid, "arithmetic_error", m.oz, f"{m.oz}: {ln.ep:.2f} × {ln.qty:g} = {calc:,.2f}, but the total says {ln.gp:,.2f}; the unit price prevails.", evs, conf, expected=calc, found=ln.gp, detail=dk))
+                out.append(
+                    _make(
+                        bid,
+                        "arithmetic_error",
+                        m.oz,
+                        f"{m.oz}: {ln.ep:.2f} × {ln.qty:g} = {calc:,.2f}, but the total says {ln.gp:,.2f}; the unit price prevails.",
+                        evs,
+                        conf,
+                        expected=calc,
+                        found=ln.gp,
+                        detail=dk,
+                    )
+                )
         if ln.long and p.long:
             diffs = compare_spec(p.long, ln.long)
             if bid.route == "ocr":  # OCR changes words; only number and class changes count
@@ -182,7 +263,19 @@ def detect_bid(bid: BidDoc, res: Resolution, versions: list[TenderDoc]) -> list[
         if mt and ln.product:
             ref = mt.group(1).strip().rstrip(",")
             if _sim(ref, ln.product) < 0.8 and fold(ref) not in fold(ln.product):
-                out.append(_make(bid, "product_alternative", m.oz, f"{m.oz}: offers “{ln.product}” instead of the reference product “{ref}”.", evs, conf, expected=ref, found=ln.product, detail=dk))
+                out.append(
+                    _make(
+                        bid,
+                        "product_alternative",
+                        m.oz,
+                        f"{m.oz}: offers “{ln.product}” instead of the reference product “{ref}”.",
+                        evs,
+                        conf,
+                        expected=ref,
+                        found=ln.product,
+                        detail=dk,
+                    )
+                )
     for oz in res.unmatched_positions:
         p = pos[oz]
         out.append(_make(bid, "missing_position", oz, f"{oz} “{p.short}” is not in the bid.", [p.evidence], base * 0.95, detail={"key": oz}))
@@ -198,7 +291,18 @@ def reservations(bid: BidDoc) -> list[Finding]:
         t = fold(s.text)
         hits = [k for k, ps in pats.items() if any(p.search(t) for p in ps)]
         if hits:
-            out.append(_make(bid, "reservation", None, f"Cover letter: “{s.text}”", [s.evidence], base, found=hits[0], detail={"key": i, "kinds": hits, "sentence": s.text}))
+            out.append(
+                _make(
+                    bid,
+                    "reservation",
+                    None,
+                    f"Cover letter: “{s.text}”",
+                    [s.evidence],
+                    base,
+                    found=hits[0],
+                    detail={"key": i, "kinds": hits, "sentence": s.text},
+                )
+            )
     return out
 
 

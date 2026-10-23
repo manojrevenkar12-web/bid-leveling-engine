@@ -14,7 +14,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
-from ble.ingest.model import BidDoc, TenderDoc
+from ble.ingest.model import BidDoc, BidLine, TenderDoc
 from ble.resolve.match import Resolution
 
 
@@ -47,7 +47,7 @@ def level(versions: list[TenderDoc], bids: list[BidDoc], resolutions: list[Resol
     for f in findings:
         flags.setdefault((f.bid_id, f.oz), []).append(f.type)
     eps: dict[str, dict[str, float]] = {}
-    lines: dict[str, dict[str, Any]] = {}
+    lines: dict[str, dict[str, BidLine]] = {}
     for bid, res in zip(bids, resolutions, strict=True):
         for m in res.matches:
             if m.oz:
@@ -60,10 +60,10 @@ def level(versions: list[TenderDoc], bids: list[BidDoc], resolutions: list[Resol
     for p in cur.positions:
         row: dict[str, Cell] = {}
         for b in bids:
-            ln = lines.get(p.oz, {}).get(b.bid_id)
-            ep = None if ln is None or ln.included else ln.ep
+            cl: BidLine | None = lines.get(p.oz, {}).get(b.bid_id)
+            ep = None if cl is None or cl.included else cl.ep
             filled = False
-            if ln is not None and ln.included:
+            if cl is not None and cl.included:
                 ep_cmp = 0.0
             elif ep is None:
                 others = [v for k, v in eps.get(p.oz, {}).items() if k != b.bid_id]
@@ -74,9 +74,9 @@ def level(versions: list[TenderDoc], bids: list[BidDoc], resolutions: list[Resol
             gp_cmp = round(ep_cmp * (p.qty or 0.0), 2)
             totals[b.bid_id]["comparable"] += gp_cmp
             totals[b.bid_id]["filled"] += int(filled)
-            row[b.bid_id] = Cell(ep, ln.gp if ln is not None else None, gp_cmp, filled, sorted(set(flags.get((b.bid_id, p.oz), []))))
+            row[b.bid_id] = Cell(ep, cl.gp if cl is not None else None, gp_cmp, filled, sorted(set(flags.get((b.bid_id, p.oz), []))))
         cells[p.oz] = row
-    bidders = []
+    bidders: list[dict[str, Any]] = []
     for b, res in zip(bids, resolutions, strict=True):
         stated = b.stated_total if b.stated_total is not None else round(sum(ln.gp or 0.0 for ln in b.lines), 2)
         extras = sum(b.lines[m.line].gp or 0.0 for m in res.matches if m.oz is None)

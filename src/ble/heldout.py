@@ -53,13 +53,39 @@ def render_set(version: str) -> list[str]:
             for x in s["lines"]:
                 oz = x.get("prices_oz")
                 trade = str(oz)[:2] if oz else trade  # an added line is printed under the title before it
-                lines.append(BidLine(str(x.get("shown_no") or ""), oz, trade, str(x["short"]), x.get("long"), str(x["unit"]), float(x["qty"]), x.get("ep"), x.get("gp"), bool(x.get("included", False)), x.get("product")))
+                lines.append(
+                    BidLine(
+                        str(x.get("shown_no") or ""),
+                        oz,
+                        trade,
+                        str(x["short"]),
+                        x.get("long"),
+                        str(x["unit"]),
+                        float(x["qty"]),
+                        x.get("ep"),
+                        x.get("gp"),
+                        bool(x.get("included", False)),
+                        x.get("product"),
+                    )
+                )
             for ln in lines:
                 if ln.included:
                     ln.ep, ln.gp = 0.0, 0.0
             layout = {"include_long_text": bool(s.get("include_long_text")) or fmt == "gaeb"}
             devs = [Deviation(d["type"], d.get("oz"), str(d.get("detail", ""))) for d in s.get("deviations", [])]
-            bid = Bid(bid_id, tid, s["company"], "heldout", fmt, v, layout, lines, [d.__dict__ for d in devs if d.type == "reservation"], [str(x) for x in s.get("letter", [])], devs)
+            bid = Bid(
+                bid_id,
+                tid,
+                s["company"],
+                "heldout",
+                fmt,
+                v,
+                layout,
+                lines,
+                [d.__dict__ for d in devs if d.type == "reservation"],
+                [str(x) for x in s.get("letter", [])],
+                devs,
+            )
             d = out / "bids" / bid_id
             date = "2026-09-28"
             if fmt == "gaeb":
@@ -104,7 +130,7 @@ def search_eval(version: str, tids: list[str]) -> dict[str, Any]:
 
 def run_heldout(version: str | None = None) -> dict[str, Any]:
     from ble.evals.score import Score, score_tender
-    from ble.pipeline import export
+    from ble.runs import export
     from ble.workflows import level_tender
 
     vs = sorted(p.name for p in (ROOT / "heldout").iterdir() if p.is_dir() and (p / "bids").exists())
@@ -117,16 +143,23 @@ def run_heldout(version: str | None = None) -> dict[str, Any]:
         export(r, REPORTS / "heldout" / v / "runs")
         score_tender(r, s)
         per_tender[tid] = {"bids": len(r.bids), "findings": len(r.findings), "ranking": r.sheet.ranking}
-    res = {"set": v, "ran_at": time.strftime("%Y-%m-%d %H:%M:%S"), "score": s.as_dict(), "tenders": per_tender, "search": search_eval(v, tids)}
-    d = REPORTS / "heldout" / v
+    res: dict[str, Any] = {"set": v, "ran_at": time.strftime("%Y-%m-%d %H:%M:%S"), "score": s.as_dict(), "tenders": per_tender, "search": search_eval(v, tids)}
+    target = write_result(REPORTS / "heldout" / v, res)
+    print(
+        f"[ble] held-out {v}: precision {res['score']['total']['precision']}, recall {res['score']['total']['recall']} -> {target.relative_to(REPORTS.parent)}"
+    )
+    return res
+
+
+def write_result(d: Path, res: dict[str, Any]) -> Path:
+    """The first run of a set is kept as it was; every later run goes to latest.json."""
     d.mkdir(parents=True, exist_ok=True)
     first = d / "first_run.json"
     target = first if not first.exists() else d / "latest.json"
     target.write_text(json.dumps(res, indent=1, ensure_ascii=False, default=str), encoding="utf-8")
     if target == first:
         (d / "FIRST_RUN.md").write_text(markdown(res), encoding="utf-8")
-    print(f"[ble] held-out {v}: precision {res['score']['total']['precision']}, recall {res['score']['total']['recall']} -> {target.relative_to(REPORTS.parent)}")
-    return res
+    return target
 
 
 def markdown(res: dict[str, Any]) -> str:
@@ -156,7 +189,9 @@ def markdown(res: dict[str, Any]) -> str:
     sv = s["versions"]
     L += ["", f"BoQ version identified: {sv.get('correct', 0)} of {sv.get('correct', 0) + sv.get('wrong', 0)} bids.", ""]
     se = res["search"]
-    L += ["| Search | Queries | Hit@1 | Hit@3 |", "|---|---|---|---|"] + [f"| {k} | {v['queries']} | {pct(v['hit@1'])} | {pct(v['hit@3'])} |" for k, v in se.items()]
+    L += ["| Search | Queries | Hit@1 | Hit@3 |", "|---|---|---|---|"] + [
+        f"| {k} | {v['queries']} | {pct(v['hit@1'])} | {pct(v['hit@3'])} |" for k, v in se.items()
+    ]
     if s["misses"]:
         L += ["", "## Missed", ""] + [f"- {x['bid']} ({x['route']}): {x['type']} {x['oz'] or ''} – {x['detail']}" for x in s["misses"]]
     if s["false_alarms"]:

@@ -4,8 +4,8 @@ spreadsheets, and scans of printed, signed bids."""
 from __future__ import annotations
 
 import io
-import time
 import re
+import time
 import zipfile
 from datetime import datetime
 from pathlib import Path

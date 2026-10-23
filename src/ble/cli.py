@@ -1,14 +1,14 @@
 """ble: the command line.
 
-  ble world [--split dev|test|all]   generate tenders and bids (and the answer key in truth/)
-  ble level <tender-dir> [--out DIR]  run the bid leveling workflow on one tender folder
-  ble train                           fit the position matcher on the dev tenders
-  ble eval [--split test]             score a split against the answer key
-  ble heldout [--version v1]          first run of a blind held-out set (kept as written)
-  ble run [--quick] [--skip-world]    everything, then the report and the gate
-  ble report | ble gate
-  ble publish <run.json> --api URL    send a tender run to the platform API
-  ble serve [--port 8001]             the AI service (search, chat, workflow runs)
+ble world [--split dev|test|all]   generate tenders and bids (and the answer key in truth/)
+ble level <tender-dir> [--out DIR]  run the bid leveling workflow on one tender folder
+ble train                           fit the position matcher on the dev tenders
+ble eval [--split test]             score a split against the answer key
+ble heldout [--version v1]          first run of a blind held-out set (kept as written)
+ble run [--quick] [--skip-world]    everything, then the report and the gate
+ble report | ble gate
+ble publish <run.json> --api URL    send a tender run to the platform API
+ble serve [--port 8001]             the AI service (search, chat, workflow runs)
 """
 
 from __future__ import annotations
@@ -53,7 +53,7 @@ def main(argv: list[str] | None = None) -> int:
             print(t["tender"], t["versions"], t["positions"], "positions,", len(t["bids"]), "bids")
     elif a.cmd == "level":
         from ble.config import DATA, REPORTS
-        from ble.pipeline import export
+        from ble.runs import export
         from ble.workflows import level_tender
 
         tdir = Path(a.tender) if Path(a.tender).is_dir() else DATA / "tenders" / a.tender
@@ -88,9 +88,9 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "run":
         from ble.pipeline import run
 
-        res = run(a.quick, a.skip_world)
-        _gate(res)
-        return 0 if res["passed"] else 1
+        out = run(a.quick, a.skip_world)
+        _gate(out)
+        return 0 if out["passed"] else 1
     elif a.cmd == "report":
         from ble.report import write_report
 
@@ -98,9 +98,9 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "gate":
         from ble.gate import gate
 
-        res = gate()
-        _gate(res)
-        return 0 if res["passed"] else 1
+        g = gate()
+        _gate(g)
+        return 0 if g["passed"] else 1
     elif a.cmd == "publish":
         from ble.service.client import publish
 

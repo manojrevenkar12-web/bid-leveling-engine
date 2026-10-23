@@ -1,0 +1,303 @@
+company: Nordberliner Baugesellschaft mbH
+format: gaeb
+priced_version: v2
+include_long_text: false
+letter:
+- Beigefügt erhalten Sie unser Angebot im Format GAEB DA XML.
+- Der 1. Nachtrag vom 15.09.2026 ist vollständig eingearbeitet.
+- Eine Vertragsstrafe erkennen wir nur bis zu einer Gesamthöhe von 3 % der Abrechnungssumme an.
+- Für ein Bietergespräch stehen wir Ihnen gern zur Verfügung.
+lines:
+- shown_no: '03.0010'
+  prices_oz: '03.0010'
+  short: Sauberkeitsschicht aus Beton C8/10
+  long: Sauberkeitsschicht aus unbewehrtem Beton C8/10, Dicke 5 cm, herstellen.
+  qty: 288
+  unit: m2
+  ep: null
+  gp: null
+  included: true
+  product: null
+- shown_no: '03.0020'
+  prices_oz: '03.0020'
+  short: Bodenplatte aus Stahlbeton herstellen
+  long: Bodenplatte aus Stahlbeton, Festigkeitsklasse C30/37, Expositionsklasse XC2, Dicke 30 cm, herstellen, einschließlich Abschalung.
+  qty: 476.1
+  unit: m3
+  ep: 221.9
+  gp: 105646.59
+  included: false
+  product: null
+- shown_no: '03.0030'
+  prices_oz: '03.0030'
+  short: Stahlbetonwand außen herstellen
+  long: Außenwand aus Stahlbeton, Festigkeitsklasse C30/37, Dicke 25 cm, einschließlich zweiseitiger Schalung, glatt.
+  qty: 1782
+  unit: m2
+  ep: 151.9
+  gp: 270685.8
+  included: false
+  product: null
+- shown_no: '03.0040'
+  prices_oz: '03.0040'
+  short: Stahlbetonwand innen herstellen
+  long: Innenwand aus Stahlbeton, Festigkeitsklasse C25/30, Dicke 20 cm, Sichtbetonklasse SB2.
+  qty: 1024
+  unit: m2
+  ep: 134.5
+  gp: 137728.0
+  included: false
+  product: null
+- shown_no: '03.0050'
+  prices_oz: '03.0050'
+  short: Stahlbetondecke als Ortbetondecke herstellen
+  long: Stahlbetondecke als Ortbetondecke, Festigkeitsklasse C30/37, Dicke 24 cm, Feuerwiderstandsklasse REI 90, einschließlich Schalung.
+  qty: 2164
+  unit: m2
+  ep: 129.7
+  gp: 280670.8
+  included: false
+  product: null
+- shown_no: '03.0060'
+  prices_oz: '03.0060'
+  short: Stahlbetonstütze rechteckig herstellen
+  long: Stahlbetonstütze, Querschnitt 30/30 cm, Festigkeitsklasse C35/45, einschließlich Schalung.
+  qty: 123
+  unit: m
+  ep: 118.5
+  gp: 14575.5
+  included: false
+  product: null
+- shown_no: '03.0070'
+  prices_oz: '03.0070'
+  short: Betonstahl B500B liefern und verlegen
+  long: Betonstahl B500B als Stabstahl und Matten liefern, schneiden, biegen und verlegen.
+  qty: 143.9
+  unit: t
+  ep: 1668.0
+  gp: 240025.2
+  included: false
+  product: null
+- shown_no: '03.0080'
+  prices_oz: '03.0080'
+  short: Fertigteiltreppe einbauen
+  long: Treppenlauf als Stahlbeton-Fertigteil, gerade, liefern und einbauen, Trittschalldämmung mit Elastomerlager, Schallschutz 30 dB.
+  qty: 9
+  unit: St
+  ep: 4068.0
+  gp: 36612.0
+  included: false
+  product: null
+- shown_no: '03.0090'
+  prices_oz: '03.0090'
+  short: Fugenband in Arbeitsfugen einbauen
+  long: Innenliegendes Fugenband in Arbeitsfugen der wasserundurchlässigen Konstruktion liefern und einbauen, Leitfabrikat Sika Waterbar oder gleichwertig.
+  qty: 115
+  unit: m
+  ep: 33.1
+  gp: 3806.5
+  included: false
+  product: Sika Waterbar
+- shown_no: '05.0010'
+  prices_oz: '05.0010'
+  short: Gipskarton-Ständerwand, doppelt beplankt
+  long: Nichttragende Trennwand als Metallständerwand, Profil CW 75, doppelt beplankt mit Gipsplatten GKB 12,5 mm, Mineralwolle 80 mm, Schalldämmmaß Rw = 52 dB.
+  qty: 887
+  unit: m2
+  ep: 60.0
+  gp: 53220.0
+  included: false
+  product: null
+- shown_no: '05.0020'
+  prices_oz: '05.0020'
+  short: Brandschutz-Ständerwand herstellen
+  long: Trennwand mit Feuerwiderstandsklasse EI 60 als Metallständerwand, beidseitig doppelt beplankt mit Feuerschutzplatten GKF, Leitfabrikat Knauf W112 oder gleichwertig.
+  qty: 289
+  unit: m2
+  ep: 74.0
+  gp: 21386.0
+  included: false
+  product: Knauf W112
+- shown_no: '05.0040'
+  prices_oz: '05.0040'
+  short: Akustikdecke aus Lochplatten herstellen
+  long: Akustik-Unterdecke aus gelochten Gipsplatten, Schallabsorptionsgrad αw = 0,60, Leitfabrikat Knauf Cleaneo oder gleichwertig.
+  qty: 415
+  unit: m2
+  ep: 80.2
+  gp: 33283.0
+  included: false
+  product: Knauf Cleaneo
+- shown_no: '05.0060'
+  prices_oz: '05.0060'
+  short: Revisionsöffnung in Decke einbauen
+  long: Revisionsklappe 600 x 600 mm in Gipskartondecke einbauen, Leitfabrikat Knauf Revo oder gleichwertig.
+  qty: 71
+  unit: St
+  ep: 135.4
+  gp: 9613.4
+  included: false
+  product: Knauf Revo
+- shown_no: '06.0010'
+  prices_oz: '06.0010'
+  short: Zementestrich auf Dämmschicht herstellen
+  long: Schwimmender Zementestrich CT-C25-F4, Nenndicke 55 mm, auf Trittschalldämmung, einschließlich Randdämmstreifen.
+  qty: 1972
+  unit: m2
+  ep: 22.8
+  gp: 44961.6
+  included: false
+  product: null
+- shown_no: '06.0020'
+  prices_oz: '06.0020'
+  short: Heizestrich für Fußbodenheizung herstellen
+  long: Heizestrich CT-C30-F5 auf Fußbodenheizung, Rohrüberdeckung 45 mm, einschließlich Belegreifheizen nach Protokoll.
+  qty: 1687
+  unit: m2
+  ep: 27.4
+  gp: 46223.8
+  included: false
+  product: null
+- shown_no: '06.0030'
+  prices_oz: '06.0030'
+  short: Trittschalldämmung unter Estrich verlegen
+  long: Trittschalldämmung aus Mineralwolle, Dicke 30 mm, dynamische Steifigkeit s' ≤ 10 MN/m³, verlegen.
+  qty: 1865
+  unit: m2
+  ep: 7.45
+  gp: 13894.25
+  included: false
+  product: null
+- shown_no: '06.0040'
+  prices_oz: '06.0040'
+  short: Gefälleestrich in Nassräumen herstellen
+  long: Gefälleestrich in Nassbereichen, Gefälle 2 %, im Verbund herstellen.
+  qty: 271
+  unit: m2
+  ep: 39.6
+  gp: 10731.6
+  included: false
+  product: null
+- shown_no: '06.0050'
+  prices_oz: '06.0050'
+  short: Randdämmstreifen setzen
+  long: Randdämmstreifen aus PE-Schaum, Höhe 100 mm, an aufgehenden Bauteilen setzen.
+  qty: 1087
+  unit: m
+  ep: 1.9
+  gp: 2065.3
+  included: false
+  product: null
+- shown_no: '08.0010'
+  prices_oz: '08.0010'
+  short: Dispersionsanstrich auf Wänden
+  long: Innenwände mit Dispersionsfarbe, Nassabriebklasse 2, Deckvermögen Klasse 1, zweimal streichen.
+  qty: 3824
+  unit: m2
+  ep: 6.95
+  gp: 26576.8
+  included: false
+  product: null
+- shown_no: '08.0020'
+  prices_oz: '08.0020'
+  short: Wandflächen spachteln Q3
+  long: Gipskartonflächen in Oberflächenqualität Q3 spachteln und schleifen.
+  qty: 2183
+  unit: m2
+  ep: 9.9
+  gp: 21611.7
+  included: false
+  product: null
+- shown_no: '08.0030'
+  prices_oz: '08.0030'
+  short: Deckenflächen streichen
+  long: Deckenflächen mit Dispersionsfarbe, Nassabriebklasse 2, zweimal streichen.
+  qty: 677
+  unit: m2
+  ep: 7.7
+  gp: 5212.9
+  included: false
+  product: null
+- shown_no: '08.0040'
+  prices_oz: '08.0040'
+  short: Stahlzargen lackieren
+  long: Stahlzargen schleifen, grundieren und zweimal mit Kunstharzlack lackieren.
+  qty: 63
+  unit: St
+  ep: 48.0
+  gp: 3024.0
+  included: false
+  product: null
+- shown_no: '08.0050'
+  prices_oz: '08.0050'
+  short: Bodenbeschichtung Epoxidharz
+  long: Bodenbeschichtung aus Epoxidharz, Schichtdicke 2,0 mm, rutschhemmend R10, auf Betonboden.
+  qty: 109
+  unit: m2
+  ep: 54.6
+  gp: 5951.4
+  included: false
+  product: null
+- shown_no: '10.0010'
+  prices_oz: '10.0010'
+  short: Innentür mit Stahlzarge liefern und montieren
+  long: Innentür, Röhrenspanplatte, Oberfläche CPL, Klimaklasse III, mit Stahlumfassungszarge, Leitfabrikat Hörmann ZK oder gleichwertig.
+  qty: 75
+  unit: St
+  ep: 740.2
+  gp: 55515.0
+  included: false
+  product: Hörmann ZK
+- shown_no: '10.0020'
+  prices_oz: '10.0020'
+  short: Brandschutztür T30 liefern und montieren
+  long: Feuerhemmende Tür T90-1-RS, einflügelig, selbstschließend, mit Zulassung, liefern und montieren.
+  qty: 4
+  unit: St
+  ep: 1950.0
+  gp: 7800.0
+  included: false
+  product: null
+- shown_no: '10.0030'
+  prices_oz: '10.0030'
+  short: Innenfensterbank aus Holzwerkstoff
+  long: Innenfensterbank aus Holzwerkstoff, Dicke 25 mm, Tiefe bis 30 cm, liefern und einbauen.
+  qty: 204
+  unit: m
+  ep: 55.8
+  gp: 11383.2
+  included: false
+  product: null
+- shown_no: '10.0040'
+  prices_oz: '10.0040'
+  short: Einbauschrank nach Zeichnung herstellen
+  long: Einbauschrank nach Zeichnung des Architekten, Korpus melaminharzbeschichtet, Fronten HPL, herstellen und montieren.
+  qty: 23
+  unit: St
+  ep: 2277.0
+  gp: 50094.0
+  included: false
+  product: null
+- shown_no: '10.0050'
+  prices_oz: '10.0050'
+  short: Sockelleisten aus Holz montieren
+  long: Sockelleisten aus Massivholz, Höhe 60 mm, lackiert, montieren.
+  qty: 411
+  unit: m
+  ep: 11.35
+  gp: 4664.85
+  included: false
+  product: null
+deviations:
+- type: missing_position
+  oz: '05.0050'
+  detail: Installationsvorsatzschale fehlt
+- type: included_price
+  oz: '03.0010'
+  detail: als enthalten angegeben
+- type: arithmetic_error
+  oz: '10.0040'
+  detail: GP mit 22 statt 23 St gerechnet
+- type: reservation
+  oz: null
+  detail: 'liability: Vertragsstrafe auf 3 % der Abrechnungssumme begrenzt'

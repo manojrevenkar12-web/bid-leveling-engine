@@ -2,33 +2,33 @@
  "gaeb": {
   "bids": 31,
   "pages": 62,
-  "seconds": 0.65,
+  "seconds": 0.69,
   "cost_eur": 0.0065,
-  "pages_per_minute": 5688.1,
+  "pages_per_minute": 5360.2,
   "eur_per_page": 0.00011
  },
  "xlsx": {
   "bids": 18,
   "pages": 36,
-  "seconds": 0.8,
+  "seconds": 0.66,
   "cost_eur": 0.0045,
-  "pages_per_minute": 2693.3,
+  "pages_per_minute": 3262.8,
   "eur_per_page": 0.00013
  },
  "pdf_text": {
   "bids": 35,
   "pages": 87,
-  "seconds": 4.06,
+  "seconds": 4.37,
   "cost_eur": 0.0174,
-  "pages_per_minute": 1285.4,
+  "pages_per_minute": 1195.6,
   "eur_per_page": 0.0002
  },
  "ocr": {
   "bids": 22,
   "pages": 54,
-  "seconds": 92.63,
+  "seconds": 0.26,
   "cost_eur": 0.108,
-  "pages_per_minute": 35.0,
+  "pages_per_minute": 12607.0,
   "eur_per_page": 0.002
  }
 }

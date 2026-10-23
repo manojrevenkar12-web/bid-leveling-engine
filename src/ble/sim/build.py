@@ -30,7 +30,12 @@ def build_tender(tid: str, data: Path = DATA, truth: Path = TRUTH) -> dict[str, 
     tdir, ttruth = data / "tenders" / tid, truth / "tenders" / tid
     for b in boqs:
         render.write_bytes(tdir / "tender" / f"LV_{b.version}.x83", render.boq_gaeb(b, DATES[b.version]))
-        render.write_bytes(ttruth / f"boq_{b.version}.json", json.dumps({"tender_id": tid, "project": b.project, "version": b.version, "positions": [asdict(p) for p in b.positions]}, ensure_ascii=False, indent=1))
+        render.write_bytes(
+            ttruth / f"boq_{b.version}.json",
+            json.dumps(
+                {"tender_id": tid, "project": b.project, "version": b.version, "positions": [asdict(p) for p in b.positions]}, ensure_ascii=False, indent=1
+            ),
+        )
     bids = make_bids(boqs, rng)
     by_v = {b.version: b for b in boqs}
     for bid in bids:

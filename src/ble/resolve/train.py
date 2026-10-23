@@ -38,5 +38,9 @@ def pairs(tids: list[str]) -> tuple[np.ndarray, np.ndarray]:
 def train(tids: list[str]) -> tuple[Matcher, dict[str, Any]]:
     X, y = pairs(tids)
     lr = LogisticRegression(C=1.0, max_iter=2000, class_weight={0: 1.0, 1: 3.0}).fit(X, y)
-    m = Matcher([round(float(c), 4) for c in lr.coef_[0]], round(float(lr.intercept_[0]), 4), {"source": "trained", "tenders": tids, "pairs": len(y), "positives": int(y.sum())})
+    m = Matcher(
+        [round(float(c), 4) for c in lr.coef_[0]],
+        round(float(lr.intercept_[0]), 4),
+        {"source": "trained", "tenders": tids, "pairs": len(y), "positives": int(y.sum())},
+    )
     return m, {"features": dict(zip(FEATURES, m.coef, strict=True)), "pairs": len(y), "positives": int(y.sum())}

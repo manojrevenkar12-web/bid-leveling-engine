@@ -1,0 +1,312 @@
+company: Kowalski Innenausbau & Hochbau GmbH
+format: xlsx
+priced_version: v2
+include_long_text: false
+letter:
+- Anbei erhalten Sie das bepreiste Leistungsverzeichnis einschließlich 1. Nachtrag als Excel-Tabelle.
+- Bei Fragen zur Kalkulation wenden Sie sich bitte an Frau Kowalski.
+- Über einen Auftrag würden wir uns sehr freuen.
+lines:
+- shown_no: '3.10'
+  prices_oz: '03.0010'
+  short: SKS C8/10 5cm
+  long: null
+  qty: 288
+  unit: m²
+  ep: 15.5
+  gp: 4464.0
+  included: false
+  product: null
+- shown_no: '3.20'
+  prices_oz: '03.0020'
+  short: BP C30/37 XC2 30cm
+  long: null
+  qty: 476.1
+  unit: m³
+  ep: 212.3
+  gp: 101076.03
+  included: false
+  product: null
+- shown_no: '3.30'
+  prices_oz: '03.0030'
+  short: AW STB 25cm glatt
+  long: null
+  qty: 1782
+  unit: m²
+  ep: 150.1
+  gp: 267478.2
+  included: false
+  product: null
+- shown_no: '3.40'
+  prices_oz: '03.0040'
+  short: IW STB 20cm SB2
+  long: null
+  qty: 1024
+  unit: m²
+  ep: 146.4
+  gp: 149913.6
+  included: false
+  product: null
+- shown_no: '3.50'
+  prices_oz: '03.0050'
+  short: DE STB 24cm REI90
+  long: null
+  qty: 2164
+  unit: m²
+  ep: 133.3
+  gp: 288461.2
+  included: false
+  product: null
+- shown_no: '3.60'
+  prices_oz: '03.0060'
+  short: STÜ 30x30 C35/45
+  long: null
+  qty: 123
+  unit: St
+  ep: 126.3
+  gp: 15534.9
+  included: false
+  product: null
+- shown_no: '3.70'
+  prices_oz: '03.0070'
+  short: BEW B500B
+  long: null
+  qty: 143.9
+  unit: t
+  ep: 1825.0
+  gp: 262617.5
+  included: false
+  product: null
+- shown_no: '3.80'
+  prices_oz: '03.0080'
+  short: FT-Treppe
+  long: null
+  qty: 9
+  unit: Stk
+  ep: 4114.0
+  gp: 37026.0
+  included: false
+  product: null
+- shown_no: '3.90'
+  prices_oz: '03.0090'
+  short: Fugenband Arbeitsfuge WU
+  long: null
+  qty: 115
+  unit: m
+  ep: 32.3
+  gp: 3714.5
+  included: false
+  product: null
+- shown_no: '5.10'
+  prices_oz: '05.0010'
+  short: MSW CW75 2x GKB
+  long: null
+  qty: 887
+  unit: m²
+  ep: 66.0
+  gp: 57882.0
+  included: false
+  product: null
+- shown_no: '5.20'
+  prices_oz: '05.0020'
+  short: MSW EI60 GKF
+  long: null
+  qty: 289
+  unit: m²
+  ep: 83.1
+  gp: 24015.9
+  included: false
+  product: null
+- shown_no: '5.40'
+  prices_oz: '05.0040'
+  short: Akustik-UD gelocht
+  long: null
+  qty: 415
+  unit: m²
+  ep: 90.9
+  gp: 37723.5
+  included: false
+  product: null
+- shown_no: '5.50'
+  prices_oz: '05.0050'
+  short: VSS CW50 GKBI
+  long: null
+  qty: 174
+  unit: m²
+  ep: 51.7
+  gp: 8995.8
+  included: false
+  product: null
+- shown_no: '5.60'
+  prices_oz: '05.0060'
+  short: Revi-Klappe 60x60
+  long: null
+  qty: 71
+  unit: Stk
+  ep: 150.4
+  gp: 10678.4
+  included: false
+  product: null
+- shown_no: '6.10'
+  prices_oz: '06.0010'
+  short: ZE CT-C25-F4 55mm
+  long: null
+  qty: 1972
+  unit: m²
+  ep: 24.6
+  gp: 48511.2
+  included: false
+  product: null
+- shown_no: '6.20'
+  prices_oz: '06.0020'
+  short: HE CT-C30-F5
+  long: null
+  qty: 1687
+  unit: m²
+  ep: 28.9
+  gp: 48754.3
+  included: false
+  product: null
+- shown_no: '6.30'
+  prices_oz: '06.0030'
+  short: TSD MW 30mm
+  long: null
+  qty: 1865
+  unit: m²
+  ep: 8.05
+  gp: 15013.25
+  included: false
+  product: null
+- shown_no: '6.40'
+  prices_oz: '06.0040'
+  short: Gefälle-Estr. 2%
+  long: null
+  qty: 271
+  unit: m²
+  ep: 37.3
+  gp: 10108.3
+  included: false
+  product: null
+- shown_no: '6.50'
+  prices_oz: '06.0050'
+  short: RDS PE 100mm
+  long: null
+  qty: 1087
+  unit: m
+  ep: null
+  gp: null
+  included: true
+  product: null
+- shown_no: '8.10'
+  prices_oz: '08.0010'
+  short: Disp. Wand NAK2
+  long: null
+  qty: 3284
+  unit: m²
+  ep: 7.0
+  gp: 22988.0
+  included: false
+  product: null
+- shown_no: '8.20'
+  prices_oz: '08.0020'
+  short: Spachteln Q3
+  long: null
+  qty: 2183
+  unit: m²
+  ep: 9.25
+  gp: 20192.75
+  included: false
+  product: null
+- shown_no: '8.30'
+  prices_oz: '08.0030'
+  short: Disp. Decke
+  long: null
+  qty: 677
+  unit: m²
+  ep: 7.6
+  gp: 5145.2
+  included: false
+  product: null
+- shown_no: '8.40'
+  prices_oz: '08.0040'
+  short: Zargen lackieren
+  long: null
+  qty: 63
+  unit: Stk
+  ep: 49.8
+  gp: 3137.4
+  included: false
+  product: null
+- shown_no: '8.50'
+  prices_oz: '08.0050'
+  short: EP-Beschichtung R10
+  long: null
+  qty: 109
+  unit: m²
+  ep: 62.4
+  gp: 6801.6
+  included: false
+  product: null
+- shown_no: '10.10'
+  prices_oz: '10.0010'
+  short: Tür RSP CPL + Zarge
+  long: null
+  qty: 75
+  unit: Stk
+  ep: 703.8
+  gp: 52785.0
+  included: false
+  product: null
+- shown_no: '10.20'
+  prices_oz: '10.0020'
+  short: BS-Tür T30 1-flg.
+  long: null
+  qty: 4
+  unit: Stk
+  ep: 1992.0
+  gp: 7968.0
+  included: false
+  product: null
+- shown_no: '10.30'
+  prices_oz: '10.0030'
+  short: Fensterbank innen 25mm
+  long: null
+  qty: 204
+  unit: m
+  ep: 58.8
+  gp: 11995.2
+  included: false
+  product: null
+- shown_no: '10.40'
+  prices_oz: '10.0040'
+  short: Einbauschrank
+  long: null
+  qty: 23
+  unit: Stk
+  ep: 2495.0
+  gp: 57385.0
+  included: false
+  product: null
+- shown_no: '10.50'
+  prices_oz: '10.0050'
+  short: Sockel Massivholz
+  long: null
+  qty: 411
+  unit: m
+  ep: 10.85
+  gp: 4459.35
+  included: false
+  product: null
+deviations:
+- type: qty_changed
+  oz: '08.0010'
+  detail: 3824 -> 3284
+- type: unit_changed
+  oz: '03.0060'
+  detail: m -> St
+- type: included_price
+  oz: '06.0050'
+  detail: als enthalten angegeben
+- type: arithmetic_error
+  oz: '05.0010'
+  detail: GP mit 877 statt 887 m2 gerechnet

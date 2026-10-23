@@ -20,8 +20,8 @@ from openpyxl import load_workbook
 
 from ble import gaeb
 from ble.config import DATA, load
-from ble.ingest.repair import repair
 from ble.ingest.model import BidDoc, BidLine, Evidence, Sentence, TenderDoc, TenderPosition, de_num
+from ble.ingest.repair import repair
 from ble.ingest.table import Word, letter_sentences, lines_of, parse_table
 
 
@@ -132,7 +132,7 @@ def xlsx_lines(path: Path, did: str) -> tuple[list[BidLine], float | None, list[
             if found["text"] >= 0 and found["qty"] >= 0 and found["ep"] >= 0:
                 cols = {k: v for k, v in found.items() if v >= 0}
             continue
-        g = lambda k: vals[cols[k]] if k in cols and cols[k] < len(vals) else ""  # noqa: E731
+        g = lambda k, vals=vals, cols=cols: vals[cols[k]] if k in cols and cols[k] < len(vals) else ""  # noqa: E731
         text = str(g("text")).strip()
         no = str(g("no")).strip()
         ev = Evidence(did, row=r, text=" | ".join(str(v) for v in vals if v != ""))

@@ -1,0 +1,324 @@
+company: Hoch- und Tiefbau Lindemann GmbH
+format: pdf
+priced_version: v1
+include_long_text: false
+letter:
+- Bezugnehmend auf Ihre Ausschreibung vom 01.09.2026 unterbreiten wir Ihnen nachstehendes Angebot.
+- Die Positionsnummern stammen aus unserem Kalkulationsprogramm, die Reihenfolge entspricht Ihrem Leistungsverzeichnis.
+- Wegen der anhaltend schwankenden Stahlpreise verstehen sich die Preise für Betonstahl vorbehaltlich einer Anpassung an den Erzeugerpreisindex zum Lieferzeitpunkt.
+- Als Ansprechpartner steht Ihnen unser Oberbauleiter Herr Dietz zur Verfügung.
+- Wir würden uns freuen, das Projekt gemeinsam mit Ihnen umzusetzen.
+lines:
+- shown_no: '1.1'
+  prices_oz: '02.0010'
+  short: Oberboden abtr. u. seitl. lagern
+  long: null
+  qty: 1703
+  unit: m2
+  ep: 3.75
+  gp: 6386.25
+  included: false
+  product: null
+- shown_no: '1.2'
+  prices_oz: '02.0020'
+  short: Baugrube ausheben, laden, abfahren
+  long: null
+  qty: 2361.1
+  unit: m3
+  ep: 51.6
+  gp: 121832.76
+  included: false
+  product: null
+- shown_no: '1.3'
+  prices_oz: '02.0030'
+  short: Arbeitsraum verf. u. verdichten
+  long: null
+  qty: 540.5
+  unit: m3
+  ep: 34.1
+  gp: 18431.05
+  included: false
+  product: null
+- shown_no: '1.4'
+  prices_oz: '02.0040'
+  short: Schottertragschicht 0/32
+  long: null
+  qty: 119.8
+  unit: m3
+  ep: 49.8
+  gp: 5966.04
+  included: false
+  product: null
+- shown_no: '1.5'
+  prices_oz: '02.0050'
+  short: Wasserhaltung offen, Betrieb
+  long: null
+  qty: 393.3
+  unit: h
+  ep: 27.2
+  gp: 10697.76
+  included: false
+  product: null
+- shown_no: '1.6'
+  prices_oz: '02.0060'
+  short: Boden Z2 entsorgen
+  long: null
+  qty: 210.7
+  unit: t
+  ep: 95.0
+  gp: 20016.5
+  included: false
+  product: null
+- shown_no: '2.1'
+  prices_oz: '03.0010'
+  short: Sauberkeitsschicht C8/10
+  long: null
+  qty: 360
+  unit: m2
+  ep: 13.05
+  gp: 4698.0
+  included: false
+  product: null
+- shown_no: '2.2'
+  prices_oz: '03.0020'
+  short: Bodenplatte Stb.
+  long: null
+  qty: 270.7
+  unit: m3
+  ep: 187.3
+  gp: 50702.11
+  included: false
+  product: null
+- shown_no: '2.3'
+  prices_oz: '03.0030'
+  short: Stb.-Wand außen
+  long: null
+  qty: 719
+  unit: m2
+  ep: 129.7
+  gp: 93254.3
+  included: false
+  product: null
+- shown_no: '2.4'
+  prices_oz: '03.0040'
+  short: Stb.-Wand innen
+  long: null
+  qty: 623
+  unit: m2
+  ep: 121.4
+  gp: 75632.2
+  included: false
+  product: null
+- shown_no: '2.5'
+  prices_oz: '03.0050'
+  short: Stb.-Decke Ortbeton
+  long: null
+  qty: 1045
+  unit: m2
+  ep: 104.4
+  gp: 109098.0
+  included: false
+  product: null
+- shown_no: '2.6'
+  prices_oz: '03.0060'
+  short: Stb.-Stütze rechteckig
+  long: null
+  qty: 41
+  unit: m
+  ep: 105.1
+  gp: 4309.1
+  included: false
+  product: null
+- shown_no: '2.7'
+  prices_oz: '03.0070'
+  short: Betonstahl B500B liefern/verl.
+  long: null
+  qty: 185.9
+  unit: t
+  ep: 2602.0
+  gp: 483711.8
+  included: false
+  product: null
+- shown_no: '2.8'
+  prices_oz: '03.0080'
+  short: Fertigteiltreppe
+  long: null
+  qty: 3
+  unit: St
+  ep: 3182.0
+  gp: 9546.0
+  included: false
+  product: null
+- shown_no: '2.9'
+  prices_oz: '03.0090'
+  short: Fugenband Arbeitsfuge
+  long: null
+  qty: 365
+  unit: m
+  ep: 28.3
+  gp: 10329.5
+  included: false
+  product: null
+- shown_no: '3.1'
+  prices_oz: '04.0010'
+  short: KS-Innenwand
+  long: null
+  qty: 603
+  unit: m2
+  ep: 53.5
+  gp: 32620.5
+  included: false
+  product: null
+- shown_no: '3.2'
+  prices_oz: '04.0020'
+  short: Ziegel-MW außen, WD
+  long: null
+  qty: 706
+  unit: m2
+  ep: 101.9
+  gp: 71941.4
+  included: false
+  product: null
+- shown_no: '3.3'
+  prices_oz: '04.0030'
+  short: Fertigteilsturz
+  long: null
+  qty: 60
+  unit: St
+  ep: 58.9
+  gp: 3534.0
+  included: false
+  product: null
+- shown_no: '3.4'
+  prices_oz: '04.0040'
+  short: Schlitze im MW
+  long: null
+  qty: 280
+  unit: m
+  ep: 20.3
+  gp: 5684.0
+  included: false
+  product: null
+- shown_no: '3.5'
+  prices_oz: '04.0050'
+  short: Brandwand KS
+  long: null
+  qty: 285
+  unit: m2
+  ep: 73.9
+  gp: 21061.5
+  included: false
+  product: null
+- shown_no: '4.1'
+  prices_oz: '09.0010'
+  short: Bauwerksabdichtung Bitumen
+  long: null
+  qty: 935
+  unit: m2
+  ep: 45.3
+  gp: 42355.5
+  included: false
+  product: null
+- shown_no: '4.2'
+  prices_oz: '09.0020'
+  short: Perimeterdämmung XPS
+  long: null
+  qty: 864
+  unit: m2
+  ep: 44.1
+  gp: 38102.4
+  included: false
+  product: null
+- shown_no: '4.3'
+  prices_oz: '09.0030'
+  short: Flachdachabdichtung KSt-Bahn
+  long: null
+  qty: 1328
+  unit: m2
+  ep: 33.8
+  gp: 44886.4
+  included: false
+  product: null
+- shown_no: '4.4'
+  prices_oz: '09.0040'
+  short: Gefälledämmung Flachdach
+  long: null
+  qty: 656
+  unit: m2
+  ep: 41.7
+  gp: 27355.2
+  included: false
+  product: null
+- shown_no: '4.5'
+  prices_oz: '09.0050'
+  short: Hohlkehle u. Anschluss
+  long: null
+  qty: 227
+  unit: m
+  ep: 15.6
+  gp: 3541.2
+  included: false
+  product: null
+- shown_no: '5.1'
+  prices_oz: '10.0010'
+  short: Innentür m. Stahlzarge
+  long: null
+  qty: 118
+  unit: St
+  ep: 630.8
+  gp: 74434.4
+  included: false
+  product: null
+- shown_no: '5.2'
+  prices_oz: '10.0020'
+  short: Brandschutztür T30
+  long: null
+  qty: 25
+  unit: St
+  ep: 1590.0
+  gp: 39750.0
+  included: false
+  product: null
+- shown_no: '5.3'
+  prices_oz: '10.0030'
+  short: Innenfensterbank HWS
+  long: null
+  qty: 75
+  unit: m
+  ep: 46.6
+  gp: 3495.0
+  included: false
+  product: null
+- shown_no: '5.4'
+  prices_oz: '10.0040'
+  short: Einbauschrank n. Zeichnung
+  long: null
+  qty: 16
+  unit: St
+  ep: null
+  gp: null
+  included: false
+  product: null
+- shown_no: '5.5'
+  prices_oz: '10.0050'
+  short: Sockelleiste Holz
+  long: null
+  qty: 554
+  unit: m
+  ep: 10.05
+  gp: 5567.7
+  included: false
+  product: null
+deviations:
+- type: speculative_pricing
+  oz: null
+  detail: Aushub, Wasserhaltung, Z2-Entsorgung, Betonstahl und Schlitze ca. +55 %, übrige Positionen ca. -11 %
+- type: arithmetic_error
+  oz: '04.0010'
+  detail: GP ungleich EP x Menge (Zahlendreher)
+- type: missing_price
+  oz: '10.0040'
+  detail: EP und GP leer
+- type: reservation
+  oz: null
+  detail: 'escalation: Stahlpreisgleitung nach Erzeugerpreisindex'

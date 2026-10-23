@@ -222,7 +222,7 @@
    "route": "ocr",
    "type": "spec_change",
    "oz": "05.0030",
-   "message": "Long text of 05.0030 differs: “q 3” → “03”"
+   "message": "Long text of 05.0030 differs: “q3” → “03”"
   },
   {
    "bid": "T57-B1",

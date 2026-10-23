@@ -1,14 +1,14 @@
 {
  "features": {
-  "oz_exact": 4.2896,
-  "text_construction": 5.4817,
-  "text_plain": 3.5609,
-  "trigram": 3.3214,
-  "qty": 5.2533,
-  "qty_known": -4.4371,
-  "unit": 0.6289,
-  "trade": 0.7449,
-  "order": -1.0121
+  "oz_exact": 4.2899,
+  "text_construction": 5.4813,
+  "text_plain": 3.5612,
+  "trigram": 3.321,
+  "qty": 5.2539,
+  "qty_known": -4.4364,
+  "unit": 0.6284,
+  "trade": 0.7442,
+  "order": -1.0117
  },
  "pairs": 33015,
  "positives": 1394

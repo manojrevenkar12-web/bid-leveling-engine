@@ -1,0 +1,82 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -e ".[dev]"
+      - run: ruff check src tests && ruff format --check src tests
+      - run: mypy
+      - run: pytest -q -m "not slow"
+
+  platform:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_USER: ble, POSTGRES_PASSWORD: ble, POSTGRES_DB: ble_test }
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 3s --health-retries 20
+    defaults: { run: { working-directory: platform } }
+    env: { TEST_DATABASE_URL: "postgres://ble:ble@127.0.0.1:5432/ble_test" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: platform/package-lock.json }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  pipeline:
+    # the whole thing: simulate tenders, OCR the scans, fit the matcher, level, score, gate,
+    # re-run the held-out set, then the end-to-end check through the platform and the AI service
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_USER: ble, POSTGRES_PASSWORD: ble, POSTGRES_DB: ble }
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 3s --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: platform/package-lock.json }
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-deu
+      - run: pip install -e ".[dev]"
+      - name: ble run --quick (world, matcher, dev + test evaluation, gate)
+        run: ble run --quick
+      - run: pytest -q -m slow
+      - name: held-out set (first run is committed and must not change)
+        run: |
+          ble heldout --version v1
+          git diff --exit-code reports/heldout/v1/first_run.json reports/heldout/v1/FIRST_RUN.md
+      - name: end to end
+        env: { DATABASE_URL: "postgres://ble:ble@127.0.0.1:5432/ble" }
+        run: |
+          (cd platform && npm ci && npm run build)
+          scripts/e2e.sh T51
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports
+          path: |
+            reports/*.json
+            reports/EVALUATION.md
+            reports/heldout/
+            /tmp/ble-*.log
+
+  docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build

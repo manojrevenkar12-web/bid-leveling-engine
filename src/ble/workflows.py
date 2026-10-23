@@ -41,10 +41,25 @@ def _resolve(bids: list[BidDoc], versions: list[TenderDoc], matcher: Matcher) ->
     for b in bids:
         r = resolve(b, versions, matcher)
         out.append(r)
-        dec.append(Decision(b.bid_id, f"priced {r.version}", min(1.0, 0.5 + r.version_margin), alternatives=[{"version": k, "score": v} for k, v in r.version_scores.items()]))
+        dec.append(
+            Decision(
+                b.bid_id,
+                f"priced {r.version}",
+                min(1.0, 0.5 + r.version_margin),
+                alternatives=[{"version": k, "score": v} for k, v in r.version_scores.items()],
+            )
+        )
         for m in r.matches:
             ln = b.lines[m.line]
-            dec.append(Decision(f"{b.bid_id}/line{m.line}", f"prices {m.oz}" if m.oz else "added position", m.p, [ln.evidence.as_dict()], [{"oz": m.runner_up, "p": m.p_runner_up}]))
+            dec.append(
+                Decision(
+                    f"{b.bid_id}/line{m.line}",
+                    f"prices {m.oz}" if m.oz else "added position",
+                    m.p,
+                    [ln.evidence.as_dict()],
+                    [{"oz": m.runner_up, "p": m.p_runner_up}],
+                )
+            )
     return out, dec, 0.0
 
 
@@ -60,9 +75,13 @@ def _detect(bids: list[BidDoc], res: list[Resolution], versions: list[TenderDoc]
 def level_tender(tender_dir: Path, root: Path = DATA, matcher: Matcher | None = None) -> TenderResult:
     m = matcher or Matcher.load()
     run = Run("bid-leveling")
-    versions = run.step("read_tender", read_tender_versions, tender_dir, root, inputs=[str(p.relative_to(root)) for p in sorted((tender_dir / "tender").glob("*.x83"))])
+    versions = run.step(
+        "read_tender", read_tender_versions, tender_dir, root, inputs=[str(p.relative_to(root)) for p in sorted((tender_dir / "tender").glob("*.x83"))]
+    )
     bids = run.step("read_bids", _ingest_bids, tender_dir, root, inputs=[v.doc_id for v in versions], model="tesseract+pdfplumber")
-    res = run.step("resolve_positions", _resolve, bids, versions, m, inputs=[d for b in bids for d in b.doc_ids], model=f"matcher:{m.trained_on.get('source', 'trained')}")
+    res = run.step(
+        "resolve_positions", _resolve, bids, versions, m, inputs=[d for b in bids for d in b.doc_ids], model=f"matcher:{m.trained_on.get('source', 'trained')}"
+    )
     findings = run.step("detect_deviations", _detect, bids, res, versions, inputs=[t.trace_id for t in run.traces[-1:]])
     sheet = run.step("level_bids", level, versions, bids, res, findings, inputs=[t.trace_id for t in run.traces[-1:]])
     lineage = {"run_id": run.run_id, "code": code_version(), "config": config_version()}

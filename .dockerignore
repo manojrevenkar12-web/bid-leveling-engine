@@ -1,0 +1,10 @@
+data
+truth
+reports/runs*
+platform/node_modules
+platform/dist
+.git
+**/__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache

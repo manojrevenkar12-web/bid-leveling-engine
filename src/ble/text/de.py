@@ -18,7 +18,7 @@ from functools import cache
 from ble.config import load
 
 FOLD = str.maketrans({"ä": "a", "ö": "o", "ü": "u", "ß": "ss", "é": "e"})
-WORD = re.compile(r"[a-zäöüß]+|\d+(?:[.,]\d+)?", re.I)
+WORD = re.compile(r"\b(?:m|cm|mm|dm)[23]\b|[a-zäöüß]+|\d+(?:[.,]\d+)?", re.I)  # m2/m3 stay one unit token
 # specification codes: concrete classes, fire ratings, slip resistance, exposure classes ...
 SPEC = re.compile(r"\b(?:C\d{2}/\d{2}|REI\s?\d{2,3}|EI\s?\d{2,3}|F\s?\d{2,3}(?:-A)?|T\d{2}(?:-1)?(?:-RS)?|R\s?\d{1,2}|W\d(?:\.\d)?-[IE]|XC\d|Q\d|B500[AB]?)\b")
 
@@ -49,7 +49,15 @@ def _lex() -> dict[str, object]:
     units = {fold(v): k for k, vs in lx["units"].items() for v in vs}
     abbr = {fold(k): fold(v) for k, v in lx["abbreviations"].items()}
     syn = {fold(k): fold(v) for k, v in (lx.get("synonyms") or {}).items()}
-    return {"morph": morph, "morph_set": set(morph), "link": [fold(x) for x in lx["linking"]], "units": units, "abbr": abbr, "stop": {fold(s) for s in lx["stopwords"]}, "syn": syn}
+    return {
+        "morph": morph,
+        "morph_set": set(morph),
+        "link": [fold(x) for x in lx["linking"]],
+        "units": units,
+        "abbr": abbr,
+        "stop": {fold(s) for s in lx["stopwords"]},
+        "syn": syn,
+    }
 
 
 @cache
@@ -162,4 +170,5 @@ class BM25:
 def unit(u: str) -> str:
     """Canonical unit for a spelling (m², qm -> m2); unknown spellings pass through."""
     f = fold(u.strip().replace("²", "2").replace("³", "3").rstrip("."))
-    return _lex()["units"].get(f, u.strip())  # type: ignore[union-attr]
+    units: dict[str, str] = _lex()["units"]  # type: ignore[assignment]
+    return units.get(f, u.strip())

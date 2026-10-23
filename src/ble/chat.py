@@ -32,6 +32,9 @@ TYPE_WORDS = {
 }
 
 
+DEVIATE_WORDS = ["deviat", "abweich", "weicht", "differ", "findings", "problem", "auffall"]
+
+
 @dataclass
 class Citation:
     ref: str
@@ -119,6 +122,10 @@ def answer(run: dict[str, Any], question: str) -> Answer:
         olds = [x for x in run["bids"] if x["priced_version"] != b["version"]]
         for x in olds:
             lines.append(f"{x['company']} priced {x['priced_version']}. {ev.cite({'doc': x['doc_ids'][-1], 'text': 'bid document'})}")
+    elif bid is None and not types and any(w in fq for w in DEVIATE_WORDS):
+        intent = "unknown_bidder"
+        tools.append("bids.list")
+        lines.append("No bidder in this tender matches the name in the question. The bidders are: " + ", ".join(b["company"] for b in run["bids"]) + ".")
     elif bid is not None or types:
         intent = "findings"
         tools.append("findings.filter")

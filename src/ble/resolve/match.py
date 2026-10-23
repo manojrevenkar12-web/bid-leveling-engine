@@ -155,6 +155,10 @@ def assign(P: np.ndarray, p_none: float) -> list[int]:
     return out
 
 
+def _same_qty(a: float | None, b: float | None) -> bool:
+    return bool(a and b and abs(a - b) <= 0.005 * b)
+
+
 def resolve(bid: BidDoc, versions: list[TenderDoc], matcher: Matcher | None = None) -> Resolution:
     cfg = load("rules")["matching"]
     m = matcher or Matcher.load()
@@ -167,7 +171,7 @@ def resolve(bid: BidDoc, versions: list[TenderDoc], matcher: Matcher | None = No
         a = assign(P, cfg["p_none"])
         matched = [(i, j) for i, j in enumerate(a) if j >= 0]
         # how well the bid fits this version: matches that agree on quantity, against everything left over
-        agree = sum(1 for i, j in matched if bid.lines[i].qty and boq.positions[j].qty and abs(bid.lines[i].qty - boq.positions[j].qty) <= 0.005 * boq.positions[j].qty)
+        agree = sum(1 for i, j in matched if _same_qty(bid.lines[i].qty, boq.positions[j].qty))
         left = (len(boq.positions) - len(matched)) + (len(bid.lines) - len(matched))
         s = (agree - left) / max(len(boq.positions), 1)
         scores[boq.version] = round(s, 4)

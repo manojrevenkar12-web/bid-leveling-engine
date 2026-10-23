@@ -1,0 +1,61 @@
+queries:
+- tender: H91
+  q: Mutterboden abschieben
+  expect: ['02.0010']
+- tender: H91
+  q: Aushub Baugrube mit Deponie
+  expect: ['02.0020']
+- tender: H91
+  q: Wasserhaltung Tauchpumpe
+  expect: ['02.0050']
+- tender: H91
+  q: Z2 Boden Entsorgung
+  expect: ['02.0060']
+- tender: H91
+  q: Bewehrung B500
+  expect: ['03.0070']
+- tender: H91
+  q: Sichtbeton Innenwand
+  expect: ['03.0040']
+- tender: H91
+  q: KS Mauerwerk
+  expect: ['04.0010', '04.0050']
+- tender: H91
+  q: Hochlochziegel 42,5
+  expect: ['04.0020']
+- tender: H91
+  q: Installationsschlitze fräsen
+  expect: ['04.0040']
+- tender: H91
+  q: FPO Dachbahn
+  expect: ['09.0030']
+- tender: H92
+  q: GK Trennwand Rw 52
+  expect: ['05.0010']
+- tender: H92
+  q: Brandschutzwand GKF EI60
+  expect: ['05.0020']
+- tender: H92
+  q: Revisionsklappe
+  expect: ['05.0060']
+- tender: H92
+  q: Estrich Fußbodenheizung
+  expect: ['06.0020']
+- tender: H92
+  q: TSD Mineralwolle 30mm
+  expect: ['06.0030']
+- tender: H92
+  q: Wände streichen Dispersion
+  expect: ['08.0010']
+- tender: H92
+  q: Epoxid Bodenbeschichtung
+  expect: ['08.0050']
+- tender: H92
+  q: Zargen lackieren
+  expect: ['08.0040']
+- tender: H92
+  q: Feuerschutztür einflügelig
+  expect: ['10.0020']
+- tender: H92
+  q: Sockelleiste
+  expect: ['10.0050']

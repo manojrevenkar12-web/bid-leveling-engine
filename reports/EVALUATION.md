@@ -47,7 +47,7 @@ BoQ version each bid priced, identified correctly: 42 of 42.
 - T53-B4 (ocr): missing_price 07.0030 – No price for 07.0030 “Verbundabdichtung in Nassräumen”.
 - T53-B4 (ocr): missing_price 08.0010 – No price for 08.0010 “Dispersionsanstrich auf Wänden”.
 - T53-B4 (ocr): missing_price 09.0040 – No price for 09.0040 “Gefälledämmung Flachdach verlegen”.
-- T56-B5 (ocr): spec_change 05.0030 – Long text of 05.0030 differs: “q 3” → “03”
+- T56-B5 (ocr): spec_change 05.0030 – Long text of 05.0030 differs: “q3” → “03”
 - T57-B1 (ocr): missing_price 08.0030 – No price for 08.0030 “Deckenflächen streichen”.
 - T57-B1 (ocr): arithmetic_error 10.0040 – 10.0040: 2418.51 × 3 = 7,255.53, but the total says 71,255.53; the unit price prevails.
 
@@ -147,10 +147,10 @@ Queries the way estimators type them (compounds split or joined, shorthand, no u
 
 | Route | Bids | Pages | Pages per minute | € per page |
 |---|---|---|---|---|
-| gaeb | 31 | 62 | 5688.1 | 0.00011 |
-| xlsx | 18 | 36 | 2693.3 | 0.00013 |
-| pdf_text | 35 | 87 | 1285.4 | 0.0002 |
-| ocr | 22 | 54 | 35.0 | 0.002 |
+| gaeb | 31 | 62 | 5360.2 | 0.00011 |
+| xlsx | 18 | 36 | 3262.8 | 0.00013 |
+| pdf_text | 35 | 87 | 1195.6 | 0.0002 |
+| ocr | 22 | 54 | 12607.0 | 0.002 |
 
 ## Gate
 

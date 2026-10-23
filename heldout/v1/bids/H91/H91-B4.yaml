@@ -1,0 +1,323 @@
+company: Fehrmann Bau GmbH & Co. KG
+format: scan
+priced_version: v1
+include_long_text: false
+letter:
+- Hiermit geben wir unser Angebot für die ausgeschriebenen Rohbau-, Abdichtungs- und Tischlerarbeiten ab.
+- Das Leistungsverzeichnis wurde bei uns im Büro ausgefüllt und eingescannt.
+- Aufgrund unserer derzeitigen Auslastung können wir mit den Arbeiten frühestens in der dritten Kalenderwoche 2027 beginnen.
+- Bei Rückfragen erreichen Sie Herrn Fehrmann direkt im Büro in Bernau.
+lines:
+- shown_no: ''
+  prices_oz: '02.0010'
+  short: Oberbodenabtrag, Miete
+  long: null
+  qty: 1703
+  unit: m²
+  ep: 3.5
+  gp: 5960.5
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0020'
+  short: Aushub Baugrube m. Abtransport
+  long: null
+  qty: 2361.1
+  unit: m³
+  ep: 49.5
+  gp: 116874.45
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0030'
+  short: Verfüllung Arbeitsraum
+  long: null
+  qty: 540.5
+  unit: m³
+  ep: 34.8
+  gp: 18809.4
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0040'
+  short: Schotter 0/32 einbauen
+  long: null
+  qty: 119.8
+  unit: m³
+  ep: 46.6
+  gp: 5582.68
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0050'
+  short: Wasserhaltung
+  long: null
+  qty: 393.3
+  unit: Std
+  ep: 25.0
+  gp: 9832.5
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0060'
+  short: Z2-Material entsorgen
+  long: null
+  qty: 210.7
+  unit: t
+  ep: 85.5
+  gp: 18014.85
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0010'
+  short: Unterbeton C8/10
+  long: null
+  qty: 360
+  unit: m²
+  ep: 12.6
+  gp: 4536.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0020'
+  short: Sohle Stahlbeton
+  long: null
+  qty: 270.7
+  unit: m³
+  ep: 189.2
+  gp: 51216.44
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0030'
+  short: Außenwand Stahlbeton
+  long: null
+  qty: 719
+  unit: m²
+  ep: 130.3
+  gp: 93685.7
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0040'
+  short: Innenwand Stahlbeton
+  long: null
+  qty: 623
+  unit: m²
+  ep: 116.9
+  gp: 72828.7
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0050'
+  short: Ortbetondecke
+  long: null
+  qty: 1045
+  unit: m²
+  ep: 105.0
+  gp: 109725.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0060'
+  short: Rechteckstütze
+  long: null
+  qty: 41
+  unit: m
+  ep: 99.4
+  gp: 4075.4
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0070'
+  short: Bewehrung B500B
+  long: null
+  qty: 185.9
+  unit: t
+  ep: 2296.0
+  gp: 426826.4
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0080'
+  short: Treppe Fertigteil
+  long: null
+  qty: 3
+  unit: St
+  ep: null
+  gp: null
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0090'
+  short: Arbeitsfugenband
+  long: null
+  qty: 365
+  unit: m
+  ep: 28.4
+  gp: 10366.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0010'
+  short: Innenwand Kalksandstein
+  long: null
+  qty: 603
+  unit: m²
+  ep: 53.1
+  gp: 32019.3
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0020'
+  short: Außenmauerwerk Ziegel
+  long: null
+  qty: 706
+  unit: m²
+  ep: 107.2
+  gp: 75683.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0030'
+  short: Stürze
+  long: null
+  qty: 60
+  unit: St
+  ep: 6.8
+  gp: 408.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0040'
+  short: Schlitze
+  long: null
+  qty: 280
+  unit: m
+  ep: 20.4
+  gp: 5712.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0050'
+  short: Brandwand Kalksandst.
+  long: null
+  qty: 285
+  unit: m²
+  ep: 70.9
+  gp: 20206.5
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '09.0010'
+  short: Bitumenabdichtung erdber.
+  long: null
+  qty: 935
+  unit: m²
+  ep: 41.2
+  gp: 38522.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '09.0020'
+  short: Perimeterdämmung
+  long: null
+  qty: 864
+  unit: m²
+  ep: 47.2
+  gp: 40780.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '09.0030'
+  short: Dachabdichtung FPO
+  long: null
+  qty: 1328
+  unit: m²
+  ep: 35.5
+  gp: 47144.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '09.0040'
+  short: Gefälledämmung
+  long: null
+  qty: 656
+  unit: m²
+  ep: 39.7
+  gp: 26043.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '09.0050'
+  short: Hohlkehlen
+  long: null
+  qty: 227
+  unit: m
+  ep: 16.7
+  gp: 3790.9
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '10.0010'
+  short: Innentüren
+  long: null
+  qty: 118
+  unit: St
+  ep: 619.6
+  gp: 73112.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '10.0020'
+  short: Brandschutztüren
+  long: null
+  qty: 25
+  unit: St
+  ep: 1710.0
+  gp: 42750.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '10.0030'
+  short: Fensterbänke innen
+  long: null
+  qty: 75
+  unit: m
+  ep: 46.2
+  gp: 3465.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '10.0040'
+  short: Einbauschränke
+  long: null
+  qty: 16
+  unit: St
+  ep: 2229.0
+  gp: 35664.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '10.0050'
+  short: Sockelleisten
+  long: null
+  qty: 554
+  unit: m
+  ep: 9.5
+  gp: 5263.0
+  included: false
+  product: null
+deviations:
+- type: speculative_pricing
+  oz: null
+  detail: Aushub, Wasserhaltung, Z2-Entsorgung, Betonstahl und Schlitze ca. +48 %, Rest ca. -10 %
+- type: price_outlier
+  oz: '04.0030'
+  detail: EP 6,80 EUR/St, marktüblich ca. 65-70 EUR
+- type: missing_price
+  oz: '03.0080'
+  detail: EP und GP leer
+- type: reservation
+  oz: null
+  detail: 'schedule: Baubeginn frühestens KW 3/2027'

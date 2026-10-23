@@ -77,15 +77,28 @@ def build(versions: list[TenderDoc], bids: list[BidDoc], resolutions: list[Resol
             g.node("Document", d, lin(d), path=d.split("@")[0], sha256=d.split("@")[1])
         for m in r.matches:
             ln = b.lines[m.line]
-            lid = g.node("BidLine", f"{b.bid_id}/{ln.idx}", lin(ln.evidence.doc), shown_no=ln.shown_no, short=ln.short, qty=ln.qty, unit=ln.unit, ep=ln.ep, gp=ln.gp)
+            lid = g.node(
+                "BidLine", f"{b.bid_id}/{ln.idx}", lin(ln.evidence.doc), shown_no=ln.shown_no, short=ln.short, qty=ln.qty, unit=ln.unit, ep=ln.ep, gp=ln.gp
+            )
             g.edge("IN_BID", lid, bid, lin(ln.evidence.doc))
             if m.oz:
                 g.edge("PRICES", lid, f"Position:{tid}/{m.oz}", lin(ln.evidence.doc), p=m.p, needs_review=m.needs_review, runner_up=m.runner_up)
     for f in findings:
-        fid = g.node("Finding", f.id, lin(*[e["doc"] for e in f.evidence]), type=f.type, severity=f.severity, message=f.message, confidence=f.confidence, needs_review=f.needs_review)
+        fid = g.node(
+            "Finding",
+            f.id,
+            lin(*[e["doc"] for e in f.evidence]),
+            type=f.type,
+            severity=f.severity,
+            message=f.message,
+            confidence=f.confidence,
+            needs_review=f.needs_review,
+        )
         g.edge("ABOUT", fid, f"Bid:{f.bid_id}", lin())
         if f.oz:
             g.edge("CONCERNS", fid, f"Position:{tid}/{f.oz}", lin())
         for e in f.evidence:
+            doc, _, sha = e["doc"].partition("@")
+            g.node("Document", e["doc"], lin(e["doc"]), path=doc, sha256=sha or None)  # every edge ends at a node
             g.edge("EVIDENCED_BY", fid, f"Document:{e['doc']}", lin(e["doc"]), **{k: v for k, v in e.items() if k != "doc"})
     return g

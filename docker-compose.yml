@@ -1,0 +1,38 @@
+# Local stack: Postgres, the platform API + review UI (http://localhost:3000) and the AI service.
+#   docker compose up -d --build
+#   docker compose run --rm seed        # simulate the test tenders, level T51..T58 and publish them
+services:
+  db:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: ble, POSTGRES_PASSWORD: ble, POSTGRES_DB: ble }
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U ble"], interval: 3s, retries: 20 }
+  platform:
+    build: ./platform
+    environment:
+      DATABASE_URL: postgres://ble:ble@db:5432/ble
+      AI_SERVICE_URL: http://ai:8001
+      PLATFORM_API_KEYS: ${PLATFORM_API_KEYS:-}
+    ports: ["3000:3000"]
+    depends_on: { db: { condition: service_healthy } }
+  ai:
+    build: .
+    environment:
+      BLE_PLATFORM_URL: http://platform:3000
+      BLE_PLATFORM_KEY: ${BLE_PLATFORM_KEY:-}
+    volumes: [bledata:/app/data, blereports:/app/reports]
+    ports: ["8001:8001"]
+    depends_on: [platform]
+  seed:
+    build: .
+    profiles: [seed]
+    environment: { BLE_PLATFORM_KEY: "${BLE_PLATFORM_KEY:-}" }
+    volumes: [bledata:/app/data, blereports:/app/reports]
+    command: >
+      sh -c "ble world --split test &&
+             for t in T51 T52 T53 T54 T55 T56 T57 T58; do ble level $$t && ble publish reports/runs/$$t.json --api http://platform:3000; done"
+    depends_on: [platform]
+volumes:
+  pgdata: {}
+  bledata: {}
+  blereports: {}

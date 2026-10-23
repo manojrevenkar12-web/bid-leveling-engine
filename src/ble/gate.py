@@ -35,11 +35,23 @@ def gate() -> dict[str, Any]:
         rv = ev["review"]
         auto = rv.get("true_auto", 0) + rv.get("false_auto", 0)
         share = rv.get("false_auto", 0) / auto if auto else 0.0
-        add("wrong findings auto-confirmed", share <= c["findings"]["max_false_auto_confirmed_share"], f"{rv.get('false_auto', 0)} of {auto} auto-confirmed findings ({share:.1%})")
+        add(
+            "wrong findings auto-confirmed",
+            share <= c["findings"]["max_false_auto_confirmed_share"],
+            f"{rv.get('false_auto', 0)} of {auto} auto-confirmed findings ({share:.1%})",
+        )
         for route, m in ev["matching"].items():
-            add(f"matching accuracy: {route}", (m["accuracy"] or 0) >= c["matching"]["min_accuracy_per_route"], f"{m['accuracy']} on {m['lines']} lines (position number alone: {m['oz_only_accuracy']})")
+            add(
+                f"matching accuracy: {route}",
+                (m["accuracy"] or 0) >= c["matching"]["min_accuracy_per_route"],
+                f"{m['accuracy']} on {m['lines']} lines (position number alone: {m['oz_only_accuracy']})",
+            )
             share = m.get("wrong_not_flagged", 0) / m["lines"] if m["lines"] else 0
-            add(f"wrong matches sent to review: {route}", share <= c["matching"]["max_wrong_unflagged_share"], f"{m.get('wrong_not_flagged', 0)} wrong and unflagged")
+            add(
+                f"wrong matches sent to review: {route}",
+                share <= c["matching"]["max_wrong_unflagged_share"],
+                f"{m.get('wrong_not_flagged', 0)} wrong and unflagged",
+            )
         v = ev["versions"]
         acc = v.get("correct", 0) / max(1, v.get("correct", 0) + v.get("wrong", 0))
         add("BoQ version priced", acc >= c["versions"]["min_accuracy"], f"{v.get('correct', 0)} of {v.get('correct', 0) + v.get('wrong', 0)} bids")

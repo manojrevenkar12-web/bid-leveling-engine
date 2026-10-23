@@ -67,7 +67,7 @@ class Score:
         return c
 
     def as_dict(self) -> dict[str, Any]:
-        m = {k: dict(v) for k, v in self.matching.items()}
+        m: dict[str, dict[str, Any]] = {k: dict(v) for k, v in self.matching.items()}
         for v in m.values():
             n = v.get("lines", 0)
             v["accuracy"] = round(v.get("correct", 0) / n, 4) if n else None
@@ -82,8 +82,6 @@ class Score:
             "misses": self.misses[:60],
             "false_alarms": self.false_alarms[:60],
         }
-
-
 
 
 def score_tender(r: TenderResult, s: Score | None = None) -> Score:

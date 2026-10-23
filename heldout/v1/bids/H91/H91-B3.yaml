@@ -1,0 +1,330 @@
+company: Märkische Bau- und Sanierungsgesellschaft mbH
+format: xlsx
+priced_version: v1
+include_long_text: false
+letter:
+- Wie gewünscht senden wir Ihnen das ausgefüllte Leistungsverzeichnis im Excel-Format zurück.
+- Die Baustelleneinrichtung haben wir in einer eigenen Zeile ausgewiesen.
+- Kampfmittelfreigabe des Baufelds und etwaige ergänzende Baugrunduntersuchungen sind vom Auftraggeber beizustellen und nicht Bestandteil unseres Angebots.
+- Wir haben bereits mehrere Schulbauten im Bezirk realisiert und kennen die örtlichen Verhältnisse.
+- Mit freundlichen Grüßen aus Königs Wusterhausen
+lines:
+- shown_no: '01.0010'
+  prices_oz: null
+  short: Baustelleneinrichtung inkl. Räumen
+  long: null
+  qty: 1
+  unit: psch
+  ep: 38500.0
+  gp: 38500.0
+  included: false
+  product: null
+- shown_no: '02.0010'
+  prices_oz: '02.0010'
+  short: Mutterboden abschieben + lagern
+  long: null
+  qty: 1703
+  unit: m2
+  ep: 4.15
+  gp: 7067.45
+  included: false
+  product: null
+- shown_no: '02.0020'
+  prices_oz: '02.0020'
+  short: BG-Aushub inkl. Abfuhr/Deponie
+  long: null
+  qty: 2316.1
+  unit: m3
+  ep: 33.2
+  gp: 76894.52
+  included: false
+  product: null
+- shown_no: '02.0030'
+  prices_oz: '02.0030'
+  short: AR-Verfüllung, verdichtet
+  long: null
+  qty: 540.5
+  unit: m3
+  ep: 40.7
+  gp: 21998.35
+  included: false
+  product: null
+- shown_no: '02.0040'
+  prices_oz: '02.0040'
+  short: STS 0/32, d=30
+  long: null
+  qty: 119.8
+  unit: m3
+  ep: 60.6
+  gp: 7259.88
+  included: false
+  product: null
+- shown_no: '02.0050'
+  prices_oz: '02.0050'
+  short: Wasserhaltung (Betriebsstd.)
+  long: null
+  qty: 393.3
+  unit: h
+  ep: 19.1
+  gp: 7512.03
+  included: false
+  product: null
+- shown_no: '02.0060'
+  prices_oz: '02.0060'
+  short: Entsorgung Z2-Boden
+  long: null
+  qty: 210.7
+  unit: m3
+  ep: 59.1
+  gp: 12452.37
+  included: false
+  product: null
+- shown_no: '03.0010'
+  prices_oz: '03.0010'
+  short: Sauberkeitssch. C8/10 d=5
+  long: null
+  qty: 360
+  unit: m2
+  ep: 15.3
+  gp: 5508.0
+  included: false
+  product: null
+- shown_no: '03.0020'
+  prices_oz: '03.0020'
+  short: Bopla C30/37 d=25
+  long: null
+  qty: 270.7
+  unit: m3
+  ep: 215.4
+  gp: 58308.78
+  included: false
+  product: null
+- shown_no: '03.0030'
+  prices_oz: '03.0030'
+  short: AW Stb C30/37 d=25
+  long: null
+  qty: 719
+  unit: m2
+  ep: 154.1
+  gp: 110797.9
+  included: false
+  product: null
+- shown_no: '03.0040'
+  prices_oz: '03.0040'
+  short: IW Stb C25/30 d=20 SB2
+  long: null
+  qty: 623
+  unit: m2
+  ep: 144.5
+  gp: 90023.5
+  included: false
+  product: null
+- shown_no: '03.0050'
+  prices_oz: '03.0050'
+  short: Decke Stb d=24 REI60
+  long: null
+  qty: 1045
+  unit: m2
+  ep: 120.0
+  gp: 125400.0
+  included: false
+  product: null
+- shown_no: '03.0060'
+  prices_oz: '03.0060'
+  short: Stütze 30/30 C35/45
+  long: null
+  qty: 41
+  unit: m
+  ep: 123.3
+  gp: 5055.3
+  included: false
+  product: null
+- shown_no: '03.0070'
+  prices_oz: '03.0070'
+  short: BSt B500B
+  long: null
+  qty: 185.9
+  unit: t
+  ep: 1804.0
+  gp: 335363.6
+  included: false
+  product: null
+- shown_no: '03.0080'
+  prices_oz: '03.0080'
+  short: FT-Treppenlauf
+  long: null
+  qty: 3
+  unit: St
+  ep: 3730.0
+  gp: 11190.0
+  included: false
+  product: null
+- shown_no: '03.0090'
+  prices_oz: '03.0090'
+  short: Fugenband innenl.
+  long: null
+  qty: 365
+  unit: m
+  ep: 33.3
+  gp: 12154.5
+  included: false
+  product: null
+- shown_no: '04.0010'
+  prices_oz: '04.0010'
+  short: KS-IW 17,5
+  long: null
+  qty: 603
+  unit: m2
+  ep: 66.4
+  gp: 40039.2
+  included: false
+  product: null
+- shown_no: '04.0020'
+  prices_oz: '04.0020'
+  short: HLz AW 42,5
+  long: null
+  qty: 706
+  unit: m2
+  ep: 115.2
+  gp: 81331.2
+  included: false
+  product: null
+- shown_no: '04.0030'
+  prices_oz: '04.0030'
+  short: Sturz FT bis 1,51
+  long: null
+  qty: 60
+  unit: St
+  ep: 67.2
+  gp: 4032.0
+  included: false
+  product: null
+- shown_no: '04.0040'
+  prices_oz: '04.0040'
+  short: Schlitze fräsen 5x5
+  long: null
+  qty: 280
+  unit: m
+  ep: 14.5
+  gp: 4060.0
+  included: false
+  product: null
+- shown_no: '04.0050'
+  prices_oz: '04.0050'
+  short: Brandwand KS 24 F60
+  long: null
+  qty: 285
+  unit: m2
+  ep: 81.3
+  gp: 23170.5
+  included: false
+  product: null
+- shown_no: '09.0010'
+  prices_oz: '09.0010'
+  short: Abdichtung PYE 2-lg. W2.1-E
+  long: null
+  qty: 935
+  unit: m2
+  ep: 52.4
+  gp: 48994.0
+  included: false
+  product: null
+- shown_no: '09.0020'
+  prices_oz: '09.0020'
+  short: XPS Perimeter 160
+  long: null
+  qty: 864
+  unit: m2
+  ep: 51.1
+  gp: 44150.4
+  included: false
+  product: null
+- shown_no: '09.0030'
+  prices_oz: '09.0030'
+  short: FPO-Dachbahn 2,0
+  long: null
+  qty: 1328
+  unit: m2
+  ep: 37.2
+  gp: 49401.6
+  included: false
+  product: null
+- shown_no: '09.0040'
+  prices_oz: '09.0040'
+  short: Gefälle-WD EPS
+  long: null
+  qty: 656
+  unit: m2
+  ep: 46.0
+  gp: 30176.0
+  included: false
+  product: null
+- shown_no: '09.0050'
+  prices_oz: '09.0050'
+  short: Hohlkehle Dichtschlämme
+  long: null
+  qty: 227
+  unit: m
+  ep: null
+  gp: null
+  included: true
+  product: null
+- shown_no: '10.0010'
+  prices_oz: '10.0010'
+  short: Innentür CPL + Stahlzarge
+  long: null
+  qty: 118
+  unit: St
+  ep: 767.5
+  gp: 90565.0
+  included: false
+  product: null
+- shown_no: '10.0020'
+  prices_oz: '10.0020'
+  short: BS-Tür T30
+  long: null
+  qty: 25
+  unit: St
+  ep: 2087.0
+  gp: 52175.0
+  included: false
+  product: null
+- shown_no: '10.0030'
+  prices_oz: '10.0030'
+  short: Fensterbank innen HWS
+  long: null
+  qty: 75
+  unit: m
+  ep: 56.2
+  gp: 4215.0
+  included: false
+  product: null
+- shown_no: '10.0040'
+  prices_oz: '10.0040'
+  short: Einbauschrank lt. Zeichng.
+  long: null
+  qty: 16
+  unit: St
+  ep: 2392.0
+  gp: 38272.0
+  included: false
+  product: null
+deviations:
+- type: qty_changed
+  oz: '02.0020'
+  detail: 2361.1 -> 2316.1
+- type: unit_changed
+  oz: '02.0060'
+  detail: t -> m3
+- type: included_price
+  oz: '09.0050'
+  detail: als enthalten angegeben
+- type: missing_position
+  oz: '10.0050'
+  detail: Sockelleisten fehlen im Angebot
+- type: extra_position
+  oz: null
+  detail: Baustelleneinrichtung inkl. Räumen (psch)
+- type: reservation
+  oz: null
+  detail: 'exclusions: Kampfmittelfreigabe und Baugrunduntersuchung bauseits'

@@ -53,7 +53,7 @@ def align(doc: BidDoc) -> list[int | None]:
     return out
 
 
-def line_truth(doc: BidDoc) -> list[str | None | bool]:
+def line_truth(doc: BidDoc) -> list[str | bool | None]:
     """The BoQ position each ingested line really prices; None = an added position; False = the
     line reproduces no truth line."""
     tl = bid(doc.tender_id, doc.bid_id)["lines"]

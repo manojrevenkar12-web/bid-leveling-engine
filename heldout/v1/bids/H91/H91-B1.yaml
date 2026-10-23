@@ -1,0 +1,322 @@
+company: Krüger & Söhne Bauunternehmung GmbH
+format: gaeb
+priced_version: v1
+include_long_text: false
+letter:
+- Vielen Dank für die Übersendung der Vergabeunterlagen zur Erweiterung der Grundschule Pankow.
+- Beiliegend erhalten Sie unser Angebot als GAEB-Datei für sämtliche ausgeschriebenen Titel.
+- Die Baustelle haben wir am 12.09.2026 besichtigt, die Andienung über die Nebenstraße ist in unserer Kalkulation berücksichtigt.
+- An die angebotenen Preise halten wir uns bis zum 31.10.2026 gebunden; bei späterer Beauftragung behalten wir uns eine Anpassung vor.
+- Beim Fugenband haben wir das von uns vorgesehene Fabrikat in der Bieterangabe eingetragen.
+- Für ein Aufklärungsgespräch stehen wir Ihnen jederzeit gern zur Verfügung.
+lines:
+- shown_no: '02.0010'
+  prices_oz: '02.0010'
+  short: Oberboden abtragen und seitlich lagern
+  long: Oberboden in einer Stärke von 30 cm abtragen und auf der Baustelle seitlich in Mieten lagern.
+  qty: 1703
+  unit: m2
+  ep: 4.2
+  gp: 7152.6
+  included: false
+  product: null
+- shown_no: '02.0020'
+  prices_oz: '02.0020'
+  short: Baugrube ausheben, Boden laden und abfahren
+  long: Baugrube ausheben, Homogenbereich B2, Boden laden und zur Deponie abfahren, einschließlich Deponiegebühren.
+  qty: 2361.1
+  unit: m3
+  ep: 33.6
+  gp: 79332.96
+  included: false
+  product: null
+- shown_no: '02.0030'
+  prices_oz: '02.0030'
+  short: Arbeitsraum verfüllen und verdichten
+  long: Arbeitsraum lagenweise mit Liefermaterial verfüllen und auf Dpr 100 % verdichten.
+  qty: 540.5
+  unit: m3
+  ep: 39.7
+  gp: 21457.85
+  included: false
+  product: null
+- shown_no: '02.0040'
+  prices_oz: '02.0040'
+  short: Schottertragschicht 0/32 herstellen
+  long: Schottertragschicht aus Mineralgemisch 0/32, Dicke 30 cm, einbauen und verdichten, Ev2 mindestens 120 MN/m².
+  qty: 119.8
+  unit: m3
+  ep: 52.6
+  gp: 6301.48
+  included: false
+  product: null
+- shown_no: '02.0050'
+  prices_oz: '02.0050'
+  short: Offene Wasserhaltung betreiben
+  long: Offene Wasserhaltung mit Tauchpumpen einschließlich Pumpensumpf betreiben, abgerechnet nach Betriebsstunden.
+  qty: 393.3
+  unit: h
+  ep: 17.3
+  gp: 6804.09
+  included: false
+  product: null
+- shown_no: '02.0060'
+  prices_oz: '02.0060'
+  short: Belasteten Boden Z2 entsorgen
+  long: Boden der Zuordnungsklasse Z2 nach LAGA laden, abfahren und fachgerecht entsorgen, einschließlich Nachweisen.
+  qty: 210.7
+  unit: t
+  ep: 58.1
+  gp: 12241.67
+  included: false
+  product: null
+- shown_no: '03.0010'
+  prices_oz: '03.0010'
+  short: Sauberkeitsschicht aus Beton C8/10
+  long: Sauberkeitsschicht aus unbewehrtem Beton C8/10, Dicke 5 cm, herstellen.
+  qty: 360
+  unit: m2
+  ep: 13.55
+  gp: 4878.0
+  included: false
+  product: null
+- shown_no: '03.0020'
+  prices_oz: '03.0020'
+  short: Bodenplatte aus Stahlbeton herstellen
+  long: Bodenplatte aus Stahlbeton, Festigkeitsklasse C30/37, Expositionsklasse XC2, Dicke 25 cm, herstellen, einschließlich Abschalung.
+  qty: 270.7
+  unit: m3
+  ep: 217.0
+  gp: 58741.9
+  included: false
+  product: null
+- shown_no: '03.0030'
+  prices_oz: '03.0030'
+  short: Stahlbetonwand außen herstellen
+  long: Außenwand aus Stahlbeton, Festigkeitsklasse C30/37, Dicke 25 cm, einschließlich zweiseitiger Schalung, glatt.
+  qty: 719
+  unit: m2
+  ep: 148.2
+  gp: 106555.8
+  included: false
+  product: null
+- shown_no: '03.0040'
+  prices_oz: '03.0040'
+  short: Stahlbetonwand innen herstellen
+  long: Innenwand aus Stahlbeton, Festigkeitsklasse C25/30, Dicke 20 cm, Sichtbetonklasse SB2.
+  qty: 623
+  unit: m2
+  ep: 141.4
+  gp: 88092.2
+  included: false
+  product: null
+- shown_no: '03.0050'
+  prices_oz: '03.0050'
+  short: Stahlbetondecke als Ortbetondecke herstellen
+  long: Stahlbetondecke als Ortbetondecke, Festigkeitsklasse C30/37, Dicke 24 cm, Feuerwiderstandsklasse REI 60, einschließlich Schalung.
+  qty: 1045
+  unit: m2
+  ep: 120.7
+  gp: 126131.5
+  included: false
+  product: null
+- shown_no: '03.0060'
+  prices_oz: '03.0060'
+  short: Stahlbetonstütze rechteckig herstellen
+  long: Stahlbetonstütze, Querschnitt 30/30 cm, Festigkeitsklasse C35/45, einschließlich Schalung.
+  qty: 41
+  unit: m
+  ep: 120.6
+  gp: 4944.6
+  included: false
+  product: null
+- shown_no: '03.0070'
+  prices_oz: '03.0070'
+  short: Betonstahl B500B liefern und verlegen
+  long: Betonstahl B500B als Stabstahl und Matten liefern, schneiden, biegen und verlegen.
+  qty: 185.9
+  unit: t
+  ep: 1593.0
+  gp: 296138.7
+  included: false
+  product: null
+- shown_no: '03.0080'
+  prices_oz: '03.0080'
+  short: Fertigteiltreppe einbauen
+  long: Treppenlauf als Stahlbeton-Fertigteil, gerade, liefern und einbauen, Trittschalldämmung mit Elastomerlager, Schallschutz 30 dB.
+  qty: 3
+  unit: St
+  ep: 3633.0
+  gp: 10899.0
+  included: false
+  product: null
+- shown_no: '03.0090'
+  prices_oz: '03.0090'
+  short: Fugenband in Arbeitsfugen einbauen
+  long: Innenliegendes Fugenband in Arbeitsfugen der wasserundurchlässigen Konstruktion liefern und einbauen, Leitfabrikat Sika Waterbar oder gleichwertig.
+  qty: 365
+  unit: m
+  ep: 33.0
+  gp: 12045.0
+  included: false
+  product: MAX FRANK Arbeitsfugenband PVC-P
+- shown_no: '04.0010'
+  prices_oz: '04.0010'
+  short: Kalksandstein-Innenwand mauern
+  long: Innenwand aus Kalksandstein KS 20-2,0, Dicke 17,5 cm, im Dünnbettmörtel mauern.
+  qty: 603
+  unit: m2
+  ep: 60.5
+  gp: 36481.5
+  included: false
+  product: null
+- shown_no: '04.0020'
+  prices_oz: '04.0020'
+  short: Ziegelmauerwerk außen, wärmedämmend
+  long: Außenwand aus wärmedämmenden Hochlochziegeln, Dicke 42,5 cm, Wärmeleitfähigkeit λ = 0,09 W/(mK), mauern.
+  qty: 706
+  unit: m2
+  ep: 109.7
+  gp: 77448.2
+  included: false
+  product: null
+- shown_no: '04.0030'
+  prices_oz: '04.0030'
+  short: Fertigteilsturz einbauen
+  long: Fertigteilsturz für Öffnungsbreiten bis 1,51 m liefern und einbauen.
+  qty: 60
+  unit: St
+  ep: 66.0
+  gp: 3960.0
+  included: false
+  product: null
+- shown_no: '04.0040'
+  prices_oz: '04.0040'
+  short: Schlitze in Mauerwerk herstellen
+  long: Schlitze für Installationen in Mauerwerk fräsen, Querschnitt bis 5 x 5 cm, Schutt beseitigen.
+  qty: 280
+  unit: m
+  ep: 13.55
+  gp: 3794.0
+  included: false
+  product: null
+- shown_no: '04.0050'
+  prices_oz: '04.0050'
+  short: Brandwand aus Kalksandstein mauern
+  long: Brandwand aus Kalksandstein, Dicke 24 cm, Feuerwiderstandsklasse F 60-A, nach DIN 4102-4 mauern.
+  qty: 285
+  unit: m2
+  ep: 84.8
+  gp: 24168.0
+  included: false
+  product: null
+- shown_no: '09.0010'
+  prices_oz: '09.0010'
+  short: Bauwerksabdichtung mit Bitumenbahnen
+  long: Abdichtung erdberührter Wände mit Polymerbitumen-Schweißbahnen, Wassereinwirkungsklasse W2.1-E, 2-lagig.
+  qty: 935
+  unit: m2
+  ep: 45.5
+  gp: 42542.5
+  included: false
+  product: null
+- shown_no: '09.0020'
+  prices_oz: '09.0020'
+  short: Perimeterdämmung aus XPS verlegen
+  long: Perimeterdämmung aus XPS-Platten, Dicke 120 mm, Wärmeleitfähigkeit λ = 0,035 W/(mK), verkleben.
+  qty: 864
+  unit: m2
+  ep: 50.9
+  gp: 43977.6
+  included: false
+  product: null
+- shown_no: '09.0030'
+  prices_oz: '09.0030'
+  short: Flachdachabdichtung mit Kunststoffbahn
+  long: Flachdachabdichtung mit FPO-Kunststoffbahn, Dicke 2,0 mm, mechanisch befestigt, Leitfabrikat Sika Sarnafil TG 66 oder gleichwertig.
+  qty: 1328
+  unit: m2
+  ep: 39.0
+  gp: 51792.0
+  included: false
+  product: Sika Sarnafil TG 66
+- shown_no: '09.0040'
+  prices_oz: '09.0040'
+  short: Gefälledämmung Flachdach verlegen
+  long: Gefälledämmung aus EPS DAA dh, mittlere Dicke 200 mm, Wärmeleitfähigkeit λ = 0,031 W/(mK).
+  qty: 656
+  unit: m2
+  ep: 44.7
+  gp: 29323.2
+  included: false
+  product: null
+- shown_no: '09.0050'
+  prices_oz: '09.0050'
+  short: Hohlkehle und Anschluss abdichten
+  long: Hohlkehle aus Dichtschlämme an Wand-Boden-Anschlüssen herstellen und Abdichtung anschließen.
+  qty: 227
+  unit: m
+  ep: 17.05
+  gp: 3870.35
+  included: false
+  product: null
+- shown_no: '10.0010'
+  prices_oz: '10.0010'
+  short: Innentür mit Stahlzarge liefern und montieren
+  long: Innentür, Röhrenspanplatte, Oberfläche CPL, Klimaklasse III, mit Stahlumfassungszarge, Leitfabrikat Hörmann ZK oder gleichwertig.
+  qty: 118
+  unit: St
+  ep: 701.6
+  gp: 82788.8
+  included: false
+  product: Hörmann ZK
+- shown_no: '10.0020'
+  prices_oz: '10.0020'
+  short: Brandschutztür T30 liefern und montieren
+  long: Feuerhemmende Tür T90-1-RS, einflügelig, selbstschließend, mit Zulassung, liefern und montieren.
+  qty: 25
+  unit: St
+  ep: 1896.0
+  gp: 47400.0
+  included: false
+  product: null
+- shown_no: '10.0030'
+  prices_oz: '10.0030'
+  short: Innenfensterbank aus Holzwerkstoff
+  long: Innenfensterbank aus Holzwerkstoff, Dicke 25 mm, Tiefe bis 30 cm, liefern und einbauen.
+  qty: 75
+  unit: m
+  ep: 52.7
+  gp: 3952.5
+  included: false
+  product: null
+- shown_no: '10.0040'
+  prices_oz: '10.0040'
+  short: Einbauschrank nach Zeichnung herstellen
+  long: Einbauschrank nach Zeichnung des Architekten, Korpus melaminharzbeschichtet, Fronten HPL, herstellen und montieren.
+  qty: 16
+  unit: St
+  ep: 2489.0
+  gp: 39824.0
+  included: false
+  product: null
+- shown_no: '10.0050'
+  prices_oz: '10.0050'
+  short: Sockelleisten aus Holz montieren
+  long: Sockelleisten aus Massivholz, Höhe 60 mm, lackiert, montieren.
+  qty: 554
+  unit: m
+  ep: 10.8
+  gp: 5983.2
+  included: false
+  product: null
+deviations:
+- type: product_alternative
+  oz: '03.0090'
+  detail: Sika Waterbar -> MAX FRANK Arbeitsfugenband PVC-P
+- type: spec_downgrade
+  oz: '09.0020'
+  detail: XPS Dicke 160 mm -> 120 mm
+- type: reservation
+  oz: null
+  detail: 'validity: Bindung nur bis 31.10.2026, danach Preisanpassung'
