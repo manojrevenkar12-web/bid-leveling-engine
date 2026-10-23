@@ -1,0 +1,375 @@
+company: Ausbau Kessler GmbH
+format: pdf
+priced_version: v1
+include_long_text: false
+letter:
+- Sehr geehrte Damen und Herren,
+- bezugnehmend auf Ihre Ausschreibung bieten wir Ihnen die Leistungen der Titel 01 bis 06 zu den nachstehenden Einheitspreisen an.
+- Da im Leistungsverzeichnis kein Fassadengerüst vorgesehen ist, haben wir dieses als zusätzliche Position aufgenommen.
+- Für die Holz-Alu-Fenster bieten wir ein gleichwertiges Fabrikat an; Prospekte und Prüfzeugnisse liegen bei.
+- Abschlagsrechnungen sind innerhalb von 10 Kalendertagen ohne Abzug zu bezahlen; einen Sicherheitseinbehalt akzeptieren wir nur gegen Stellung einer Bürgschaft.
+- Über ein Aufklärungsgespräch würden wir uns freuen.
+lines:
+- shown_no: '1.10'
+  prices_oz: '01.0010'
+  short: Untergr. vorb. + grund.
+  long: null
+  qty: 1240
+  unit: m²
+  ep: 4.34
+  gp: 5381.6
+  included: false
+  product: null
+- shown_no: '1.15'
+  prices_oz: null
+  short: Fassadengerüst LK 4, Standzeit 8 Wo.
+  long: null
+  qty: 1380
+  unit: m²
+  ep: 9.8
+  gp: 13524.0
+  included: false
+  product: null
+- shown_no: '1.20'
+  prices_oz: '01.0020'
+  short: Sockeldämm. XPS 120mm inkl. Arm.
+  long: null
+  qty: 118
+  unit: m²
+  ep: 64.33
+  gp: 7590.94
+  included: false
+  product: null
+- shown_no: '1.30'
+  prices_oz: '01.0030'
+  short: WDVS MW 200 WLS035 A2
+  long: null
+  qty: 1058
+  unit: m²
+  ep: 107.46
+  gp: 113692.68
+  included: false
+  product: Sto StoTherm Mineral
+- shown_no: '1.40'
+  prices_oz: '01.0040'
+  short: Laib. dämmen/arm. b. 30cm
+  long: null
+  qty: 412
+  unit: lfm
+  ep: 34.71
+  gp: 14300.52
+  included: false
+  product: null
+- shown_no: '1.50'
+  prices_oz: '01.0050'
+  short: OP Sil.harz K2 + Egal.
+  long: null
+  qty: 1085
+  unit: m²
+  ep: 23.97
+  gp: 26007.45
+  included: false
+  product: null
+- shown_no: '1.60'
+  prices_oz: '01.0060'
+  short: Zul. dkl. FT HBW<25
+  long: null
+  qty: 140
+  unit: m²
+  ep: 6.54
+  gp: 915.6
+  included: false
+  product: null
+- shown_no: '2.10'
+  prices_oz: '02.0010'
+  short: HoAl-Fe 2flg 151x151 RC2
+  long: null
+  qty: 24
+  unit: Stck
+  ep: 2202.0
+  gp: 52848.0
+  included: false
+  product: Gaulhofer FUSIONLINE Holz-Alu
+- shown_no: '2.20'
+  prices_oz: '02.0020'
+  short: Festelem. 226x251 VSG
+  long: null
+  qty: 6
+  unit: Stck
+  ep: 4043.0
+  gp: 24258.0
+  included: false
+  product: null
+- shown_no: '2.30'
+  prices_oz: '02.0030'
+  short: FeTür 1flg 101x226 o.Schw.
+  long: null
+  qty: 8
+  unit: Stck
+  ep: 2608.0
+  gp: 20864.0
+  included: false
+  product: null
+- shown_no: '2.40'
+  prices_oz: '02.0040'
+  short: Fensterbank au. Alu 260
+  long: null
+  qty: 96
+  unit: lfm
+  ep: 56.67
+  gp: 5440.32
+  included: false
+  product: null
+- shown_no: '2.50'
+  prices_oz: '02.0050'
+  short: RAL-Anschl. Folie in/au
+  long: null
+  qty: 238
+  unit: lfm
+  ep: 15.43
+  gp: 3672.34
+  included: false
+  product: ISO-Chemie ISO-CONNECT INSIDE/OUTSIDE
+- shown_no: '2.60'
+  prices_oz: '02.0060'
+  short: Hauseingangstür Alu 2flg Panik
+  long: null
+  qty: 1
+  unit: Stck
+  ep: 11757.0
+  gp: 11757.0
+  included: false
+  product: null
+- shown_no: '3.10'
+  prices_oz: '03.0010'
+  short: Dampfsp. Bit-Alu geschw.
+  long: null
+  qty: 640
+  unit: m²
+  ep: 16.84
+  gp: 10777.6
+  included: false
+  product: null
+- shown_no: '3.20'
+  prices_oz: '03.0020'
+  short: Gef.-Dämm. EPS 035 im 220
+  long: null
+  qty: 640
+  unit: m²
+  ep: 52.07
+  gp: 33324.8
+  included: false
+  product: null
+- shown_no: '3.30'
+  prices_oz: '03.0030'
+  short: Abdicht. PYE 2lg. K2
+  long: null
+  qty: 640
+  unit: m²
+  ep: 45.44
+  gp: 29081.6
+  included: false
+  product: Bauder BauderKARAT
+- shown_no: '3.40'
+  prices_oz: '03.0040'
+  short: Attika Alu 2mm Zuschn. 450
+  long: null
+  qty: 112
+  unit: lfm
+  ep: 80.04
+  gp: 8964.48
+  included: false
+  product: null
+- shown_no: '3.50'
+  prices_oz: '03.0050'
+  short: Dachabl. DN100 beh.
+  long: null
+  qty: 8
+  unit: Stck
+  ep: 427.13
+  gp: 3417.04
+  included: false
+  product: SitaTrendy
+- shown_no: '3.60'
+  prices_oz: '03.0060'
+  short: Notüberl. Attika 300x65
+  long: null
+  qty: 4
+  unit: Stck
+  ep: 271.74
+  gp: 1086.96
+  included: false
+  product: null
+- shown_no: '3.70'
+  prices_oz: '03.0070'
+  short: RFR TiZn DN100
+  long: null
+  qty: 46
+  unit: lfm
+  ep: 48.28
+  gp: 2220.88
+  included: false
+  product: null
+- shown_no: '4.10'
+  prices_oz: '04.0010'
+  short: Verbundabd. W2-I
+  long: null
+  qty: 86
+  unit: m²
+  ep: 41.29
+  gp: 3550.94
+  included: false
+  product: null
+- shown_no: '4.20'
+  prices_oz: '04.0020'
+  short: BF FSZ 30x60 R10
+  long: null
+  qty: 210
+  unit: m²
+  ep: 96.97
+  gp: 20363.7
+  included: false
+  product: null
+- shown_no: '4.30'
+  prices_oz: '04.0030'
+  short: WF Stg 20x40 ws matt
+  long: null
+  qty: 340
+  unit: m²
+  ep: 68.0
+  gp: 23120.0
+  included: false
+  product: null
+- shown_no: '4.40'
+  prices_oz: '04.0040'
+  short: Sockel FSZ h=7cm
+  long: null
+  qty: 180
+  unit: lfm
+  ep: 18.19
+  gp: 3274.2
+  included: false
+  product: null
+- shown_no: '4.50'
+  prices_oz: '04.0050'
+  short: Abschl.profil VA
+  long: null
+  qty: 120
+  unit: lfm
+  ep: 14.64
+  gp: 1756.8
+  included: false
+  product: Schlüter-SCHIENE-E
+- shown_no: '5.10'
+  prices_oz: '05.0010'
+  short: UG-Vorb. Estr. schl./sp.
+  long: null
+  qty: 740
+  unit: m²
+  ep: 13.45
+  gp: 9953.0
+  included: false
+  product: null
+- shown_no: '5.20'
+  prices_oz: '05.0020'
+  short: Kautschuk 3mm Bahn
+  long: null
+  qty: 690
+  unit: m²
+  ep: 63.33
+  gp: 43697.7
+  included: false
+  product: nora noraplan sentica
+- shown_no: '5.30'
+  prices_oz: '05.0030'
+  short: Sauberlaufmatte m. Rahmen
+  long: null
+  qty: 12
+  unit: m²
+  ep: 371.41
+  gp: 4456.92
+  included: false
+  product: null
+- shown_no: '5.40'
+  prices_oz: '05.0040'
+  short: Hohlkehls. h=100
+  long: null
+  qty: 410
+  unit: lfm
+  ep: 20.6
+  gp: 8446.0
+  included: false
+  product: null
+- shown_no: '5.50'
+  prices_oz: '05.0050'
+  short: Stufen Kautsch. inkl. Kante
+  long: null
+  qty: 32
+  unit: Stck
+  ep: 133.0
+  gp: 4256.0
+  included: false
+  product: null
+- shown_no: '6.10'
+  prices_oz: '06.0010'
+  short: Trep.-Geländer St verz.+HL VA
+  long: null
+  qty: 28
+  unit: lfm
+  ep: 448.35
+  gp: 12553.8
+  included: false
+  product: null
+- shown_no: '6.20'
+  prices_oz: '06.0020'
+  short: Absturzsich. FT 101
+  long: null
+  qty: 14
+  unit: Stck
+  ep: 401.27
+  gp: 5617.78
+  included: false
+  product: null
+- shown_no: '6.30'
+  prices_oz: '06.0030'
+  short: Vordach St/Glas 300x180
+  long: null
+  qty: 1
+  unit: Stck
+  ep: 9438.0
+  gp: 9438.0
+  included: false
+  product: null
+- shown_no: '6.40'
+  prices_oz: '06.0040'
+  short: Kleinstahlt. verz.
+  long: null
+  qty: 180
+  unit: kg
+  ep: 11.1
+  gp: 1998.0
+  included: false
+  product: null
+- shown_no: '6.50'
+  prices_oz: '06.0050'
+  short: StdL Metallbauer
+  long: null
+  qty: 16
+  unit: Std
+  ep: 54.78
+  gp: 876.48
+  included: false
+  product: null
+deviations:
+- type: extra_position
+  oz: null
+  detail: Fassadengerüst LK 4, Standzeit 8 Wo.
+- type: qty_changed
+  oz: '01.0030'
+  detail: 1085 -> 1058
+- type: product_alternative
+  oz: '02.0010'
+  detail: Leitfabrikat Internorm HF 410 -> Gaulhofer FUSIONLINE Holz-Alu
+- type: reservation
+  oz: null
+  detail: payment

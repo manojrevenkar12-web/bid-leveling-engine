@@ -144,7 +144,7 @@ function openFinding(fs) {
       (f) => `<section><h2>${esc(LABEL[f.type] || f.type)} ${f.oz ? esc(f.oz) : ""}</h2>
       <span class="sev ${SEV[f.type]}">${esc(f.severity)}</span> <span class="status ${esc(f.status)}">${f.status === "open" ? "" : esc(f.status)}</span>
       <p>${esc(f.message)}</p>
-      ${f.detail && (f.detail.expected != null || f.detail.found != null) ? `<div class="src">BoQ / field: ${esc(JSON.stringify(f.detail.expected))}\nBid:        ${esc(JSON.stringify(f.detail.found))}</div>` : ""}
+      ${f.detail && !(f.detail.diffs || []).length && (f.detail.expected != null || f.detail.found != null) ? `<div class="src">Expected: ${esc(String(f.detail.expected ?? "–"))}\nBid says: ${esc(String(f.detail.found ?? "–"))}</div>` : ""}
       ${(f.detail?.diffs || []).map((d) => `<div class="src">BoQ: …${esc(d.context)} <b>${esc(d.was)}</b>\nBid: …${esc(d.context)} <b>${esc(d.now)}</b>  (${esc(d.direction)})</div>`).join("")}
       ${f.evidence.map(evidenceImg).join("")}
       <p class="note">Confidence ${(100 * f.confidence).toFixed(0)}%${f.needsReview ? " · sent to review" : ""}</p>

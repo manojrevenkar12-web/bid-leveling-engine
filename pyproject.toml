@@ -30,7 +30,7 @@ dependencies = [
 [project.optional-dependencies]
 prefect = ["prefect>=3.4,<4"]
 llm = ["anthropic>=0.40"]
-dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10", "types-PyYAML"]
+dev = ["pytest>=8", "ruff==0.16.8", "mypy>=1.10", "types-PyYAML"]
 
 [project.scripts]
 ble = "ble.cli:main"

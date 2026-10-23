@@ -1,0 +1,364 @@
+company: Wolff Bau- und Fenstertechnik GmbH
+format: xlsx
+priced_version: v1
+include_long_text: false
+letter:
+- Wir danken für Ihre Anfrage und übersenden Ihnen unser Angebot im Excel-Format.
+- Beim Kautschukbelag bieten wir ein gleichwertiges Produkt an, die technischen Datenblätter fügen wir bei.
+- Die Untergrundvorbereitung für die Bodenbeläge haben wir in die Belagspreise eingerechnet.
+- An die angebotenen Preise halten wir uns bis zum 30.11.2026 gebunden; danach bedürfen sie unserer erneuten Bestätigung.
+- Ihre Ansprechpartnerin in unserem Haus ist Frau Wolff.
+lines:
+- shown_no: '1'
+  prices_oz: '01.0010'
+  short: Untergrund vorbereiten, grun
+  long: null
+  qty: 1240
+  unit: qm
+  ep: 5.25
+  gp: 6510.0
+  included: false
+  product: null
+- shown_no: '2'
+  prices_oz: '01.0020'
+  short: Sockeldämmung XPS 120 mm
+  long: null
+  qty: 118
+  unit: qm
+  ep: 84.77
+  gp: 10002.86
+  included: false
+  product: null
+- shown_no: '3'
+  prices_oz: '01.0030'
+  short: WDVS Mineralwolle 200 mm, ni
+  long: null
+  qty: 1085
+  unit: qm
+  ep: 126.43
+  gp: 137176.55
+  included: false
+  product: Sto StoTherm Mineral
+- shown_no: '4'
+  prices_oz: '01.0040'
+  short: Laibungen dämmen, Tiefe bis
+  long: null
+  qty: 412
+  unit: m
+  ep: 42.37
+  gp: 17456.44
+  included: false
+  product: null
+- shown_no: '5'
+  prices_oz: '01.0050'
+  short: Oberputz Silikonharz 2 mm, E
+  long: null
+  qty: 1085
+  unit: qm
+  ep: 27.98
+  gp: 30358.3
+  included: false
+  product: null
+- shown_no: '6'
+  prices_oz: '01.0060'
+  short: Zulage dunkler Farbton HBW 1
+  long: null
+  qty: 140
+  unit: qm
+  ep: 7.5
+  gp: 1050.0
+  included: false
+  product: null
+- shown_no: '7'
+  prices_oz: '02.0010'
+  short: Holz-Alu-Fenster 2-flg., 1,5
+  long: null
+  qty: 24
+  unit: St.
+  ep: 2814.0
+  gp: 67536.0
+  included: false
+  product: Internorm HF 410
+- shown_no: '8'
+  prices_oz: '02.0020'
+  short: Festverglasung 2,26 x 2,51 m
+  long: null
+  qty: 6
+  unit: St.
+  ep: 3865.0
+  gp: 23190.0
+  included: false
+  product: null
+- shown_no: '9'
+  prices_oz: '02.0030'
+  short: Fenstertür 1-flg., schwellen
+  long: null
+  qty: 8
+  unit: St.
+  ep: 3250.0
+  gp: 26000.0
+  included: false
+  product: null
+- shown_no: '10'
+  prices_oz: '02.0040'
+  short: Außenfensterbank Aluminium
+  long: null
+  qty: 96
+  unit: m
+  ep: 66.65
+  gp: 6398.4
+  included: false
+  product: null
+- shown_no: '11'
+  prices_oz: '02.0050'
+  short: Fensteranschluss luft- und s
+  long: null
+  qty: 238
+  unit: m
+  ep: 17.83
+  gp: 4243.54
+  included: false
+  product: ISO-Chemie ISO-CONNECT INSIDE/OUTSIDE
+- shown_no: '12'
+  prices_oz: '02.0060'
+  short: Haupteingangstür Alu 2-flg.
+  long: null
+  qty: 1
+  unit: St.
+  ep: 12499.0
+  gp: 12499.0
+  included: false
+  product: null
+- shown_no: '13'
+  prices_oz: '03.0010'
+  short: Dampfsperre Bitumen-Alu, ges
+  long: null
+  qty: 640
+  unit: qm
+  ep: 19.59
+  gp: 12537.6
+  included: false
+  product: null
+- shown_no: '14'
+  prices_oz: '03.0020'
+  short: Gefälledämmung EPS 035, i. M
+  long: null
+  qty: 640
+  unit: qm
+  ep: 58.98
+  gp: 37747.2
+  included: false
+  product: null
+- shown_no: '15'
+  prices_oz: '03.0030'
+  short: Dachabdichtung Polymerbitume
+  long: null
+  qty: 640
+  unit: qm
+  ep: 48.97
+  gp: 31340.8
+  included: false
+  product: Bauder BauderKARAT
+- shown_no: '16'
+  prices_oz: '03.0040'
+  short: Attikaabdeckung Aluminium 2
+  long: null
+  qty: 112
+  unit: m
+  ep: 87.57
+  gp: 9807.84
+  included: false
+  product: null
+- shown_no: '17'
+  prices_oz: '03.0050'
+  short: Flachdachablauf DN 100, behe
+  long: null
+  qty: 8
+  unit: St.
+  ep: 460.25
+  gp: 3682.0
+  included: false
+  product: SitaTrendy
+- shown_no: '18'
+  prices_oz: '03.0060'
+  short: Notüberlauf Attika 300 x 65
+  long: null
+  qty: 4
+  unit: St.
+  ep: 349.2
+  gp: 1396.8
+  included: false
+  product: null
+- shown_no: '19'
+  prices_oz: '03.0070'
+  short: Regenfallrohr Titanzink DN 1
+  long: null
+  qty: 46
+  unit: m
+  ep: 53.49
+  gp: 2460.54
+  included: false
+  product: null
+- shown_no: '20'
+  prices_oz: '04.0010'
+  short: Verbundabdichtung W2-I, Dusc
+  long: null
+  qty: 86
+  unit: qm
+  ep: 38.47
+  gp: 3308.42
+  included: false
+  product: null
+- shown_no: '21'
+  prices_oz: '04.0020'
+  short: Bodenfliesen Feinsteinzeug 3
+  long: null
+  qty: 210
+  unit: qm
+  ep: 91.8
+  gp: 19278.0
+  included: false
+  product: null
+- shown_no: '22'
+  prices_oz: '04.0030'
+  short: Wandfliesen Steingut 20 x 40
+  long: null
+  qty: 340
+  unit: qm
+  ep: 86.08
+  gp: 29267.2
+  included: false
+  product: null
+- shown_no: '23'
+  prices_oz: '04.0040'
+  short: Fliesensockel h = 7 cm
+  long: null
+  qty: 180
+  unit: m2
+  ep: 19.6
+  gp: 3528.0
+  included: false
+  product: null
+- shown_no: '24'
+  prices_oz: '04.0050'
+  short: Abschlussprofil Edelstahl
+  long: null
+  qty: 120
+  unit: m
+  ep: 17.93
+  gp: 2151.6
+  included: false
+  product: Schlüter-SCHIENE-E
+- shown_no: '25'
+  prices_oz: '05.0010'
+  short: Untergrundvorbereitung Estri
+  long: null
+  qty: 740
+  unit: qm
+  ep: null
+  gp: null
+  included: true
+  product: null
+- shown_no: '26'
+  prices_oz: '05.0020'
+  short: Kautschukbelag 3,0 mm, Bahne
+  long: null
+  qty: 690
+  unit: qm
+  ep: 78.28
+  gp: 54013.2
+  included: false
+  product: Artigo Kayar 3,0 mm
+- shown_no: '27'
+  prices_oz: '05.0030'
+  short: Sauberlaufzone in Alu-Matten
+  long: null
+  qty: 12
+  unit: qm
+  ep: 419.85
+  gp: 5038.2
+  included: false
+  product: null
+- shown_no: '28'
+  prices_oz: '05.0040'
+  short: Hohlkehlsockel Kautschuk h =
+  long: null
+  qty: 410
+  unit: m
+  ep: 24.28
+  gp: 9954.8
+  included: false
+  product: null
+- shown_no: '29'
+  prices_oz: '05.0050'
+  short: Treppenstufe Kautschuk mit K
+  long: null
+  qty: 32
+  unit: St.
+  ep: 165.16
+  gp: 5285.12
+  included: false
+  product: null
+- shown_no: '30'
+  prices_oz: '06.0010'
+  short: Treppengeländer Stahl verz.
+  long: null
+  qty: 28
+  unit: m
+  ep: 489.4
+  gp: 13703.2
+  included: false
+  product: null
+- shown_no: '31'
+  prices_oz: '06.0020'
+  short: Absturzsicherung bodentiefe
+  long: null
+  qty: 14
+  unit: St.
+  ep: 446.62
+  gp: 6252.68
+  included: false
+  product: null
+- shown_no: '32'
+  prices_oz: '06.0030'
+  short: Vordach Stahl-Glas 3,00 x 1
+  long: null
+  qty: 1
+  unit: St.
+  ep: 10857.0
+  gp: 10857.0
+  included: false
+  product: null
+- shown_no: '33'
+  prices_oz: '06.0040'
+  short: Kleinstahlteile, Konsolen, W
+  long: null
+  qty: 180
+  unit: kg
+  ep: 12.44
+  gp: 2239.2
+  included: false
+  product: null
+- shown_no: '34'
+  prices_oz: '06.0050'
+  short: Stundenlohnarbeiten Metallba
+  long: null
+  qty: 16
+  unit: h
+  ep: 64.32
+  gp: 1029.12
+  included: false
+  product: null
+deviations:
+- type: unit_changed
+  oz: '04.0040'
+  detail: m -> m2
+- type: included_price
+  oz: '05.0010'
+  detail: marked 'enthalten'
+- type: product_alternative
+  oz: '05.0020'
+  detail: Leitfabrikat nora noraplan sentica -> Artigo Kayar 3,0 mm
+- type: reservation
+  oz: null
+  detail: validity

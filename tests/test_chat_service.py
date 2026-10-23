@@ -87,3 +87,20 @@ def test_evidence_crop_checks_the_document_hash(client):
     assert c.get("/evidence.png", params={"doc": f"../../etc/passwd@{sha}"}).status_code == 404
     (data / "X01" / "a.pdf").write_bytes(b"%PDF-1.4 changed")
     assert c.get("/evidence.png", params={"doc": f"X01/a.pdf@{sha}"}).status_code == 409
+
+
+def test_model_phrasing_is_held_to_the_evidence(run_dict):
+    def fake(prompt):
+        assert "[E1]" in prompt
+        return "Hoffmann Hochbau GmbH ist am günstigsten. [E1]\nSchulte bietet 5 % Rabatt. [E9]\nDer Preis liegt bei 99.000 €."
+
+    a = answer(run_dict, "Wer ist am günstigsten?", complete=fake)
+    assert a.text == "Hoffmann Hochbau GmbH ist am günstigsten. [E1]" and "llm.phrase" in a.tools and a.dropped == 1
+
+
+def test_model_failure_keeps_the_deterministic_answer(run_dict):
+    def broken(prompt):
+        raise RuntimeError("timeout")
+
+    a = answer(run_dict, "Who is cheapest?", complete=broken)
+    assert a.text.startswith("1. ") and "llm.phrase" not in a.tools

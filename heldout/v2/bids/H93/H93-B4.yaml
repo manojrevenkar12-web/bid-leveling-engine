@@ -1,0 +1,356 @@
+company: Hans Rieger Bauunternehmung e.K.
+format: scan
+priced_version: v1
+include_long_text: false
+letter:
+- Hiermit reichen wir unser Angebot für die Hüllen- und Ausbauarbeiten an der Kita ein.
+- Mit den Arbeiten können wir frühestens in KW 12/2027 beginnen, da unsere Kolonnen bis dahin anderweitig gebunden sind.
+- Baustrom und Bauwasser sind uns bauseits kostenfrei zur Verfügung zu stellen.
+- Mit freundlichem Gruß
+lines:
+- shown_no: ''
+  prices_oz: '01.0010'
+  short: Untergr. vorb. + grund.
+  long: null
+  qty: 1240
+  unit: qm
+  ep: 4.15
+  gp: 5146.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '01.0020'
+  short: Sockeldämm. XPS 120mm inkl. Arm.
+  long: null
+  qty: 118
+  unit: qm
+  ep: 67.19
+  gp: 7928.42
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '01.0030'
+  short: WDVS MW 200 WLS035 A2
+  long: null
+  qty: 1085
+  unit: qm
+  ep: 108.29
+  gp: 117494.65
+  included: false
+  product: Sto StoTherm Mineral
+- shown_no: ''
+  prices_oz: '01.0040'
+  short: Laib. dämmen/arm. b. 30cm
+  long: null
+  qty: 412
+  unit: lfm
+  ep: 30.21
+  gp: 12446.52
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '01.0050'
+  short: OP Sil.harz K2 + Egal.
+  long: null
+  qty: 1085
+  unit: qm
+  ep: 21.53
+  gp: 23360.05
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '01.0060'
+  short: Zul. dkl. FT HBW<25
+  long: null
+  qty: 140
+  unit: qm
+  ep: 6.21
+  gp: 869.4
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0010'
+  short: HoAl-Fe 2flg 151x151 RC2
+  long: null
+  qty: 24
+  unit: Stk
+  ep: 2403.0
+  gp: 57672.0
+  included: false
+  product: Internorm HF 410
+- shown_no: ''
+  prices_oz: '02.0020'
+  short: Festelem. 226x251 VSG
+  long: null
+  qty: 6
+  unit: Stk
+  ep: 3714.0
+  gp: 22284.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0030'
+  short: FeTür 1flg 101x226 o.Schw.
+  long: null
+  qty: 8
+  unit: Stk
+  ep: 2672.0
+  gp: 21376.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0040'
+  short: Fensterbank au. Alu 260
+  long: null
+  qty: 96
+  unit: lfm
+  ep: 63.07
+  gp: 6504.72
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0050'
+  short: RAL-Anschl. Folie in/au
+  long: null
+  qty: 238
+  unit: lfm
+  ep: 13.11
+  gp: 3120.18
+  included: false
+  product: ISO-Chemie ISO-CONNECT INSIDE/OUTSIDE
+- shown_no: ''
+  prices_oz: '02.0060'
+  short: Hauseingangstür Alu 2flg Panik
+  long: null
+  qty: 1
+  unit: Stk
+  ep: 11967.0
+  gp: 11967.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0010'
+  short: Dampfsp. Bit-Alu geschw.
+  long: null
+  qty: 640
+  unit: qm
+  ep: 16.95
+  gp: 10848.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0020'
+  short: Gef.-Dämm. EPS 035 im 220
+  long: null
+  qty: 640
+  unit: qm
+  ep: 50.37
+  gp: 32236.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0030'
+  short: Abdicht. PYE 2lg. K2
+  long: null
+  qty: 640
+  unit: qm
+  ep: 43.46
+  gp: 27814.4
+  included: false
+  product: Bauder BauderKARAT
+- shown_no: ''
+  prices_oz: '03.0040'
+  short: Attika Alu 2mm Zuschn. 450
+  long: null
+  qty: 112
+  unit: lfm
+  ep: 69.18
+  gp: 7748.16
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0050'
+  short: Dachabl. DN100 beh.
+  long: null
+  qty: 8
+  unit: Stk
+  ep: 426.13
+  gp: 3409.04
+  included: false
+  product: SitaTrendy
+- shown_no: ''
+  prices_oz: '03.0060'
+  short: Notüberl. Attika 300x65
+  long: null
+  qty: 4
+  unit: Stk
+  ep: 297.39
+  gp: 1189.56
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0070'
+  short: RFR TiZn DN100
+  long: null
+  qty: 46
+  unit: lfm
+  ep: 47.12
+  gp: 2167.52
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0010'
+  short: Verbundabd. W2-I
+  long: null
+  qty: 86
+  unit: qm
+  ep: 37.39
+  gp: 3215.54
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0020'
+  short: BF FSZ 30x60 R10
+  long: null
+  qty: 210
+  unit: qm
+  ep: 84.42
+  gp: 17728.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0030'
+  short: WF Stg 20x40 ws matt
+  long: null
+  qty: 340
+  unit: qm
+  ep: 70.15
+  gp: 23851.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0040'
+  short: Sockel FSZ h=7cm
+  long: null
+  qty: 180
+  unit: lfm
+  ep: 17.44
+  gp: 3139.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0050'
+  short: Abschl.profil VA
+  long: null
+  qty: 120
+  unit: lfm
+  ep: 54.0
+  gp: 6480.0
+  included: false
+  product: Schlüter-SCHIENE-E
+- shown_no: ''
+  prices_oz: '05.0010'
+  short: UG-Vorb. Estr. schl./sp.
+  long: null
+  qty: 740
+  unit: qm
+  ep: 12.12
+  gp: 8968.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0020'
+  short: Kautschuk 3mm Bahn
+  long: null
+  qty: 690
+  unit: qm
+  ep: 58.64
+  gp: 40461.6
+  included: false
+  product: nora noraplan sentica
+- shown_no: ''
+  prices_oz: '05.0030'
+  short: Sauberlaufmatte m. Rahmen
+  long: null
+  qty: 12
+  unit: qm
+  ep: 363.62
+  gp: 4363.44
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0040'
+  short: Hohlkehls. h=100
+  long: null
+  qty: 410
+  unit: lfm
+  ep: 20.19
+  gp: 8277.9
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0050'
+  short: Stufen Kautsch. inkl. Kante
+  long: null
+  qty: 32
+  unit: Stk
+  ep: 134.5
+  gp: 4304.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '06.0010'
+  short: Trep.-Geländer St verz.+HL VA
+  long: null
+  qty: 28
+  unit: lfm
+  ep: 437.16
+  gp: 12240.48
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '06.0030'
+  short: Vordach St/Glas 300x180
+  long: null
+  qty: 1
+  unit: Stk
+  ep: 8889.0
+  gp: 8889.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '06.0040'
+  short: Kleinstahlt. verz.
+  long: null
+  qty: 180
+  unit: kg
+  ep: 9.31
+  gp: 1675.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '06.0050'
+  short: StdL Metallbauer
+  long: null
+  qty: 16
+  unit: Std
+  ep: 58.84
+  gp: 941.44
+  included: false
+  product: null
+deviations:
+- type: arithmetic_error
+  oz: '02.0040'
+  detail: 63.07 x 96 = 6054.72, printed 6504.72
+- type: price_outlier
+  oz: '04.0050'
+  detail: EP 54.00 vs. market approx. 16.50
+- type: missing_position
+  oz: '06.0020'
+  detail: Absturzsicherung bodentiefe Fenster not offered
+- type: reservation
+  oz: null
+  detail: schedule
+- type: reservation
+  oz: null
+  detail: exclusions

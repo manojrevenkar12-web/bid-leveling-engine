@@ -1,0 +1,320 @@
+company: Wegebau Mertens GmbH
+format: xlsx
+priced_version: v2
+include_long_text: false
+letter:
+- Vielen Dank für Ihre Anfrage, anbei erhalten Sie unser Angebot.
+- Sämtliche Arbeiten führen wir mit eigenen Kolonnen aus, lediglich die Kanal-TV-Inspektion vergeben wir an einen Nachunternehmer.
+- Zwischen dem 15.12. und dem 15.02. führen wir witterungsbedingt keine Asphaltarbeiten aus; die Bauzeit verlängert sich entsprechend.
+- Wir freuen uns auf Ihre Rückmeldung.
+lines:
+- shown_no: ''
+  prices_oz: '01.0010'
+  short: BE einr./vorh./räumen
+  long: null
+  qty: 1
+  unit: psch
+  ep: 21229.0
+  gp: 21229.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '01.0020'
+  short: VS RSA21 inkl. LSA
+  long: null
+  qty: 1
+  unit: psch
+  ep: 7269.0
+  gp: 7269.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '01.0030'
+  short: Wasserh. offen Pumpen-h
+  long: null
+  qty: 560
+  unit: h
+  ep: 6.1
+  gp: 3416.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0010'
+  short: MuBo abschieben/Miete
+  long: null
+  qty: 3200
+  unit: qm
+  ep: 2.69
+  gp: 8608.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0020'
+  short: Bod. lös./lad./abf. B1
+  long: null
+  qty: 1450
+  unit: m3
+  ep: 17.62
+  gp: 25549.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0030'
+  short: Entsorg. Z1.2 inkl. Geb.
+  long: null
+  qty: 740
+  unit: t
+  ep: 21.66
+  gp: 16028.4
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0040'
+  short: Entsorg. Z2 inkl. Geb.
+  long: null
+  qty: 180
+  unit: t
+  ep: 33.66
+  gp: 6058.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0050'
+  short: Planum Ev2>=45
+  long: null
+  qty: 2850
+  unit: qm
+  ep: 1.95
+  gp: 5557.5
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '02.0060'
+  short: Bod.-Austausch Schott. 0/45
+  long: null
+  qty: 220
+  unit: m3
+  ep: 39.24
+  gp: 8632.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0010'
+  short: RoGr Aush. T 2,5-3,5
+  long: null
+  qty: 980
+  unit: m3
+  ep: 25.82
+  gp: 25303.6
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0020'
+  short: Verbau Gleitschiene
+  long: null
+  qty: 1120
+  unit: qm
+  ep: 9.71
+  gp: 10875.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0030'
+  short: SW PP SN16 DN300
+  long: null
+  qty: 286
+  unit: lfdm
+  ep: 122.39
+  gp: 35003.54
+  included: false
+  product: REHAU AWADUKT PP SN16
+- shown_no: ''
+  prices_oz: '03.0040'
+  short: RW StB-Rohr DN500
+  long: null
+  qty: 214
+  unit: lfdm
+  ep: 196.44
+  gp: 42038.16
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0050'
+  short: Schacht FT DN1000 b. 3,5m
+  long: null
+  qty: 11
+  unit: St
+  ep: 2877.0
+  gp: 31647.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0060'
+  short: SA D400 DN625
+  long: null
+  qty: 11
+  unit: St
+  ep: 527.86
+  gp: 5806.46
+  included: false
+  product: ACO MULTITOP bituplus
+- shown_no: ''
+  prices_oz: '03.0070'
+  short: Hausanschl. PP DN150 b. 8m
+  long: null
+  qty: 26
+  unit: St
+  ep: 1640.0
+  gp: 42640.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0080'
+  short: Leitungszone Sand 0/8
+  long: null
+  qty: 310
+  unit: m3
+  ep: 38.43
+  gp: 11913.3
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0090'
+  short: TV-Insp. Haltung
+  long: null
+  qty: 500
+  unit: lfdm
+  ep: 3.39
+  gp: 1695.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '03.0100'
+  short: Dichtheitspr. Luft LC
+  long: null
+  qty: 500
+  unit: lfdm
+  ep: 5.71
+  gp: 2855.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0010'
+  short: FSS 0/32 d=30
+  long: null
+  qty: 2650
+  unit: qm
+  ep: 13.14
+  gp: 34821.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0020'
+  short: STS 0/32 d=15
+  long: null
+  qty: 2650
+  unit: qm
+  ep: 11.56
+  gp: 30634.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0030'
+  short: ATS AC32TS 10cm
+  long: null
+  qty: 2180
+  unit: qm
+  ep: 22.91
+  gp: 49943.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0040'
+  short: ADS AC11DS 4cm
+  long: null
+  qty: 2180
+  unit: qm
+  ep: 15.42
+  gp: 33615.6
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0050'
+  short: Haftkl. C60BP1-S
+  long: null
+  qty: 2180
+  unit: qm
+  ep: 0.94
+  gp: 2049.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '04.0060'
+  short: Anschl. Bestand schn.+Fugenb.
+  long: null
+  qty: 64
+  unit: lfdm
+  ep: 14.95
+  gp: 956.8
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0010'
+  short: HB 15/30 inkl. Fund.
+  long: null
+  qty: 820
+  unit: lfdm
+  ep: 37.7
+  gp: 30914.0
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0020'
+  short: TB 8/25
+  long: null
+  qty: 640
+  unit: lfdm
+  ep: 24.18
+  gp: 15475.2
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0030'
+  short: BSP 20/10/8 grau
+  long: null
+  qty: 1140
+  unit: qm
+  ep: 43.42
+  gp: 49498.8
+  included: false
+  product: KANN Rechteckpflaster Classic
+- shown_no: ''
+  prices_oz: '05.0040'
+  short: Muldenr. Granit 3zlg.
+  long: null
+  qty: 210
+  unit: lfdm
+  ep: 59.59
+  gp: 12513.9
+  included: false
+  product: null
+- shown_no: ''
+  prices_oz: '05.0050'
+  short: Str.-Abl. 500/500 D400
+  long: null
+  qty: 18
+  unit: St
+  ep: 681.37
+  gp: 12264.66
+  included: false
+  product: null
+deviations:
+- type: qty_changed
+  oz: '03.0030'
+  detail: 302 -> 286
+- type: missing_position
+  oz: '03.0110'
+  detail: Anschluss an vorhandenen Mischwasserschacht not offered
+- type: reservation
+  oz: null
+  detail: schedule

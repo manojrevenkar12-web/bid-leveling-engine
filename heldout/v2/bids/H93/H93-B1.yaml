@@ -1,0 +1,358 @@
+company: Fassadentechnik Brenner GmbH & Co. KG
+format: gaeb
+priced_version: v1
+include_long_text: false
+letter:
+- Vielen Dank für die Übersendung der Ausschreibungsunterlagen zum Neubau der Kita „Am Mühlbach“.
+- Beigefügt erhalten Sie unser Angebot als GAEB-Datei sowie das unterschriebene Angebotsschreiben.
+- Unsere Lohn- und Materialansätze beruhen auf den Tarif- und Listenpreisen vom September 2026; erfolgt die Beauftragung nach dem 31.12.2026, passen wir die Einheitspreise entsprechend der Indexentwicklung an.
+- Bei Fragen zur Kalkulation steht Ihnen unser Herr Brenner gern zur Verfügung.
+- Mit freundlichen Grüßen
+lines:
+- shown_no: '01.0010'
+  prices_oz: '01.0010'
+  short: Untergrund vorbereiten, grundieren
+  long: 'Mauerwerksuntergrund aus Kalksandstein für das Aufbringen des Wärmedämm-Verbundsystems vorbereiten: lose Teile und Mörtelgrate entfernen, Fläche abkehren, Haftzugfestigkeit stichprobenartig prüfen und protokollieren. Anschließend systemzugehörige Grundierung vollflächig auftragen. Abrechnung nach Ansichtsfläche, Öffnungen über 2,5 m² werden abgezogen.'
+  qty: 1240
+  unit: m2
+  ep: 4.61
+  gp: 5716.4
+  included: false
+  product: null
+- shown_no: '01.0020'
+  prices_oz: '01.0020'
+  short: Sockeldämmung XPS 120 mm
+  long: Sockel- und Perimeterdämmung im Spritzwasserbereich bis 30 cm unter Geländeoberkante aus extrudiertem Polystyrol-Hartschaum XPS, WLS 035, Druckspannung bei 10 % Stauchung ≥ 300 kPa, Dicke 120 mm, Oberfläche geprägt, mit Klebe- und Armierungsmörtel vollflächig verkleben, im erdberührten Bereich mit bituminöser Dickbeschichtung nach Systemvorgabe schützen. Armierungsschicht und mineralischen Sockelputz mitliefern.
+  qty: 118
+  unit: m2
+  ep: 81.65
+  gp: 9634.7
+  included: false
+  product: null
+- shown_no: '01.0030'
+  prices_oz: '01.0030'
+  short: WDVS Mineralwolle 200 mm, nichtbrennbar
+  long: 'Wärmedämm-Verbundsystem mit allgemeiner bauaufsichtlicher Zulassung, Baustoffklasse nichtbrennbar A2-s1,d0, bestehend aus Mineralwolle-Putzträgerplatten WLS 035, Dicke 200 mm, mit Klebemörtel im Wulst-Punkt-Verfahren verkleben und systemgerecht verdübeln (Dübelschema nach Windzone 2, Gebäudehöhe bis 10 m), Armierungsschicht mit Glasfasergewebe, Gewebeüberlappung mind. 10 cm, Diagonalarmierung an allen Öffnungsecken. Leitfabrikat: Sto StoTherm Mineral oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 1085
+  unit: m2
+  ep: 130.78
+  gp: 141896.3
+  included: false
+  product: Sto StoTherm Mineral
+- shown_no: '01.0040'
+  prices_oz: '01.0040'
+  short: Laibungen dämmen, Tiefe bis 30 cm
+  long: Fenster- und Türlaibungen mit Mineralwolle-Dämmplatten WLS 035, Dicke 40 mm, dämmen, armieren und putzen, einschließlich Anputzleiste mit Gewebelasche am Blendrahmen und Kantenschutzprofil mit Gewebe. Laibungstiefe bis 30 cm, Abrechnung nach laufendem Meter Laibung.
+  qty: 412
+  unit: m
+  ep: 38.09
+  gp: 15693.08
+  included: false
+  product: null
+- shown_no: '01.0050'
+  prices_oz: '01.0050'
+  short: Oberputz Silikonharz 2 mm, Egalisation
+  long: Silikonharz-Oberputz als Kratzputz, Korngröße 2,0 mm, nach ausreichender Standzeit auf die Armierungsschicht aufziehen und gleichmäßig strukturieren; anschließend Egalisationsanstrich mit Silikonharzfarbe, Farbton nach Bemusterung, Hellbezugswert ≥ 25. Eine Musterfläche von ca. 1 m² ist vorab anzulegen.
+  qty: 1085
+  unit: m2
+  ep: 26.71
+  gp: 28980.35
+  included: false
+  product: null
+- shown_no: '01.0060'
+  prices_oz: '01.0060'
+  short: Zulage dunkler Farbton HBW 15–25
+  long: Zulage zu Pos. 01.0050 für Oberputz und Anstrich in Farbtönen mit einem Hellbezugswert von 15 bis 25, einschließlich systembedingter Zusatzmaßnahmen (verstärkte Armierung nach Herstellerangabe).
+  qty: 140
+  unit: m2
+  ep: 8.14
+  gp: 1139.6
+  included: false
+  product: null
+- shown_no: '02.0010'
+  prices_oz: '02.0010'
+  short: Holz-Alu-Fenster 2-flg., 1,51 x 1,51 m
+  long: 'Holz-Aluminium-Fenster, zweiflügelig mit Stulp, Dreh-Kipp/Dreh, Rohbaurichtmaß 1,51 x 1,51 m, Holz Fichte lamelliert, innen deckend weiß lackiert, Aluminium-Deckschale außen pulverbeschichtet RAL 7016. Dreifach-Isolierverglasung Ug = 0,5 W/(m²K) mit warmer Kante, Uw ≤ 0,85 W/(m²K), Einbruchhemmung RC 2 nach DIN EN 1627, abschließbare Griffe, Fehlbedienungssperre. Leitfabrikat: Internorm HF 410 oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 24
+  unit: St
+  ep: 2503.0
+  gp: 60072.0
+  included: false
+  product: Internorm HF 410
+- shown_no: '02.0020'
+  prices_oz: '02.0020'
+  short: Festverglasung 2,26 x 2,51 m
+  long: Holz-Aluminium-Festelement in Ausführung wie Pos. 02.0010, Rohbaurichtmaß 2,26 x 2,51 m, mit horizontalem Kämpfer bei 0,90 m, Verglasung im Brüstungsbereich innen aus VSG 2 x 4 mm absturzsichernd nach DIN 18008-4, Uw ≤ 0,85 W/(m²K).
+  qty: 6
+  unit: St
+  ep: 4077.0
+  gp: 24462.0
+  included: false
+  product: null
+- shown_no: '02.0030'
+  prices_oz: '02.0030'
+  short: Fenstertür 1-flg., schwellenlos
+  long: Fenstertür in Ausführung wie Pos. 02.0010, einflügelig Dreh-Kipp, Rohbaurichtmaß 1,01 x 2,26 m, barrierefreie Magnet-Doppeldichtschwelle mit 0 mm Schwellenhöhe, Stoßgriff außen, Uw ≤ 0,90 W/(m²K), Einbruchhemmung RC 2.
+  qty: 8
+  unit: St
+  ep: 2650.0
+  gp: 21200.0
+  included: false
+  product: null
+- shown_no: '02.0040'
+  prices_oz: '02.0040'
+  short: Außenfensterbank Aluminium, Ausladung 260 mm
+  long: Außenfensterbank aus Aluminium, Materialdicke 2,0 mm, eloxiert E6/EV1, Ausladung 260 mm, Tropfkante 30 mm vor fertiger Fassade, mit seitlichen Bordprofilen, Dehnungsausgleich und Antidröhnbeschichtung, auf Gefälleunterlage montieren und dauerelastisch anschließen.
+  qty: 96
+  unit: m
+  ep: 58.66
+  gp: 5631.36
+  included: false
+  product: null
+- shown_no: '02.0050'
+  prices_oz: '02.0050'
+  short: Fensteranschluss luft- und schlagregendicht
+  long: 'Fensteranschlussfuge nach Leitfaden zur Planung und Ausführung der Montage von Fenstern und Haustüren (RAL) herstellen: raumseitig luftdichtes Folienband sd ≥ 10 m, außenseitig schlagregendichtes, diffusionsoffenes Band, Funktionsbereich mit Mineralwolle oder Montageschaum ausfüllen. Leitfabrikat: ISO-Chemie ISO-CONNECT INSIDE/OUTSIDE oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 238
+  unit: m
+  ep: 17.2
+  gp: 4093.6
+  included: false
+  product: ISO-Chemie ISO-CONNECT INSIDE/OUTSIDE
+- shown_no: '02.0060'
+  prices_oz: '02.0060'
+  short: Haupteingangstür Alu 2-flg., Panikfunktion
+  long: Aluminium-Haustüranlage, zweiflügelig, thermisch getrennt, Rohbaurichtmaß 2,01 x 2,385 m, mit festem Oberlicht, Gangflügel mit 1,10 m lichter Durchgangsbreite, Antipanik-Stangengriffbeschlag nach DIN EN 1125, elektrischer Türöffner, Obentürschließer mit Freilauf, Fingerschutzrollo an der Bandseite, Ud ≤ 1,3 W/(m²K), Farbe RAL 7016.
+  qty: 1
+  unit: St
+  ep: null
+  gp: null
+  included: false
+  product: null
+- shown_no: '03.0010'
+  prices_oz: '03.0010'
+  short: Dampfsperre Bitumen-Alu, geschweißt
+  long: Auf der Rohdecke aus Stahlbeton nach kaltflüssigem Voranstrich Dampfsperrbahn aus Elastomerbitumen mit Aluminium-Verbundeinlage (sd ≥ 1500 m) vollflächig aufschweißen, Längs- und Quernähte 8 cm überlappend, an Aufkantungen bis Oberkante Dämmung hochführen.
+  qty: 640
+  unit: m2
+  ep: 17.82
+  gp: 11404.8
+  included: false
+  product: null
+- shown_no: '03.0020'
+  prices_oz: '03.0020'
+  short: Gefälledämmung EPS 035, i. M. 220 mm
+  long: Gefälledämmung aus EPS-Hartschaum DAA dh, WLS 035, Gefälle 2 %, mittlere Dicke 220 mm, Mindestdicke 160 mm, nach Verlegeplan des Herstellers verlegen, einschließlich Grat- und Kehlausbildung. Der Verlegeplan ist vor Lieferung zur Freigabe vorzulegen.
+  qty: 640
+  unit: m2
+  ep: 54.17
+  gp: 34668.8
+  included: false
+  product: null
+- shown_no: '03.0030'
+  prices_oz: '03.0030'
+  short: Dachabdichtung Polymerbitumen 2-lagig
+  long: 'Zweilagige Dachabdichtung nach DIN 18531, Anwendungskategorie K2: Unterlage Elastomerbitumen-Schweißbahn PYE-G 200 S4, Oberlage Elastomerbitumen-Schweißbahn PYE-PV 250 S5 mit Schieferbestreuung, Nahtüberdeckung 8 cm, vollflächig verschweißt, Windsogsicherung nach DIN EN 1991-1-4. Leitfabrikat: Bauder BauderKARAT oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 640
+  unit: m2
+  ep: 46.94
+  gp: 30041.6
+  included: false
+  product: Bauder BauderKARAT
+- shown_no: '03.0040'
+  prices_oz: '03.0040'
+  short: Attikaabdeckung Aluminium 2,0 mm
+  long: Attikaabdeckung aus Aluminium, Dicke 2,0 mm, pulverbeschichtet RAL 7016, Zuschnitt 450 mm, mit Gefälle zur Dachseite ≥ 2°, auf Haltewinkeln bzw. Haftstreifen, Stoßverbinder mit Dichtung im Abstand von max. 3 m, einschließlich Ecken und Endstücken.
+  qty: 112
+  unit: m
+  ep: 86.05
+  gp: 9637.6
+  included: false
+  product: null
+- shown_no: '03.0050'
+  prices_oz: '03.0050'
+  short: Flachdachablauf DN 100, beheizt
+  long: 'Flachdachablauf DN 100 senkrecht, wärmegedämmter Grundkörper mit Aufstockelement und Kiesfang, werkseitiger Anschlussflansch für Bitumenbahnen, elektrisch beheizt 230 V. Leitfabrikat: SitaTrendy oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 8
+  unit: St
+  ep: 407.46
+  gp: 3259.68
+  included: false
+  product: SitaTrendy
+- shown_no: '03.0060'
+  prices_oz: '03.0060'
+  short: Notüberlauf Attika 300 x 65 mm
+  long: Attika-Notüberlauf aus Edelstahl, Querschnitt 300 x 65 mm, mit Klebeflansch für Bitumenabdichtung, Einbauhöhe 35 mm über Abdichtungsebene, einschließlich Herstellen und Abdichten des Durchbruchs in der Attika.
+  qty: 4
+  unit: St
+  ep: 342.35
+  gp: 1369.4
+  included: false
+  product: null
+- shown_no: '03.0070'
+  prices_oz: '03.0070'
+  short: Regenfallrohr Titanzink DN 100
+  long: Regenfallrohr aus Titanzink, Nenndurchmesser 100 mm, Wanddicke 0,7 mm, mit Rohrschellen im Abstand von max. 2,0 m und Anschluss an das bauseitige Standrohr, einschließlich Bögen und Abzweige.
+  qty: 46
+  unit: m
+  ep: 60.54
+  gp: 2784.84
+  included: false
+  product: null
+- shown_no: '04.0010'
+  prices_oz: '04.0010'
+  short: Verbundabdichtung W2-I, Duschbereiche
+  long: Abdichtung im Verbund mit Fliesen und Platten nach DIN 18534, Wassereinwirkungsklasse W2-I, aus flexibler, rissüberbrückender mineralischer Dichtschlämme in zwei Arbeitsgängen, Trockenschichtdicke ≥ 2 mm, einschließlich Dichtband in Wand-/Boden-Ecken und Dichtmanschetten an Rohrdurchführungen.
+  qty: 86
+  unit: m2
+  ep: 36.54
+  gp: 3142.44
+  included: false
+  product: null
+- shown_no: '04.0020'
+  prices_oz: '04.0020'
+  short: Bodenfliesen Feinsteinzeug 30 x 60 cm, R 10
+  long: Bodenfliesen aus Feinsteinzeug, unglasiert, Format 30 x 60 cm, Rutschhemmung R 10, in Nassbereichen zusätzlich Bewertungsgruppe B (barfuß begangen), im Dünnbettverfahren mit C2-Flexkleber verlegen, Fugenbreite 3 mm, zementäre Fugenmasse, Farbton grau nach Bemusterung. Materialpreis der Fliese ca. 35 €/m² netto.
+  qty: 210
+  unit: m2
+  ep: 94.58
+  gp: 19861.8
+  included: false
+  product: null
+- shown_no: '04.0030'
+  prices_oz: '04.0030'
+  short: Wandfliesen Steingut 20 x 40 cm, weiß matt
+  long: Wandfliesen aus glasiertem Steingut, Format 20 x 40 cm, weiß matt, im Dünnbett mit C1-Kleber verlegen, Fugenbreite 2 mm, Fugenfarbe silbergrau, Verlegung im Halbverband bis 2,00 m Höhe.
+  qty: 340
+  unit: m2
+  ep: 80.75
+  gp: 27455.0
+  included: false
+  product: null
+- shown_no: '04.0040'
+  prices_oz: '04.0040'
+  short: Fliesensockel h = 7 cm
+  long: Sockel aus zugeschnittenen Bodenfliesen wie Pos. 04.0020, Höhe 7 cm, mit Kleber ansetzen und verfugen, Anschlussfuge zum Bodenbelag dauerelastisch schließen.
+  qty: 180
+  unit: m
+  ep: 20.64
+  gp: 3715.2
+  included: false
+  product: null
+- shown_no: '04.0050'
+  prices_oz: '04.0050'
+  short: Abschlussprofil Edelstahl
+  long: 'Abschluss- und Kantenschutzprofil aus Edelstahl 1.4301, Höhe passend zur Belagsdicke, im Fliesenkleber einbetten, Stöße mit Verbindern. Leitfabrikat: Schlüter-SCHIENE-E oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 120
+  unit: m
+  ep: 16.03
+  gp: 1923.6
+  included: false
+  product: Schlüter-SCHIENE-E
+- shown_no: '05.0010'
+  prices_oz: '05.0010'
+  short: Untergrundvorbereitung Estrich
+  long: Zementestrich CT-C25-F4 schleifen und absaugen, Restfeuchte nach CM-Methode prüfen und protokollieren (zulässig ≤ 2,0 CM-%), Grundierung auftragen und Ausgleichsspachtelung in einer mittleren Schichtdicke von 3 mm aufbringen.
+  qty: 740
+  unit: m2
+  ep: 13.39
+  gp: 9908.6
+  included: false
+  product: null
+- shown_no: '05.0020'
+  prices_oz: '05.0020'
+  short: Kautschukbelag 3,0 mm, Bahnenware
+  long: 'Kautschuk-Bodenbelag als Bahnenware, Dicke 3,0 mm, Brandverhalten Cfl-s1 nach DIN EN 13501-1, phthalatfrei, mit Dispersionskleber vollflächig kleben, Nähte thermisch verschweißen, Farbe nach Bemusterung. Leitfabrikat: nora noraplan sentica oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 690
+  unit: m2
+  ep: 63.08
+  gp: 43525.2
+  included: false
+  product: nora noraplan sentica
+- shown_no: '05.0030'
+  prices_oz: '05.0030'
+  short: Sauberlaufzone in Alu-Mattenrahmen
+  long: Sauberlaufmatte mit Rips- und Bürsteneinlagen auf Aluminium-Profilen, Aufbauhöhe 22 mm, rollstuhlbefahrbar, einschließlich Mattenrahmen aus Aluminium-Winkelprofil, in die vorhandene Estrichvertiefung einsetzen.
+  qty: 12
+  unit: m2
+  ep: 413.43
+  gp: 4961.16
+  included: false
+  product: null
+- shown_no: '05.0040'
+  prices_oz: '05.0040'
+  short: Hohlkehlsockel Kautschuk h = 100 mm
+  long: Hohlkehlsockel aus dem Belagsmaterial der Pos. 05.0020, an der Wand hochgezogen, Höhe 100 mm, mit Hohlkehlstützprofil und Abschlussprofil, einschließlich Innen- und Außenecken.
+  qty: 410
+  unit: m
+  ep: 21.62
+  gp: 8864.2
+  included: false
+  product: null
+- shown_no: '05.0050'
+  prices_oz: '05.0050'
+  short: Treppenstufe Kautschuk mit Kantenprofil
+  long: Stufenbelag aus Kautschuk für Tritt- und Setzstufe auf Betonfertigteilstufen, Stufenbreite 1,20 m, mit integriertem Stufenkantenprofil in Kontrastfarbe nach DIN 18040-1, vollflächig verkleben.
+  qty: 32
+  unit: St
+  ep: 158.15
+  gp: 5060.8
+  included: false
+  product: null
+- shown_no: '06.0010'
+  prices_oz: '06.0010'
+  short: Treppengeländer Stahl verz., Handlauf Edelstahl
+  long: Treppengeländer aus Stahl S235, feuerverzinkt und beschichtet DB 703, Höhe 1,10 m, senkrechte Füllstäbe Ø 12 mm mit lichtem Abstand ≤ 11 cm (nicht beklettbar), seitlich an der Treppenwange montiert, mit zusätzlichem Kinderhandlauf in 0,65 m Höhe, Handläufe aus Edelstahl Ø 42,4 mm.
+  qty: 28
+  unit: m
+  ep: 482.82
+  gp: 13518.96
+  included: false
+  product: null
+- shown_no: '06.0020'
+  prices_oz: '06.0020'
+  short: Absturzsicherung bodentiefe Fenster
+  long: Absturzsicherung als Flachstahl-Geländer 40 x 10 mm, feuerverzinkt, Höhe 0,90 m über Fertigfußboden, Breite 1,01 m, in der Laibung verschraubt, mit statischem Nachweis für eine Holmlast von 0,5 kN/m.
+  qty: 14
+  unit: St
+  ep: 406.26
+  gp: 5687.64
+  included: false
+  product: null
+- shown_no: '06.0030'
+  prices_oz: '06.0030'
+  short: Vordach Stahl-Glas 3,00 x 1,80 m
+  long: Vordach über dem Haupteingang als Stahlkonstruktion, feuerverzinkt und pulverbeschichtet, Abmessung 3,00 x 1,80 m, Eindeckung aus VSG 2 x 8 mm TVG, Gefälle 3 % mit integrierter Rinne und Entwässerung über Stahlrohr, Befestigung über thermisch getrennte Konsolen. Die prüffähige Statik ist mitzuliefern.
+  qty: 1
+  unit: St
+  ep: 9279.0
+  gp: 9279.0
+  included: false
+  product: null
+- shown_no: '06.0040'
+  prices_oz: '06.0040'
+  short: Kleinstahlteile, Konsolen, Winkel
+  long: Kleinstahlteile aus S235, feuerverzinkt, als Konsolen, Winkel und Befestigungslaschen nach Angabe der Bauleitung liefern und montieren; Abrechnung nach Gewicht laut Tabellenbuch.
+  qty: 180
+  unit: kg
+  ep: 11.81
+  gp: 2125.8
+  included: false
+  product: null
+- shown_no: '06.0050'
+  prices_oz: '06.0050'
+  short: Stundenlohnarbeiten Metallbauer
+  long: Stundenlohnarbeiten Metallbaugeselle, nur auf schriftliche Anordnung der Bauleitung; Stundenzettel sind täglich zur Gegenzeichnung vorzulegen.
+  qty: 16
+  unit: h
+  ep: 59.32
+  gp: 949.12
+  included: false
+  product: null
+deviations:
+- type: missing_price
+  oz: '02.0060'
+  detail: EP and GP left blank
+- type: reservation
+  oz: null
+  detail: escalation

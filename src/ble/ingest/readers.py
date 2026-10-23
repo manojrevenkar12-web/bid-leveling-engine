@@ -62,8 +62,9 @@ def _tessdata() -> str | None:
     return None
 
 
-def ocr_words(path: Path, pages: list[int]) -> list[Word]:
-    """OCR the given pages (1-based) with tesseract; boxes are converted to PDF points."""
+def ocr_words(path: Path, pages: list[int]) -> tuple[list[Word], float]:
+    """OCR the given pages (1-based) with tesseract; boxes are converted to PDF points. Also returns
+    the OCR seconds that the cache saved, so throughput is reported as if every page was read cold."""
     import pypdfium2 as pdfium
 
     cfg = load("ingest")
@@ -74,6 +75,7 @@ def ocr_words(path: Path, pages: list[int]) -> list[Word]:
     td = _tessdata()
     doc = pdfium.PdfDocument(str(path))
     out: list[Word] = []
+    saved = 0.0
     k = 72.0 / dpi
     sha = hashlib.sha256(path.read_bytes()).hexdigest()[:16]
     cache_dir = Path(os.environ.get("BLE_CACHE", DATA / ".cache")) / "ocr"
@@ -81,8 +83,12 @@ def ocr_words(path: Path, pages: list[int]) -> list[Word]:
         for p in pages:
             key = cache_dir / f"{sha}-p{p}-{dpi}-{psm}-{lang if td else 'eng'}.json"
             if key.exists():  # same file, page and settings: OCR once (re-ingestion is idempotent and free)
-                out += [Word(**w) for w in json.loads(key.read_text())]
+                c = json.loads(key.read_text())
+                c = c if isinstance(c, dict) else {"seconds": 0.0, "words": c}
+                out += [Word(**w) for w in c["words"]]
+                saved += float(c["seconds"])
                 continue
+            t_page = time.perf_counter()
             page_words: list[Word] = []
             img = doc[p - 1].render(scale=dpi / 72).to_pil().convert("L")
             f = Path(tmp) / f"p{p}.png"
@@ -101,9 +107,9 @@ def ocr_words(path: Path, pages: list[int]) -> list[Word]:
                 x, y, w, h = (int(c[6]), int(c[7]), int(c[8]), int(c[9]))
                 page_words.append(Word(c[11], x * k, (x + w) * k, y * k, (y + h) * k, p, conf))
             key.parent.mkdir(parents=True, exist_ok=True)
-            key.write_text(json.dumps([asdict(w) for w in page_words]))
+            key.write_text(json.dumps({"seconds": round(time.perf_counter() - t_page, 3), "words": [asdict(w) for w in page_words]}))
             out += page_words
-    return out
+    return out, saved
 
 
 # -- spreadsheets --------------------------------------------------------------------------------
@@ -176,12 +182,15 @@ def read_bid(bid_dir: Path, root: Path) -> BidDoc:
     total, label, company, warnings = None, "", "", []
     doc_ids: list[str] = []
     pages, cost, route = 0, 0.0, ""
+    cached_s = 0.0
     if "anschreiben.pdf" in files:
         did = doc_id(files["anschreiben.pdf"], root)
         doc_ids.append(did)
         words, n, empty = pdf_words(files["anschreiben.pdf"])
         if empty:
-            words += ocr_words(files["anschreiben.pdf"], empty)
+            ow, sv = ocr_words(files["anschreiben.pdf"], empty)
+            words += ow
+            cached_s += sv
             cost += cfg["ocr"]["eur_per_page"] * len(empty)
         cost += cfg["pdf_text"]["eur_per_page"] * (n - len(empty))
         pages += n
@@ -213,7 +222,9 @@ def read_bid(bid_dir: Path, root: Path) -> BidDoc:
         words, n, empty = pdf_words(main)
         route = "ocr" if len(empty) == n else "pdf_text"
         if empty:
-            words = [w for w in words if w.page not in empty] + ocr_words(main, empty)
+            ow, sv = ocr_words(main, empty)
+            words = [w for w in words if w.page not in empty] + ow
+            cached_s += sv
         cost += cfg["ocr"]["eur_per_page"] * len(empty) + cfg["pdf_text"]["eur_per_page"] * (n - len(empty))
         pages += n
         lines, t2, w = parse_table(words, did, scale_tol=1.4 if route == "ocr" else 1.0)
@@ -227,7 +238,9 @@ def read_bid(bid_dir: Path, root: Path) -> BidDoc:
             letter, t3 = letter_sentences([x for x in words if x.page == 1], did)
             total = total if total is not None else t3
         company = company or _company([x for x in words if x.page == 1])
-    return BidDoc(bid_id, tid, company, route, lines, letter, total, label, doc_ids, pages, round(cost, 6), round(time.perf_counter() - t0, 3), warnings)
+    return BidDoc(
+        bid_id, tid, company, route, lines, letter, total, label, doc_ids, pages, round(cost, 6), round(time.perf_counter() - t0 + cached_s, 3), warnings
+    )
 
 
 def _company(words: list[Word]) -> str:

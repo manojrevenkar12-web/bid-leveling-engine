@@ -1,0 +1,330 @@
+company: Stumpf Tiefbau GmbH & Co. KG
+format: pdf
+priced_version: v1
+include_long_text: true
+letter:
+- Zu Ihrer Ausschreibung vom 21.09.2026 überreichen wir Ihnen unser Angebot.
+- Als ortsansässiger Fachbetrieb verfügen wir über langjährige Erfahrung im kommunalen Kanal- und Straßenbau.
+- Abweichend von den Vertragsbedingungen bitten wir um eine Vorauszahlung von 15 % der Auftragssumme bei Baubeginn.
+- Mit freundlichen Grüßen
+lines:
+- shown_no: '010010'
+  prices_oz: '01.0010'
+  short: Baustelleneinrichtung
+  long: Baustelle einrichten, für die gesamte Bauzeit von ca. 7 Monaten vorhalten und räumen, einschließlich Büro- und Sanitärcontainer, Lager- und Abstellflächen, Bauzaun entlang der Bestandsbebauung (ca. 180 m) sowie Baustrom- und Bauwasseranschluss.
+  qty: 1
+  unit: psch
+  ep: 22415.0
+  gp: 22415.0
+  included: false
+  product: null
+- shown_no: '010020'
+  prices_oz: '01.0020'
+  short: Verkehrssicherung nach RSA 21
+  long: Verkehrssicherung der Baustelle an der Kreisstraße K 4127 nach RSA 21 und verkehrsrechtlicher Anordnung, einschließlich Verkehrszeichenplan, Absperrschranken, Leitbaken und Warnleuchten sowie mobiler Lichtsignalanlage für die halbseitige Sperrung im Einmündungsbereich (ca. 3 Wochen); tägliche Kontrolle und Dokumentation.
+  qty: 1
+  unit: psch
+  ep: 8507.0
+  gp: 8507.0
+  included: false
+  product: null
+- shown_no: '010030'
+  prices_oz: '01.0030'
+  short: Wasserhaltung offen, Betriebsstunden
+  long: Offene Wasserhaltung aus Pumpensümpfen in Rohrgräben und Schachtbaugruben mit Tauchpumpen bis 50 m³/h, einschließlich Absetzbecken und Ableitung in den Vorfluter gemäß wasserrechtlicher Erlaubnis; Abrechnung nach Betriebsstunden je Pumpe.
+  qty: 560
+  unit: h
+  ep: 6.35
+  gp: 3556.0
+  included: false
+  product: null
+- shown_no: '020010'
+  prices_oz: '02.0010'
+  short: Mutterboden abschieben, in Mieten lagern
+  long: Mutterboden in einer Dicke von ca. 30 cm abschieben und seitlich in Mieten bis max. 2,0 m Höhe lagern, Mieten profilieren und mit Gräsermischung zwischenbegrünen.
+  qty: 3200
+  unit: m²
+  ep: 3.25
+  gp: 10400.0
+  included: false
+  product: null
+- shown_no: '020020'
+  prices_oz: '02.0020'
+  short: Boden lösen, laden, abfahren, Homogenbereich B1
+  long: Boden des Homogenbereichs B1 (Bodengruppen GU/GT nach DIN 18196, mitteldicht gelagert) lösen, laden und zu einer Verwertungsstelle des Auftragnehmers abfahren, Transportentfernung bis 15 km; Abrechnung nach Aufmaß im Abtrag.
+  qty: 1450
+  unit: m³
+  ep: 16.7
+  gp: 24215.0
+  included: false
+  product: null
+- shown_no: '020030'
+  prices_oz: '02.0030'
+  short: Entsorgung Boden LAGA Z 1.2
+  long: Ausgehobenen Boden mit der Zuordnung LAGA Z 1.2 nach Deklarationsanalyse einer zugelassenen Annahmestelle zuführen, einschließlich Annahmegebühren und Wiegescheinen; Nachweisführung über das elektronische Abfallnachweisverfahren (eANV).
+  qty: 620
+  unit: t
+  ep: 23.85
+  gp: 14787.0
+  included: false
+  product: null
+- shown_no: '020040'
+  prices_oz: '02.0040'
+  short: Entsorgung Boden LAGA Z 2
+  long: Ausgehobenen Boden mit der Zuordnung LAGA Z 2 nach Deklarationsanalyse einer zugelassenen Deponie bzw. Annahmestelle zuführen, einschließlich Annahmegebühren und Wiegescheinen; Nachweisführung über eANV.
+  qty: 180
+  unit: t
+  ep: 37.27
+  gp: 6708.6
+  included: false
+  product: null
+- shown_no: '020050'
+  prices_oz: '02.0050'
+  short: Planum herstellen, Ev2 ≥ 45 MN/m²
+  long: Planum im Fahrbahn- und Gehwegbereich profilgerecht herstellen und verdichten, Ebenheitstoleranz ± 3 cm, Verformungsmodul Ev2 ≥ 45 MN/m² durch statische Plattendruckversuche nachweisen.
+  qty: 2850
+  unit: m²
+  ep: 1.88
+  gp: 5358.0
+  included: false
+  product: null
+- shown_no: '020060'
+  prices_oz: '02.0060'
+  short: Bodenaustausch Schotter 0/45
+  long: Nicht tragfähigen Boden unterhalb des Planums nach Anordnung der Bauleitung durch Schottergemisch 0/45 aus gebrochenem Naturstein ersetzen, lagenweise einbauen und verdichten (DPr ≥ 100 %); der Aushub wird gesondert vergütet.
+  qty: 220
+  unit: m³
+  ep: 43.86
+  gp: 9649.2
+  included: false
+  product: null
+- shown_no: '030010'
+  prices_oz: '03.0010'
+  short: Rohrgraben ausheben, Tiefe 2,50–3,50 m
+  long: Rohrgraben für Kanalleitungen DN 300 bis DN 500 ausheben, Grabentiefe 2,50 bis 3,50 m, Homogenbereiche B1/B2, Aushub seitlich lagern und zum Wiedereinbau geeigneten Boden getrennt halten; Grabenbreite nach DIN EN 1610.
+  qty: 980
+  unit: m³
+  ep: 27.69
+  gp: 27136.2
+  included: false
+  product: null
+- shown_no: '030020'
+  prices_oz: '03.0020'
+  short: Grabenverbau, Gleitschienenverbau
+  long: Grabenverbau als Gleitschienenverbau (Linearverbau) bis 4,0 m Tiefe einbauen, vorhalten und rückbauen; Abrechnung nach verbauter Grabenwandfläche beidseitig.
+  qty: 1120
+  unit: m²
+  ep: 9.84
+  gp: 11020.8
+  included: false
+  product: null
+- shown_no: '030030'
+  prices_oz: '03.0030'
+  short: Kanalrohr PP SN 16, DN 300
+  long: 'Schmutzwasserkanal aus Polypropylen-Vollwandrohren nach DIN EN 1852, Ringsteifigkeit SN 16, DN 300, mit Steckmuffe und Lippendichtung, in Bettung Typ 1 verlegen, Gefälle nach Längsschnitt. Leitfabrikat: REHAU AWADUKT PP SN16 oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 286
+  unit: m
+  ep: 153.17
+  gp: 43806.62
+  included: false
+  product: REHAU AWADUKT PP SN16
+- shown_no: '030040'
+  prices_oz: '03.0040'
+  short: Stahlbetonrohr DN 500, Regenwasser
+  long: Regenwasserkanal aus Stahlbetonrohren nach DIN EN 1916 und DIN V 1201, Typ 2, DN 500, mit Glockenmuffe und integrierter Gleitringdichtung, Tragfähigkeitsklasse nach statischer Berechnung, mindestens FT 135, Baulänge 3,0 m, in Bettung Typ 1 verlegen.
+  qty: 214
+  unit: m
+  ep: 227.32
+  gp: 48646.48
+  included: false
+  product: null
+- shown_no: '030050'
+  prices_oz: '03.0050'
+  short: Fertigteilschacht DN 1000, Tiefe bis 3,50 m
+  long: Schacht aus Betonfertigteilen DN 1000 nach DIN EN 1917 und DIN V 4034-1 mit monolithischem Schachtunterteil einschließlich Gerinne, Schachtringen, Konus und Auflageringen, Steigbügeln und Gleitringdichtungen; Schachttiefe bis 3,50 m.
+  qty: 11
+  unit: Stck
+  ep: 3387.0
+  gp: 37257.0
+  included: false
+  product: null
+- shown_no: '030060'
+  prices_oz: '03.0060'
+  short: Schachtabdeckung Klasse D 400, DN 625
+  long: 'Schachtabdeckung DN 625 Klasse D 400 nach DIN EN 124, Gusseisen mit Betonfüllung, mit Lüftungsöffnungen und Dämpfungseinlage, Rahmenhöhe 160 mm, in Versetzmörtel einbauen. Leitfabrikat: ACO MULTITOP bituplus oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 11
+  unit: Stck
+  ep: 540.24
+  gp: 5942.64
+  included: false
+  product: ACO MULTITOP bituplus
+- shown_no: '030070'
+  prices_oz: '03.0070'
+  short: Grundstücksanschluss PP DN 150, bis 8 m
+  long: Grundstücksanschlussleitung aus PP-Rohr SN 10, DN 150, vom Hauptkanal bis 1,0 m hinter die Grundstücksgrenze herstellen, Länge bis 8 m, einschließlich Abzweig 45°, Graben, Verfüllung und Verschlussstopfen; Lage und Höhe einmessen.
+  qty: 24
+  unit: Stck
+  ep: 1599.0
+  gp: 38376.0
+  included: false
+  product: null
+- shown_no: 030080
+  prices_oz: '03.0080'
+  short: Leitungszone herstellen, Sand 0/8
+  long: Bettung und Leitungszone bis 30 cm über Rohrscheitel aus Sand-Kies-Gemisch 0/8 lagenweise einbauen und mit leichtem Verdichtungsgerät verdichten, Verdichtungsgrad DPr ≥ 97 %.
+  qty: 310
+  unit: m³
+  ep: 36.23
+  gp: 11231.3
+  included: false
+  product: null
+- shown_no: 030090
+  prices_oz: '03.0090'
+  short: TV-Inspektion Kanal
+  long: Optische Inspektion der neu verlegten Haltungen und Anschlussleitungen mit Kanal-TV-Fahrwagen, Zustandserfassung nach DIN EN 13508-2 mit Kodierung nach DWA-M 149-2, Übergabe der Daten im ISYBAU-Austauschformat mit schriftlichem Bericht.
+  qty: 500
+  unit: m
+  ep: 3.48
+  gp: 1740.0
+  included: false
+  product: null
+- shown_no: '030100'
+  prices_oz: '03.0100'
+  short: Dichtheitsprüfung Kanal mit Luft
+  long: Dichtheitsprüfung der Kanalhaltungen nach DIN EN 1610 mit Luft, Prüfverfahren LC, einschließlich Absperrblasen und Prüfprotokollen; Schächte werden gesondert mit Wasser geprüft.
+  qty: 500
+  unit: m
+  ep: 5.47
+  gp: 2735.0
+  included: false
+  product: null
+- shown_no: '040010'
+  prices_oz: '04.0010'
+  short: Frostschutzschicht 0/32, d = 30 cm
+  long: Frostschutzschicht aus frostunempfindlichem Kies-Sand-Gemisch 0/32 nach TL SoB-StB, Dicke 30 cm im verdichteten Zustand, Verformungsmodul Ev2 ≥ 120 MN/m² auf Oberkante Frostschutzschicht.
+  qty: 2650
+  unit: m²
+  ep: 11.99
+  gp: 31773.5
+  included: false
+  product: null
+- shown_no: '040020'
+  prices_oz: '04.0020'
+  short: Schottertragschicht 0/32, d = 15 cm
+  long: Schottertragschicht aus gebrochenem Gestein 0/32 nach TL SoB-StB, Dicke 15 cm, profilgerecht einbauen und verdichten, Ev2 ≥ 150 MN/m².
+  qty: 2650
+  unit: m²
+  ep: 10.72
+  gp: 28408.0
+  included: false
+  product: null
+- shown_no: '040030'
+  prices_oz: '04.0030'
+  short: Asphalttragschicht AC 32 T S, d = 10 cm
+  long: Asphalttragschicht AC 32 T S nach TL Asphalt-StB, Bindemittel 50/70, Dicke 8 cm, maschinell einbauen und verdichten; Belastungsklasse Bk1,0 nach RStO 12.
+  qty: 2180
+  unit: m²
+  ep: 25.45
+  gp: 55481.0
+  included: false
+  product: null
+- shown_no: '040040'
+  prices_oz: '04.0040'
+  short: Asphaltdeckschicht AC 11 D N, d = 4 cm
+  long: Asphaltdeckschicht AC 11 D N nach TL Asphalt-StB, Bindemittel 50/70, Dicke 4 cm, Einbau mit Fertiger, Nähte heiß an heiß oder mit Fugenband, Oberfläche mit Splitt 1/3 abstumpfen.
+  qty: 2180
+  unit: m²
+  ep: 15.96
+  gp: 34792.8
+  included: false
+  product: null
+- shown_no: '040050'
+  prices_oz: '04.0050'
+  short: Haftkleber zwischen Asphaltschichten
+  long: Bitumenemulsion C60BP1-S als Haftkleber zwischen den Asphaltschichten gleichmäßig ansprühen, Restbitumenmenge 200 bis 300 g/m².
+  qty: 2180
+  unit: m²
+  ep: 0.97
+  gp: 2114.6
+  included: false
+  product: null
+- shown_no: '040060'
+  prices_oz: '04.0060'
+  short: Anschluss an Bestandsasphalt
+  long: Bestandsbelag im Anschlussbereich geradlinig schneiden (Schnitttiefe bis 14 cm), Schnittkanten anspritzen und Anschluss mit Bitumen-Fugenband 10 x 40 mm herstellen.
+  qty: 64
+  unit: m
+  ep: 16.74
+  gp: 1071.36
+  included: false
+  product: null
+- shown_no: '050010'
+  prices_oz: '05.0010'
+  short: Hochbordstein Beton 15/30
+  long: Hochbordstein aus Beton nach DIN EN 1340, Typ H 15/30, Länge 100 cm, grau, auf Betonfundament C20/25 mit Rückenstütze (Dicke 15 cm) versetzen, Fugenbreite 3 bis 5 mm; Kurvensteine werden gesondert vergütet.
+  qty: 820
+  unit: m
+  ep: 38.56
+  gp: 31619.2
+  included: false
+  product: null
+- shown_no: '050020'
+  prices_oz: '05.0020'
+  short: Tiefbordstein Beton 8/25
+  long: Tiefbordstein aus Beton nach DIN EN 1340, 8/25 cm, Länge 100 cm, auf Betonfundament C20/25 mit beidseitiger Rückenstütze versetzen.
+  qty: 640
+  unit: m
+  ep: 25.26
+  gp: 16166.4
+  included: false
+  product: null
+- shown_no: '050030'
+  prices_oz: '05.0030'
+  short: Betonsteinpflaster 20/10/8 cm, Gehweg
+  long: 'Gehwegbefestigung aus Rechteckpflaster aus Beton nach DIN EN 1338, Format 20 x 10 cm, Dicke 8 cm, Farbe grau, mit Fase, im Läuferverband auf 4 cm Bettung aus Splitt 2/5 verlegen, Fugen mit Brechsand 0/2 einschlämmen und abrütteln. Leitfabrikat: KANN Rechteckpflaster Classic oder gleichwertig. Angebotenes Fabrikat: ................'
+  qty: 1140
+  unit: m²
+  ep: 50.27
+  gp: 57307.8
+  included: false
+  product: KANN Rechteckpflaster Classic
+- shown_no: '050040'
+  prices_oz: '05.0040'
+  short: Muldenrinne Granit, 3-zeilig
+  long: Muldenrinne aus Granit-Großpflaster 16/16/14 cm, 3-zeilig, in Beton C20/25 versetzen, Fugen mit Pflasterfugenmörtel vergießen, Gefälle zu den Straßenabläufen.
+  qty: 210
+  unit: m
+  ep: 61.22
+  gp: 12856.2
+  included: false
+  product: null
+- shown_no: '050050'
+  prices_oz: '05.0050'
+  short: Straßenablauf 500/500, Aufsatz D 400
+  long: Straßenablauf aus Betonfertigteilen nach DIN 4052, Querschnitt 500/500 mm, mit Schlammeimer, Aufsatz aus Gusseisen Klasse D 400, 500 x 500 mm, Pultform, einschließlich Anschlussleitung PP DN 150 bis 5 m Länge.
+  qty: 18
+  unit: Stck
+  ep: 745.3
+  gp: 13415.4
+  included: false
+  product: null
+- shown_no: '050060'
+  prices_oz: '05.0060'
+  short: Zulage abgesenkter Bordstein (Zufahrt)
+  long: Zulage zu Pos. 05.0010 für Bordsteine im Bereich der Grundstückszufahrten mit 3 cm Ansichtshöhe, einschließlich Übergangssteinen.
+  qty: 96
+  unit: m
+  ep: 14.69
+  gp: 1410.24
+  included: false
+  product: null
+deviations:
+- type: spec_downgrade
+  oz: '04.0030'
+  detail: Asphalttragschicht 10 cm -> 8 cm
+- type: outdated_version
+  oz: null
+  detail: priced LV v1 (21.09.2026); v2 (1. Änderung, 05.10.2026) was issued
+- type: reservation
+  oz: null
+  detail: payment

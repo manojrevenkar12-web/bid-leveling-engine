@@ -1,0 +1,103 @@
+queries:
+- tender: H93
+  q: Steinwolle Fassadendämmung
+  expect:
+  - '01.0030'
+- tender: H93
+  q: Perimeter Sockel XPS
+  expect:
+  - '01.0020'
+- tender: H93
+  q: Fensterbretter außen alu
+  expect:
+  - '02.0040'
+- tender: H93
+  q: Fensterfuge abdichten Band
+  expect:
+  - '02.0050'
+- tender: H93
+  q: Eingangstür mit Panikschloss
+  expect:
+  - '02.0060'
+- tender: H93
+  q: Attikablech
+  expect:
+  - '03.0040'
+- tender: H93
+  q: Dachgully
+  expect:
+  - '03.0050'
+- tender: H93
+  q: Regenrohr Zink
+  expect:
+  - '03.0070'
+- tender: H93
+  q: Dichtschlämme Dusche
+  expect:
+  - '04.0010'
+- tender: H93
+  q: Fußleiste Fliese
+  expect:
+  - '04.0040'
+- tender: H93
+  q: Gummiboden
+  expect:
+  - '05.0020'
+- tender: H93
+  q: Schmutzfangmatte Eingang
+  expect:
+  - '05.0030'
+- tender: H93
+  q: Handlauf Treppe
+  expect:
+  - '06.0010'
+- tender: H94
+  q: Humus abschieben
+  expect:
+  - '02.0010'
+- tender: H94
+  q: Kippgebühren belasteter Aushub
+  expect:
+  - '02.0030'
+  - '02.0040'
+- tender: H94
+  q: Grundwasser abpumpen
+  expect:
+  - '01.0030'
+- tender: H94
+  q: Baustellenampel
+  expect:
+  - '01.0020'
+- tender: H94
+  q: Kunststoffrohr Schmutzwasser 300
+  expect:
+  - '03.0030'
+- tender: H94
+  q: Betonrohr Regenkanal
+  expect:
+  - '03.0040'
+- tender: H94
+  q: Kanaldeckel
+  expect:
+  - '03.0060'
+- tender: H94
+  q: Kamerabefahrung
+  expect:
+  - '03.0090'
+- tender: H94
+  q: Hausanschlüsse Kanal
+  expect:
+  - '03.0070'
+- tender: H94
+  q: Randsteine
+  expect:
+  - '05.0010'
+  - '05.0020'
+- tender: H94
+  q: Gehwegplatten Pflaster
+  expect:
+  - '05.0030'
+- tender: H94
+  q: Gullys Straße
+  expect:
+  - '05.0050'

@@ -2,6 +2,8 @@
 # End to end: platform API + AI service, publish a leveled tender, review a finding, ask a question.
 # Needs DATABASE_URL, a built platform (platform/dist) and reports/runs/<tender>.json from `ble run`.
 set -euo pipefail
+# on failure, say where (as a CI annotation too) and show both services' logs
+trap 'echo "::error::e2e failed at line $LINENO: $BASH_COMMAND"; for f in /tmp/ble-platform.log /tmp/ble-ai.log; do echo "== $f"; tail -n 40 "$f"; done; tail -n 5 /tmp/ble-ai.log | sed "s/^/::error::ai: /"' ERR
 T=${1:-T51}
 cd "$(dirname "$0")/.."
 export PLATFORM_API_KEYS="e2e-worker:worker,e2e-reviewer:reviewer"

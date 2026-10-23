@@ -1,0 +1,348 @@
+company: Erdbau Lindner & Söhne GmbH
+format: scan
+priced_version: v2
+include_long_text: false
+letter:
+- Wie gewünscht senden wir Ihnen das ausgefüllte Leistungsverzeichnis zurück.
+- Die Änderung Nr. 1 ist eingearbeitet.
+- Zusätzlich haben wir eine Baustraße angeboten, die aus unserer Sicht für die Andienung der Baustelle erforderlich ist.
+- Unsere Preise sind freibleibend und gelten höchstens sechs Wochen ab Angebotsdatum.
+- Rechnungen sind innerhalb von 14 Tagen nach Eingang ohne Abzug zahlbar.
+- Mit freundlichen Grüßen aus Hochstetten
+lines:
+- shown_no: '1.1'
+  prices_oz: '01.0010'
+  short: BE einr./vorh./räumen
+  long: null
+  qty: 1
+  unit: pauschal
+  ep: 18173.0
+  gp: 18173.0
+  included: false
+  product: null
+- shown_no: '1.2'
+  prices_oz: '01.0020'
+  short: VS RSA21 inkl. LSA
+  long: null
+  qty: 1
+  unit: pauschal
+  ep: 7464.0
+  gp: 7464.0
+  included: false
+  product: null
+- shown_no: '1.3'
+  prices_oz: '01.0030'
+  short: Wasserh. offen Pumpen-h
+  long: null
+  qty: 560
+  unit: Std
+  ep: 5.85
+  gp: 3276.0
+  included: false
+  product: null
+- shown_no: '1.4'
+  prices_oz: null
+  short: Baustraße Schotter herst./vorh./rückb.
+  long: null
+  qty: 450
+  unit: qm
+  ep: 14.5
+  gp: 6525.0
+  included: false
+  product: null
+- shown_no: '2.1'
+  prices_oz: '02.0010'
+  short: MuBo abschieben/Miete
+  long: null
+  qty: 3200
+  unit: qm
+  ep: 2.85
+  gp: 9120.0
+  included: false
+  product: null
+- shown_no: '2.2'
+  prices_oz: '02.0020'
+  short: Bod. lös./lad./abf. B1
+  long: null
+  qty: 1450
+  unit: cbm
+  ep: 15.47
+  gp: 22431.5
+  included: false
+  product: null
+- shown_no: '2.3'
+  prices_oz: '02.0030'
+  short: Entsorg. Z1.2 inkl. Geb.
+  long: null
+  qty: 740
+  unit: t
+  ep: 20.49
+  gp: 15162.6
+  included: false
+  product: null
+- shown_no: '2.4'
+  prices_oz: '02.0040'
+  short: Entsorg. Z2 inkl. Geb.
+  long: null
+  qty: 180
+  unit: t
+  ep: 35.96
+  gp: 6472.8
+  included: false
+  product: null
+- shown_no: '2.5'
+  prices_oz: '02.0050'
+  short: Planum Ev2>=45
+  long: null
+  qty: 2850
+  unit: qm
+  ep: 1.97
+  gp: 5614.5
+  included: false
+  product: null
+- shown_no: '2.6'
+  prices_oz: '02.0060'
+  short: Bod.-Austausch Schott. 0/45
+  long: null
+  qty: 220
+  unit: cbm
+  ep: 37.91
+  gp: 8340.2
+  included: false
+  product: null
+- shown_no: '3.1'
+  prices_oz: '03.0010'
+  short: RoGr Aush. T 2,5-3,5
+  long: null
+  qty: 980
+  unit: cbm
+  ep: 26.39
+  gp: 25862.2
+  included: false
+  product: null
+- shown_no: '3.2'
+  prices_oz: '03.0020'
+  short: Verbau Gleitschiene
+  long: null
+  qty: 1120
+  unit: qm
+  ep: 8.97
+  gp: 10046.4
+  included: false
+  product: null
+- shown_no: '3.3'
+  prices_oz: '03.0030'
+  short: SW PP SN16 DN300
+  long: null
+  qty: 302
+  unit: lfm
+  ep: 132.4
+  gp: 39984.8
+  included: false
+  product: REHAU AWADUKT PP SN16
+- shown_no: '3.4'
+  prices_oz: '03.0040'
+  short: RW StB-Rohr DN500
+  long: null
+  qty: 214
+  unit: lfm
+  ep: 191.56
+  gp: 40993.84
+  included: false
+  product: null
+- shown_no: '3.5'
+  prices_oz: '03.0050'
+  short: Schacht FT DN1000 b. 3,5m
+  long: null
+  qty: 11
+  unit: Stck
+  ep: 720.0
+  gp: 7920.0
+  included: false
+  product: null
+- shown_no: '3.6'
+  prices_oz: '03.0060'
+  short: SA D400 DN625
+  long: null
+  qty: 11
+  unit: Stck
+  ep: 543.49
+  gp: 5978.39
+  included: false
+  product: ACO MULTITOP bituplus
+- shown_no: '3.7'
+  prices_oz: '03.0070'
+  short: Hausanschl. PP DN150 b. 8m
+  long: null
+  qty: 26
+  unit: Stck
+  ep: 1527.0
+  gp: 39702.0
+  included: false
+  product: null
+- shown_no: '3.8'
+  prices_oz: '03.0080'
+  short: Leitungszone Sand 0/8
+  long: null
+  qty: 310
+  unit: cbm
+  ep: 34.17
+  gp: 10592.7
+  included: false
+  product: null
+- shown_no: '3.9'
+  prices_oz: '03.0090'
+  short: TV-Insp. Haltung
+  long: null
+  qty: 500
+  unit: lfm
+  ep: 3.25
+  gp: 1625.0
+  included: false
+  product: null
+- shown_no: '3.10'
+  prices_oz: '03.0100'
+  short: Dichtheitspr. Luft LC
+  long: null
+  qty: 500
+  unit: lfm
+  ep: 4.52
+  gp: 2260.0
+  included: false
+  product: null
+- shown_no: '3.11'
+  prices_oz: '03.0110'
+  short: Anschl. Best.-Schacht KB
+  long: null
+  qty: 1
+  unit: Stck
+  ep: 3576.0
+  gp: 3576.0
+  included: false
+  product: null
+- shown_no: '4.1'
+  prices_oz: '04.0010'
+  short: FSS 0/32 d=30
+  long: null
+  qty: 2650
+  unit: qm
+  ep: 10.21
+  gp: 27056.5
+  included: false
+  product: null
+- shown_no: '4.2'
+  prices_oz: '04.0020'
+  short: STS 0/32 d=15
+  long: null
+  qty: 2650
+  unit: qm
+  ep: 9.87
+  gp: 26155.5
+  included: false
+  product: null
+- shown_no: '4.3'
+  prices_oz: '04.0030'
+  short: ATS AC32TS 10cm
+  long: null
+  qty: 2180
+  unit: qm
+  ep: 23.65
+  gp: 51557.0
+  included: false
+  product: null
+- shown_no: '4.4'
+  prices_oz: '04.0040'
+  short: ADS AC11DS 4cm
+  long: null
+  qty: 2180
+  unit: qm
+  ep: 13.11
+  gp: 28579.8
+  included: false
+  product: null
+- shown_no: '4.5'
+  prices_oz: '04.0050'
+  short: Haftkl. C60BP1-S
+  long: null
+  qty: 2180
+  unit: qm
+  ep: 0.75
+  gp: 1635.0
+  included: false
+  product: null
+- shown_no: '4.6'
+  prices_oz: '04.0060'
+  short: Anschl. Bestand schn.+Fugenb.
+  long: null
+  qty: 64
+  unit: lfm
+  ep: 15.48
+  gp: 990.72
+  included: false
+  product: null
+- shown_no: '5.1'
+  prices_oz: '05.0010'
+  short: HB 15/30 inkl. Fund.
+  long: null
+  qty: 820
+  unit: lfm
+  ep: 31.75
+  gp: 26305.0
+  included: false
+  product: null
+- shown_no: '5.2'
+  prices_oz: '05.0020'
+  short: TB 8/25
+  long: null
+  qty: 640
+  unit: lfm
+  ep: 21.73
+  gp: 13907.2
+  included: false
+  product: null
+- shown_no: '5.3'
+  prices_oz: '05.0030'
+  short: BSP 20/10/8 grau
+  long: null
+  qty: 1140
+  unit: qm
+  ep: 45.07
+  gp: 51379.8
+  included: false
+  product: KANN Rechteckpflaster Classic
+- shown_no: '5.4'
+  prices_oz: '05.0040'
+  short: Muldenr. Granit 3zlg.
+  long: null
+  qty: 210
+  unit: lfm
+  ep: 56.01
+  gp: 11762.1
+  included: false
+  product: null
+- shown_no: '5.5'
+  prices_oz: '05.0050'
+  short: Str.-Abl. 500/500 D400
+  long: null
+  qty: 18
+  unit: Stck
+  ep: 734.29
+  gp: 13217.22
+  included: false
+  product: null
+deviations:
+- type: extra_position
+  oz: null
+  detail: Baustraße Schotter herst./vorh./rückb.
+- type: price_outlier
+  oz: '03.0050'
+  detail: EP 720.00 vs. market approx. 3050.00
+- type: arithmetic_error
+  oz: '05.0010'
+  detail: 31.75 x 820 = 26035.00, printed 26305.00
+- type: reservation
+  oz: null
+  detail: validity
+- type: reservation
+  oz: null
+  detail: payment

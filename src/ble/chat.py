@@ -10,9 +10,11 @@ returned ([E1], [E2] ...), and a verifier drops any sentence citing evidence tha
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
+from ble.llm.phrase import phrase
 from ble.text.de import BM25, CONSTRUCTION, fold
 
 TYPE_WORDS = {
@@ -85,7 +87,7 @@ def _types(q: str) -> list[str]:
     return [t for t, ws in TYPE_WORDS.items() if any(fold(w) in fq for w in ws)]
 
 
-def answer(run: dict[str, Any], question: str) -> Answer:
+def answer(run: dict[str, Any], question: str, complete: Callable[[str], str] | None = None) -> Answer:
     q = question.strip()
     fq = fold(q)
     ev = Evidence()
@@ -160,6 +162,11 @@ def answer(run: dict[str, Any], question: str) -> Answer:
                 else:
                     lines.append(f"  {b['company']}: {ln['ep']:,.2f} € / {ln['unit']}. {ev.cite(ln['evidence'])}")
     text, dropped = verify("\n".join(lines), ev)
+    phrased = phrase(q, text, complete)
+    if phrased:
+        t2, d2 = verify(phrased, ev)
+        if t2:
+            text, dropped, tools = t2, dropped + d2, [*tools, "llm.phrase"]
     return Answer(q, intent, text, ev.items, dropped, tools)
 
 
