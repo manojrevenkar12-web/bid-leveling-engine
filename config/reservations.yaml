@@ -1,0 +1,37 @@
+# Cover-letter sentences that qualify a price or the terms. Patterns are matched on lower-cased,
+# umlaut-folded text (ä -> a, ö -> o, ü -> u, ß -> ss). Written from what reservations in German
+# bids look like, not from the simulator's phrase bank; the held-out sets test how far they carry.
+kinds:
+  price_validity:
+    - "(preise|angebot)[^.]{0,60}(gultig|gelten|gilt|bindefrist)[^.]{0,60}(bis|nur|innerhalb|lediglich)"
+    - "freibleibend"
+    - "anpassung (der preise )?vor"
+    - "preise[^.]{0,40}(unverbindlich|vorbehaltlich)"
+  material_escalation:
+    - "preisgleit"
+    - "gleitklausel"
+    - "material(preis)?(steigerung|erhohung|zuschlag)"
+    - "preissteigerung"
+    - "weiterberechn"
+    - "(lohn|stahl|material)[^.]{0,30}index"
+  scope_exclusion:
+    - "nicht (im angebot |in unseren (einheits)?preisen |in den preisen )?(enthalten|berucksichtigt|einkalkuliert|bestandteil)"
+    - "bauseits"
+    - "ausgenommen"
+    - "nach (tatsachlichem )?aufwand"
+    - "gesondert (berechnet|abgerechnet|vergutet)"
+  payment_terms:
+    - "abschlag(s)?zahlung"
+    - "vorauszahlung|anzahlung"
+    - "zahlungsziel"
+    - "skonto wird nicht"
+    - "(bei|nach) auftragserteilung[^.]{0,30}(zahl|%)"
+  schedule:
+    - "ausfuhrungsbeginn"
+    - "fruhestens"
+    - "(fristen|termine)[^.]{0,60}(voraus|vorbehalt|unverbindlich)"
+    - "ohne behinderung"
+  liability:
+    - "vertragsstrafe"
+    - "haftung[^.]{0,40}(begrenzt|ausgeschlossen|beschrankt)"
+    - "gewahrleistung[^.]{0,40}(verkurzt|abweichend|jahre)"

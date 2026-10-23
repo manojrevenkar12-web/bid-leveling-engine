@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bid leveling</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">Bid leveling</div>
+  <nav id="tenders" aria-label="Tenders"></nav>
+  <button id="key-btn" class="ghost" type="button" hidden>API key</button>
+</header>
+<main id="main">
+  <section id="empty" class="empty">
+    <h1>No tender selected</h1>
+    <p>Pick a tender above. Runs appear here once the workflow has published them (<code>ble level &lt;tender&gt;</code> then <code>ble publish</code>).</p>
+  </section>
+  <section id="tender" hidden>
+    <div class="head">
+      <div>
+        <h1 id="project"></h1>
+        <p id="lineage" class="lineage"></p>
+      </div>
+      <div class="tabs" role="tablist">
+        <button role="tab" data-tab="sheet" aria-selected="true">Leveling sheet</button>
+        <button role="tab" data-tab="review" aria-selected="false">To review <span id="review-count" class="count"></span></button>
+        <button role="tab" data-tab="ask" aria-selected="false">Ask</button>
+      </div>
+    </div>
+    <div id="ranking" class="ranking"></div>
+    <div id="tab-sheet" class="tab">
+      <div class="legend">
+        <span><i class="mark high"></i>can exclude the bid</span>
+        <span><i class="mark medium"></i>check with the bidder</span>
+        <span><i class="mark low"></i>note</span>
+        <span><i class="mark filled"></i>not priced: valued at the highest other price</span>
+      </div>
+      <div class="sheet-wrap"><table id="sheet" class="sheet"></table></div>
+    </div>
+    <div id="tab-review" class="tab" hidden>
+      <ol id="queue" class="queue"></ol>
+    </div>
+    <div id="tab-ask" class="tab" hidden>
+      <form id="ask" class="ask">
+        <input id="question" name="question" autocomplete="off" placeholder="Where does Schulte Bau deviate from the BoQ? · Who is cheapest? · Preise für Trockenbauwände">
+        <button type="submit">Ask</button>
+      </form>
+      <div id="answer" class="answer" aria-live="polite"></div>
+    </div>
+  </section>
+  <aside id="panel" class="panel" hidden aria-label="Finding">
+    <button id="panel-close" class="ghost close" type="button" aria-label="Close">×</button>
+    <div id="panel-body"></div>
+  </aside>
+</main>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

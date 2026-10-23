@@ -1,0 +1,26 @@
+{
+  "name": "ble-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "System of record and review UI for bid leveling: tenders, bids, findings, decisions, chat.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "migrate": "tsx src/migrate.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "fastify": "5.12.2",
+    "pg": "8.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/pg": "8.23.1",
+    "tsx": "4.23.14",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}

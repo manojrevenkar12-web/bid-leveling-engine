@@ -1,0 +1,69 @@
+# German construction vocabulary for search and matching. Compounds are split into these parts
+# (Stahlbetonwand -> stahl beton wand) so a query for "Betonwand" finds "Stahlbetonwand" and a
+# bidder's "Stb.-Wand" meets the BoQ's "Stahlbetonwand". Extend per customer; tests check that
+# every part is lower case and at least 2 letters.
+morphemes: [
+  abdichtung, abfahren, abgehängt, abhang, abhänge, abschalung, absorption, abwasser, akustik, anschluss, anstrich, arbeit, arbeits,
+  aufzug, ausbau, aushub, außen, bahn, band, bank, bau, baugrube, baustelle, baustellen, beplankt, beschichtung,
+  beton, betonstahl, bewegung, bewehrung, bitumen, boden, brand, breite, dach, dämm, dämmung, dämmstoff, decke, decken,
+  dicht, dichtung, dispersion, doppel, dünn, dünnbett, eck, einbau, einrichtung, einzel, elastomer, element, entsorgung,
+  epoxid, erd, estrich, fassade, fassaden, feinsteinzeug, fenster, fertig, fertigteil, feuer, flach, fliesen, fuge, fugen,
+  fuß, gefälle, gerüst, gesamt, gips, gipskarton, glas, grube, harz, haltung, heiz, heizung, hohl, holz, innen,
+  installation, karton, kehle, kalk, kanal, keller, kunststoff, lager, lack, leiste, leistung, loch, mauer, mauerwerk,
+  metall, mineral, mineralwolle, nass, ober, öffnung, ort, ortbeton, perimeter, platte, platten, profil, pumpe, putz,
+  rand, raum, revision, rohr, sand, sanitär, sauberkeit, schacht, schale, schall, schalung, schicht, schlitz, schotter,
+  schrank, schutz, schweiß, sicht, sichtbeton, silikon, sockel, sohle, spachtel, stahl, ständer, stein, streifen, sturz,
+  stütze, system, tief, trag, treppe, trenn, tritt, trittschall, tür, unter, verbund, verfüllung, verteiler, vorsatz, wand, wände,
+  wärme, wasser, werk, werkstoff, ziegel, zarge, zaun, zement, zulage, zuschlag
+]
+linking: [s, es, n, en, e]     # Fugenelemente between compound parts
+abbreviations:                 # bidder shorthand -> words (applied before splitting)
+  stb: stahlbeton
+  ks: kalksandstein
+  gk: gipskarton
+  gkb: gipskarton bauplatte
+  gkf: gipskarton feuerschutzplatte
+  mw: mauerwerk
+  herst: herstellen
+  einb: einbauen
+  lief: liefern
+  verl: verlegen
+  bopl: bodenplatte
+  innenw: innenwand
+  außenw: außenwand
+  aussenw: außenwand
+  trennw: trennwand
+  dämm: dämmung
+  abd: abdichtung
+  fl: fliesen
+  bs: brandschutz
+  estr: estrich
+  inkl: einschließlich
+  be: baustelleneinrichtung
+  ud: unterdecke
+  rev: revision
+  tsd: trittschalldämmung
+  wdvs: wärmedämmverbundsystem
+  lv: leistungsverzeichnis
+synonyms:                      # same building part, different words (both directions are indexed)
+  bewehrung: betonstahl
+  betonstahl: bewehrung
+  abgehangt: abhang
+  abhang: abgehangt
+  gipskarton: gips
+  anstrich: streichen
+  streichen: anstrich
+  aushub: ausheben
+  ausheben: aushub
+units:                         # spellings -> canonical unit
+  m2: [m2, m², qm, m^2]
+  m3: [m3, m³, cbm, m^3]
+  m: [m, lfm, lfdm, lm]
+  St: [st, stk, stck, stück]
+  psch: [psch, pauschal, pau, pschl]
+  t: [t, to]
+  kg: [kg]
+  h: [h, std, stunden]
+  Wo: [wo, woche, wochen]
+  Tag: [tag, tage]
+stopwords: [und, oder, mit, für, der, die, das, des, dem, den, ein, eine, einer, eines, in, im, auf, aus, bis, von, zu, zur, zum, als, je, nach, bei, an, am, sowie, gem, lt]

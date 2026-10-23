@@ -1,0 +1,110 @@
+# The synthetic tender world (simulator only). A tender is a BoQ issued by a general contractor or
+# client; bidders return priced bids in their own format, with the deviations real bids contain.
+# Everything the engine must find is written to truth/ and never read by the engine.
+
+tenders:
+  positions: [28, 52]          # positions per tender
+  trades: [3, 5]               # trades (Titel) per tender
+  addendum_rate: 0.6           # share of tenders with a revised BoQ (v2) issued during bidding
+  addendum:
+    qty_changes: [3, 7]
+    added: [1, 3]
+    removed: [0, 2]
+    text_changes: [0, 2]
+
+bidders_per_tender: [4, 6]
+
+formats:                       # how a bidder returns its prices
+  gaeb: 0.25                   # GAEB DA XML X84
+  pdf: 0.35                    # digital PDF printed from their estimating software
+  xlsx: 0.22                   # the BoQ copied into a spreadsheet
+  scan: 0.18                   # printed, signed and scanned
+
+layout:                        # PDF / spreadsheet habits, per bidder
+  own_numbering: 0.25          # replaces the OZ with 1, 2, 3 ... (PDF and spreadsheet only)
+  no_numbering: 0.08
+  abbreviate: 0.45             # writes short texts with trade abbreviations
+  include_long_text: 0.5       # prints the long text under each position (PDF)
+  reorder_within_trade: 0.12
+
+companies:
+  - Bauunternehmung Krämer GmbH
+  - Hoch- und Tiefbau Lindner AG
+  - Schulte Bau GmbH & Co. KG
+  - Müller Trockenbau GmbH
+  - Baugesellschaft Nordost mbH
+  - Fliesen Özdemir GmbH
+  - Malerbetrieb Hoffmann & Söhne
+  - Wagner Abdichtungstechnik GmbH
+  - Estrichbau Neumann GmbH
+  - Tischlerei Becker GmbH
+  - Brandenburger Bauwerke GmbH
+  - Rheinbau Kessler GmbH
+  - Bayerische Rohbau GmbH
+  - Sauer Innenausbau GmbH
+  - Fischer & Partner Bau GmbH
+  - Elbe Hochbau GmbH
+
+personas:                      # per-position probabilities of each deviation, and price behaviour
+  solid:      {weight: 0.34, price_level: [0.92, 1.05], missing_price: 0.0,  included: 0.01, arithmetic: 0.0,  qty_changed: 0.0,  unit_changed: 0.0,  missing_position: 0.0,  extra_positions: [0, 0], spec_downgrade: 0.0,  product_alt: 0.15, outlier: 0.01, reservation: 0.15, speculative: 0.0}
+  sloppy:     {weight: 0.2,  price_level: [0.95, 1.12], missing_price: 0.04, included: 0.03, arithmetic: 0.05, qty_changed: 0.03, unit_changed: 0.02, missing_position: 0.03, extra_positions: [0, 1], spec_downgrade: 0.0,  product_alt: 0.2,  outlier: 0.02, reservation: 0.3,  speculative: 0.0}
+  aggressive: {weight: 0.2,  price_level: [0.80, 0.92], missing_price: 0.0,  included: 0.02, arithmetic: 0.01, qty_changed: 0.02, unit_changed: 0.0,  missing_position: 0.01, extra_positions: [1, 2], spec_downgrade: 0.12, product_alt: 0.5,  outlier: 0.04, reservation: 0.7,  speculative: 0.0}
+  speculative: {weight: 0.14, price_level: [0.90, 1.00], missing_price: 0.0, included: 0.01, arithmetic: 0.01, qty_changed: 0.0,  unit_changed: 0.0,  missing_position: 0.0,  extra_positions: [0, 1], spec_downgrade: 0.0,  product_alt: 0.2,  outlier: 0.0,  reservation: 0.3,  speculative: 1.0}
+  outdated:   {weight: 0.12, price_level: [0.93, 1.06], missing_price: 0.01, included: 0.01, arithmetic: 0.01, qty_changed: 0.0,  unit_changed: 0.0,  missing_position: 0.0,  extra_positions: [0, 0], spec_downgrade: 0.0,  product_alt: 0.2,  outlier: 0.01, reservation: 0.2,  speculative: 0.0}
+
+extra_positions:               # positions bidders add that the BoQ does not contain
+  - {short: "Zulage für Arbeiten bei Frost", unit: psch, ep: [1500, 6000]}
+  - {short: "Baustellenreinigung zusätzlich", unit: psch, ep: [800, 3000]}
+  - {short: "Containergestellung für Bauschutt", unit: St, ep: [250, 600]}
+  - {short: "Mehraufwand Kleinmengen", unit: psch, ep: [500, 2500]}
+  - {short: "Winterbaumaßnahmen vorhalten", unit: Wo, ep: [400, 1200]}
+  - {short: "Zuschlag Nacht- und Wochenendarbeit", unit: h, ep: [25, 60]}
+
+reservations:                  # sentences in cover letters that change what the price means
+  - {kind: price_validity, text: "Unsere Preise sind bis zum 31.03.2027 gültig; danach behalten wir uns eine Anpassung vor."}
+  - {kind: price_validity, text: "Die angebotenen Preise gelten nur bei Auftragserteilung innerhalb von vier Wochen."}
+  - {kind: material_escalation, text: "Für Stahl und Dämmstoffe gilt eine Materialpreisgleitklausel auf Basis des Index des Statistischen Bundesamtes."}
+  - {kind: material_escalation, text: "Preissteigerungen bei Betonstahl werden wir zum Zeitpunkt der Lieferung weiterberechnen."}
+  - {kind: scope_exclusion, text: "Entsorgungskosten sind in unseren Einheitspreisen nicht enthalten und werden nach Aufwand abgerechnet."}
+  - {kind: scope_exclusion, text: "Gerüste stellt der Auftraggeber bauseits; diese sind nicht Bestandteil unseres Angebots."}
+  - {kind: scope_exclusion, text: "Die Baustelleneinrichtung ist in diesem Angebot nicht berücksichtigt."}
+  - {kind: payment_terms, text: "Wir bitten um Abschlagszahlungen von 30 % bei Auftragserteilung."}
+  - {kind: payment_terms, text: "Zahlungsziel 8 Tage netto, ein Skonto wird nicht gewährt."}
+  - {kind: schedule, text: "Ein Ausführungsbeginn ist frühestens ab der 14. KW 2027 möglich."}
+  - {kind: schedule, text: "Die genannten Fristen setzen eine ununterbrochene Ausführung ohne Behinderungen voraus."}
+  - {kind: liability, text: "Eine Vertragsstrafe akzeptieren wir nicht."}
+
+neutral_sentences:             # cover letter text that must not be flagged
+  - "Vielen Dank für Ihre Anfrage und das uns entgegengebrachte Vertrauen."
+  - "Gerne unterbreiten wir Ihnen unser Angebot auf Grundlage Ihres Leistungsverzeichnisses."
+  - "Für Rückfragen steht Ihnen unser Kalkulator jederzeit zur Verfügung."
+  - "Wir würden uns freuen, das Bauvorhaben gemeinsam mit Ihnen umzusetzen."
+  - "Die Preise verstehen sich netto zuzüglich der gesetzlichen Mehrwertsteuer."
+  - "Eine Besichtigung der Baustelle hat am vergangenen Dienstag stattgefunden."
+  - "Unser Betrieb ist nach DIN EN ISO 9001 zertifiziert."
+  - "Referenzen vergleichbarer Bauvorhaben senden wir Ihnen gerne zu."
+
+abbreviations:                 # how estimators shorten texts (the engine has its own lexicon)
+  Stahlbeton: Stb.
+  Kalksandstein: KS
+  Gipskarton: GK
+  Mauerwerk: MW
+  Trockenbau: TB
+  herstellen: herst.
+  einbauen: einb.
+  liefern: lief.
+  verlegen: verl.
+  Bodenplatte: Bopl.
+  Innenwand: Innenw.
+  Außenwand: Außenw.
+  Trennwand: Trennw.
+  Dämmung: Dämm.
+  Abdichtung: Abd.
+  Fliesen: Fl.
+  Brandschutz: BS
+  Estrich: Estr.
+  einschließlich: inkl.
+  Baustelleneinrichtung: BE
+  Unterdecke: UD
+  Revisionsöffnung: Rev.-Öffnung
+  Trittschalldämmung: TSD

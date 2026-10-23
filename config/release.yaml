@@ -1,0 +1,16 @@
+# The release gate: `ble gate` fails if any of these does not hold on the TEST tenders.
+findings:
+  min_precision: 0.85
+  min_recall: 0.85
+  # deviations that can exclude a bid must each be found this often (types with >= 3 cases)
+  must_find: [missing_price, qty_changed, unit_changed, missing_position, spec_change, outdated_version, reservation, arithmetic_error]
+  min_type_recall: 0.75
+  max_false_auto_confirmed_share: 0.03   # wrong findings that skipped review, as a share of auto-confirmed findings
+matching:
+  min_accuracy_per_route: 0.97
+  max_wrong_unflagged_share: 0.01        # wrong matches not sent to review
+versions:
+  min_accuracy: 0.95
+search:
+  min_hit_at_3: 0.9                      # construction tokenizer, test tenders
+  must_beat_plain: true

@@ -1,0 +1,110 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "check": "findings precision",
+   "passed": true,
+   "detail": "0.9655 (needs 0.85)"
+  },
+  {
+   "check": "findings recall",
+   "passed": true,
+   "detail": "0.9882 (needs 0.85)"
+  },
+  {
+   "check": "recall: missing_price",
+   "passed": true,
+   "detail": "6 of 6 found"
+  },
+  {
+   "check": "recall: qty_changed",
+   "passed": true,
+   "detail": "13 of 13 found"
+  },
+  {
+   "check": "recall: missing_position",
+   "passed": true,
+   "detail": "5 of 5 found"
+  },
+  {
+   "check": "recall: spec_change",
+   "passed": true,
+   "detail": "9 of 10 found"
+  },
+  {
+   "check": "recall: outdated_version",
+   "passed": true,
+   "detail": "4 of 4 found"
+  },
+  {
+   "check": "recall: reservation",
+   "passed": true,
+   "detail": "19 of 19 found"
+  },
+  {
+   "check": "recall: arithmetic_error",
+   "passed": true,
+   "detail": "14 of 14 found"
+  },
+  {
+   "check": "wrong findings auto-confirmed",
+   "passed": true,
+   "detail": "0 of 134 auto-confirmed findings (0.0%)"
+  },
+  {
+   "check": "matching accuracy: pdf_text",
+   "passed": true,
+   "detail": "1.0 on 389 lines (position number alone: 0.635)"
+  },
+  {
+   "check": "wrong matches sent to review: pdf_text",
+   "passed": true,
+   "detail": "0 wrong and unflagged"
+  },
+  {
+   "check": "matching accuracy: gaeb",
+   "passed": true,
+   "detail": "1.0 on 341 lines (position number alone: 1.0)"
+  },
+  {
+   "check": "wrong matches sent to review: gaeb",
+   "passed": true,
+   "detail": "0 wrong and unflagged"
+  },
+  {
+   "check": "matching accuracy: xlsx",
+   "passed": true,
+   "detail": "1.0 on 133 lines (position number alone: 1.0)"
+  },
+  {
+   "check": "wrong matches sent to review: xlsx",
+   "passed": true,
+   "detail": "0 wrong and unflagged"
+  },
+  {
+   "check": "matching accuracy: ocr",
+   "passed": true,
+   "detail": "1.0 on 136 lines (position number alone: 0.6471)"
+  },
+  {
+   "check": "wrong matches sent to review: ocr",
+   "passed": true,
+   "detail": "0 wrong and unflagged"
+  },
+  {
+   "check": "BoQ version priced",
+   "passed": true,
+   "detail": "42 of 42 bids"
+  },
+  {
+   "check": "search hit@3",
+   "passed": true,
+   "detail": "1.0 vs plain tokens 0.5302"
+  },
+  {
+   "check": "search beats plain tokens",
+   "passed": true,
+   "detail": "1.0 > 0.5302"
+  }
+ ]
+}

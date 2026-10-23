@@ -1,0 +1,286 @@
+{
+ "dev": {
+  "plain": {
+   "queries": 225,
+   "hit@1": 0.4756,
+   "hit@3": 0.5378,
+   "failures": [
+    {
+     "tender": "T01",
+     "query": "Betonwand"
+    },
+    {
+     "tender": "T01",
+     "query": "Ortbeton Decke"
+    },
+    {
+     "tender": "T01",
+     "query": "Bewehrung"
+    },
+    {
+     "tender": "T01",
+     "query": "Fugenbänder"
+    },
+    {
+     "tender": "T01",
+     "query": "GK-Wand"
+    },
+    {
+     "tender": "T01",
+     "query": "Abhangdecke"
+    },
+    {
+     "tender": "T01",
+     "query": "Fliesen Wand"
+    },
+    {
+     "tender": "T01",
+     "query": "Abdichtung Bad"
+    },
+    {
+     "tender": "T01",
+     "query": "Silikonfugen"
+    },
+    {
+     "tender": "T01",
+     "query": "Bitumenabdichtung"
+    },
+    {
+     "tender": "T01",
+     "query": "Perimeter Dämmung"
+    },
+    {
+     "tender": "T01",
+     "query": "Dachabdichtung"
+    },
+    {
+     "tender": "T01",
+     "query": "Dach Dämmung Gefälle"
+    },
+    {
+     "tender": "T01",
+     "query": "Baugrubenaushub"
+    },
+    {
+     "tender": "T02",
+     "query": "GK-Wand"
+    }
+   ]
+  },
+  "construction": {
+   "queries": 225,
+   "hit@1": 0.9956,
+   "hit@3": 1.0,
+   "failures": []
+  },
+  "construction_no_split": {
+   "queries": 225,
+   "hit@1": 0.5244,
+   "hit@3": 0.5956,
+   "failures": [
+    {
+     "tender": "T01",
+     "query": "Betonwand"
+    },
+    {
+     "tender": "T01",
+     "query": "Ortbeton Decke"
+    },
+    {
+     "tender": "T01",
+     "query": "Bewehrung"
+    },
+    {
+     "tender": "T01",
+     "query": "Fugenbänder"
+    },
+    {
+     "tender": "T01",
+     "query": "Abhangdecke"
+    },
+    {
+     "tender": "T01",
+     "query": "Fliesen Wand"
+    },
+    {
+     "tender": "T01",
+     "query": "Abdichtung Bad"
+    },
+    {
+     "tender": "T01",
+     "query": "Silikonfugen"
+    },
+    {
+     "tender": "T01",
+     "query": "Bitumenabdichtung"
+    },
+    {
+     "tender": "T01",
+     "query": "Perimeter Dämmung"
+    },
+    {
+     "tender": "T01",
+     "query": "Dachabdichtung"
+    },
+    {
+     "tender": "T01",
+     "query": "Dach Dämmung Gefälle"
+    },
+    {
+     "tender": "T01",
+     "query": "Baugrubenaushub"
+    },
+    {
+     "tender": "T02",
+     "query": "Fliesen Wand"
+    },
+    {
+     "tender": "T02",
+     "query": "Abdichtung Bad"
+    }
+   ]
+  }
+ },
+ "test": {
+  "plain": {
+   "queries": 149,
+   "hit@1": 0.4765,
+   "hit@3": 0.5302,
+   "failures": [
+    {
+     "tender": "T51",
+     "query": "Betonwand"
+    },
+    {
+     "tender": "T51",
+     "query": "Ortbeton Decke"
+    },
+    {
+     "tender": "T51",
+     "query": "Bewehrung"
+    },
+    {
+     "tender": "T51",
+     "query": "Fugenbänder"
+    },
+    {
+     "tender": "T51",
+     "query": "Brandschutz Wand"
+    },
+    {
+     "tender": "T51",
+     "query": "Fliesen Wand"
+    },
+    {
+     "tender": "T51",
+     "query": "Abdichtung Bad"
+    },
+    {
+     "tender": "T51",
+     "query": "Silikonfugen"
+    },
+    {
+     "tender": "T51",
+     "query": "Bitumenabdichtung"
+    },
+    {
+     "tender": "T51",
+     "query": "Perimeter Dämmung"
+    },
+    {
+     "tender": "T51",
+     "query": "Dachabdichtung"
+    },
+    {
+     "tender": "T51",
+     "query": "Dach Dämmung Gefälle"
+    },
+    {
+     "tender": "T51",
+     "query": "Gerüst Fassade"
+    },
+    {
+     "tender": "T52",
+     "query": "GK-Wand"
+    },
+    {
+     "tender": "T52",
+     "query": "Abhangdecke"
+    }
+   ]
+  },
+  "construction": {
+   "queries": 149,
+   "hit@1": 1.0,
+   "hit@3": 1.0,
+   "failures": []
+  },
+  "construction_no_split": {
+   "queries": 149,
+   "hit@1": 0.5235,
+   "hit@3": 0.5705,
+   "failures": [
+    {
+     "tender": "T51",
+     "query": "Betonwand"
+    },
+    {
+     "tender": "T51",
+     "query": "Ortbeton Decke"
+    },
+    {
+     "tender": "T51",
+     "query": "Bewehrung"
+    },
+    {
+     "tender": "T51",
+     "query": "Fugenbänder"
+    },
+    {
+     "tender": "T51",
+     "query": "Brandschutz Wand"
+    },
+    {
+     "tender": "T51",
+     "query": "Fliesen Wand"
+    },
+    {
+     "tender": "T51",
+     "query": "Abdichtung Bad"
+    },
+    {
+     "tender": "T51",
+     "query": "Silikonfugen"
+    },
+    {
+     "tender": "T51",
+     "query": "Bitumenabdichtung"
+    },
+    {
+     "tender": "T51",
+     "query": "Perimeter Dämmung"
+    },
+    {
+     "tender": "T51",
+     "query": "Dachabdichtung"
+    },
+    {
+     "tender": "T51",
+     "query": "Dach Dämmung Gefälle"
+    },
+    {
+     "tender": "T51",
+     "query": "Gerüst Fassade"
+    },
+    {
+     "tender": "T52",
+     "query": "Abhangdecke"
+    },
+    {
+     "tender": "T52",
+     "query": "Bitumenabdichtung"
+    }
+   ]
+  }
+ }
+}

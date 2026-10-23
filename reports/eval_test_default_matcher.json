@@ -1,0 +1,51 @@
+{
+ "matching": {
+  "pdf_text": {
+   "lines": 389,
+   "correct": 389,
+   "oz_only_correct": 247,
+   "review": 3,
+   "wrong_not_flagged": 0,
+   "truth_lines": 389,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 0.635
+  },
+  "gaeb": {
+   "lines": 341,
+   "correct": 341,
+   "oz_only_correct": 341,
+   "review": 0,
+   "wrong_not_flagged": 0,
+   "truth_lines": 341,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 1.0
+  },
+  "xlsx": {
+   "lines": 133,
+   "correct": 133,
+   "oz_only_correct": 133,
+   "review": 0,
+   "wrong_not_flagged": 0,
+   "truth_lines": 133,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 1.0
+  },
+  "ocr": {
+   "lines": 136,
+   "correct": 136,
+   "oz_only_correct": 88,
+   "review": 8,
+   "wrong_not_flagged": 0,
+   "truth_lines": 136,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 0.6471
+  }
+ },
+ "total": {
+  "tp": 168,
+  "fp": 6,
+  "fn": 2,
+  "precision": 0.9655,
+  "recall": 0.9882
+ }
+}

@@ -1,0 +1,35 @@
+# Thresholds and rules for matching and deviation findings (business settings, not code).
+matching:
+  p_none: 0.3              # a line whose best position is less likely than this is an added position
+  review_below: 0.8        # matches less certain than this go to review
+  review_margin: 0.15      # ... or whose runner-up is this close
+arithmetic:
+  abs_tolerance_eur: 0.5   # rounding slack before EP x quantity != total counts as an error
+  rel_tolerance: 0.001
+quantity:
+  rel_tolerance: 0.005
+outliers:
+  min_bids: 3              # positions priced by fewer bidders are not compared
+  high_ratio: 2.5          # unit price at least this multiple of the other bidders' median
+  low_ratio: 0.4
+speculative:
+  min_positions: 8
+  risk_keywords: [baugrube, aushub, wasserhaltung, entsorg, betonstahl, bewehrung, schlitz, stunden, betreiben, belastet]
+  risk_correlation: 0.6    # correlation between price loading (log unit price / field median) and quantity risk
+  loading: 0.45            # mean log loading on risk positions minus the rest (0.45 = about 1.6x)
+severity:                  # what each finding means for the award decision (VOB/A § 16, § 13)
+  missing_price: {severity: high, note: "A missing price can exclude the bid unless it is a single, insignificant position (VOB/A § 16 (1) 1 c)."}
+  included_price: {severity: medium, note: "Priced as included: confirm the work is really covered elsewhere."}
+  arithmetic_error: {severity: medium, note: "EP x quantity differs from the total; the unit price prevails (VOB/A § 16c (2))."}
+  qty_changed: {severity: high, note: "The bidder changed a tendered quantity: a change to the tender documents."}
+  unit_changed: {severity: high, note: "The bidder changed the unit of measurement."}
+  missing_position: {severity: high, note: "A tendered position is not priced."}
+  extra_position: {severity: medium, note: "The bid adds a position the BoQ does not contain."}
+  spec_change: {severity: high, note: "The long text differs from the BoQ: a change to the tender documents can exclude the bid (VOB/A § 13 (1) 5)."}
+  product_alternative: {severity: low, note: "A product other than the reference product is offered; equivalence must be proven."}
+  price_outlier: {severity: medium, note: "Unit price far from the other bidders': check for an error or ask the bidder to explain (VOB/A § 16d)."}
+  speculative_pricing: {severity: medium, note: "Margin appears loaded onto positions whose quantities usually grow."}
+  outdated_version: {severity: high, note: "The bid was priced against an earlier version of the BoQ."}
+  reservation: {severity: high, note: "The cover letter qualifies the price or the terms."}
+review:
+  auto_confirm_above: 0.9  # findings at least this confident go straight to the leveling sheet

@@ -1,0 +1,45 @@
+# Construction ontology v1: the canonical entities and relations of a tender, and how a customer
+# extends them. Every node and edge carries lineage: the documents (with content hashes) it was
+# derived from and the run (code + config version) that derived it.
+version: 1
+entities:
+  Project: {key: [name]}
+  Tender: {key: [tender_id]}
+  BoQVersion: {key: [tender_id, version], props: [date, label]}
+  Trade: {key: [tender_id, code], props: [name]}
+  Position: {key: [tender_id, oz], props: [short, long, unit]}         # one node across BoQ versions
+  Bidder: {key: [company]}
+  Bid: {key: [bid_id], props: [route, stated_total, comparable_total]}
+  BidLine: {key: [bid_id, idx], props: [shown_no, short, qty, unit, ep, gp]}
+  Document: {key: [doc_id], props: [path, sha256]}
+  Finding: {key: [finding_id], props: [type, severity, message, confidence, needs_review]}
+  Decision: {key: [decision_id], props: [verdict, reviewer, note, at]}    # written by people in review
+relations:
+  HAS_VERSION: [Tender, BoQVersion]
+  SUPERSEDES: [BoQVersion, BoQVersion]
+  IN_VERSION: [Position, BoQVersion]          # props: qty, unit, text_hash (changes show here)
+  IN_TRADE: [Position, Trade]
+  FOR_PROJECT: [Tender, Project]
+  SUBMITTED: [Bidder, Bid]
+  FOR_TENDER: [Bid, Tender]
+  PRICED_VERSION: [Bid, BoQVersion]
+  IN_BID: [BidLine, Bid]
+  PRICES: [BidLine, Position]                 # props: p, needs_review (the entity resolution)
+  ABOUT: [Finding, Bid]
+  CONCERNS: [Finding, Position]
+  EVIDENCED_BY: [Finding, Document]           # props: page, bbox, row, xml_line, text
+  READ_FROM: [BoQVersion, Document]
+  DECIDES: [Decision, Finding]
+extensions:                                    # per-customer attributes, derived by rules
+  din276_cost_group:
+    entity: Position
+    description: "DIN 276 cost group (second level), for cost planning and benchmarking"
+    rules:
+      - {match: "baugrube|oberboden|aushub|verfull|wasserhaltung|entsorg|schotter", value: "310"}
+      - {match: "bodenplatte|sauberkeit|sohle|grundung|fugenband", value: "320"}
+      - {match: "aussenwand|ziegel|perimeter|bitumen|abdichtung erdberuhr|fassade", value: "330"}
+      - {match: "innenwand|trennwand|standerwand|vorsatzschale|brandwand|kalksandstein|tur|zarge|wandfliesen|dispersion|spachtel", value: "340"}
+      - {match: "decke|estrich|trittschall|bodenfliesen|sockel|treppe|beschichtung|unterdecke", value: "350"}
+      - {match: "dach|gefalledammung", value: "360"}
+      - {match: "einbauschrank|fensterbank", value: "380"}
+      - {match: "baustelleneinrichtung|bauzaun|gerust|baustrom", value: "390"}

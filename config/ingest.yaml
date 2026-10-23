@@ -1,0 +1,12 @@
+# How documents are read, and what each route costs. Costs are compute estimates per page (OCR on
+# a CPU worker, text extraction) so routing decisions can be compared; a model-based fallback is
+# priced like a vision-model page.
+routes:
+  gaeb: {eur_per_page: 0.00001}
+  xlsx: {eur_per_page: 0.00005}
+  pdf_text: {eur_per_page: 0.0002}
+  ocr: {eur_per_page: 0.0020, dpi: 300, psm: 6, languages: deu}
+  vision_model: {eur_per_page: 0.0120}   # not used offline; the price a model call per page would add
+ocr:
+  min_word_confidence: 30      # words below this are dropped before table parsing
+  low_confidence_line: 0.6     # lines below this go to review rather than straight into findings

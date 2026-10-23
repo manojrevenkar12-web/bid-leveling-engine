@@ -1,0 +1,48 @@
+# How estimators search a BoQ: compounds split or joined differently from the text, shorthand,
+# and words without umlauts. `expect` lists the simulator template ids that count as a right
+# answer (evaluation only: the engine never sees template ids).
+queries:
+  - {q: "Betonwand", expect: [stb-aussenwand, stb-innenwand]}
+  - {q: "Stb.-Wand innen", expect: [stb-innenwand]}
+  - {q: "Ortbeton Decke", expect: [stb-decke]}
+  - {q: "Bewehrung", expect: [stb-bewehrung]}
+  - {q: "Stahl verlegen B500", expect: [stb-bewehrung]}
+  - {q: "Bodenplatte", expect: [stb-bodenplatte]}
+  - {q: "Treppe Fertigteil", expect: [stb-treppe]}
+  - {q: "Fugenbänder", expect: [stb-fugenband]}
+  - {q: "KS Wand", expect: [mw-ks-innen, mw-brandwand]}
+  - {q: "Ziegel Außenwand", expect: [mw-ziegel-aussen]}
+  - {q: "Brandwand", expect: [mw-brandwand]}
+  - {q: "Brandschutz Wand", expect: [tb-brandschutzwand, mw-brandwand]}
+  - {q: "GK-Wand", expect: [tb-trennwand, tb-brandschutzwand]}
+  - {q: "Ständerwand", expect: [tb-trennwand, tb-brandschutzwand]}
+  - {q: "Abhangdecke", expect: [tb-abhangdecke]}
+  - {q: "Akustik Decke", expect: [tb-akustikdecke]}
+  - {q: "Vorsatzschale Sanitär", expect: [tb-vorsatzschale]}
+  - {q: "Revisionsklappe", expect: [tb-revision]}
+  - {q: "Zementestrich", expect: [est-zementestrich]}
+  - {q: "Estrich Fußbodenheizung", expect: [est-heizestrich]}
+  - {q: "TSD", expect: [est-daemmung]}
+  - {q: "Trittschall", expect: [est-daemmung]}
+  - {q: "Gefaelleestrich", expect: [est-gefaelle]}
+  - {q: "Bodenfliesen", expect: [fl-boden]}
+  - {q: "Fliesen Wand", expect: [fl-wand]}
+  - {q: "Abdichtung Bad", expect: [fl-abdichtung]}
+  - {q: "Silikonfugen", expect: [fl-silikon]}
+  - {q: "Wände streichen", expect: [mal-dispersion]}
+  - {q: "Decke streichen", expect: [mal-decke]}
+  - {q: "Spachteln Q3", expect: [mal-spachtel]}
+  - {q: "Epoxid Boden", expect: [mal-boden-beschichtung]}
+  - {q: "Bitumenabdichtung", expect: [abd-bitumen]}
+  - {q: "Perimeter Dämmung", expect: [abd-perimeter]}
+  - {q: "Dachabdichtung", expect: [abd-dach]}
+  - {q: "Dach Dämmung Gefälle", expect: [abd-dachdaemmung]}
+  - {q: "Innentüren", expect: [ti-innentuer]}
+  - {q: "T30 Tür", expect: [ti-brandschutztuer]}
+  - {q: "Fensterbänke innen", expect: [ti-fensterbank]}
+  - {q: "Baugrubenaushub", expect: [erd-baugrube]}
+  - {q: "Wasserhaltung", expect: [erd-wasserhaltung]}
+  - {q: "Entsorgung Z2", expect: [erd-entsorgung-z2]}
+  - {q: "Gerüst Fassade", expect: [be-geruest]}
+  - {q: "Bauzaun", expect: [be-bauzaun]}
+  - {q: "BE einrichten", expect: [be-einrichten]}

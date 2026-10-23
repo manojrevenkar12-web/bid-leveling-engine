@@ -1,0 +1,263 @@
+{
+ "findings": {
+  "arithmetic_error": {
+   "tp": 19,
+   "fp": 3,
+   "fn": 1,
+   "precision": 0.8636,
+   "recall": 0.95
+  },
+  "extra_position": {
+   "tp": 27,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "included_price": {
+   "tp": 20,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "missing_position": {
+   "tp": 9,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "missing_price": {
+   "tp": 1,
+   "fp": 5,
+   "fn": 0,
+   "precision": 0.1667,
+   "recall": 1.0
+  },
+  "outdated_version": {
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "price_outlier": {
+   "tp": 16,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.9412
+  },
+  "product_alternative": {
+   "tp": 59,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "qty_changed": {
+   "tp": 9,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "reservation": {
+   "tp": 27,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "spec_change": {
+   "tp": 8,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.8889,
+   "recall": 1.0
+  },
+  "speculative_pricing": {
+   "tp": 9,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "unit_changed": {
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ },
+ "total": {
+  "tp": 212,
+  "fp": 9,
+  "fn": 2,
+  "precision": 0.9593,
+  "recall": 0.9907
+ },
+ "by_route": {
+  "gaeb": {
+   "tp": 65,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.9848
+  },
+  "ocr": {
+   "tp": 58,
+   "fp": 9,
+   "fn": 1,
+   "precision": 0.8657,
+   "recall": 0.9831
+  },
+  "pdf_text": {
+   "tp": 55,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "xlsx": {
+   "tp": 34,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ },
+ "matching": {
+  "gaeb": {
+   "lines": 381,
+   "correct": 381,
+   "oz_only_correct": 381,
+   "review": 0,
+   "wrong_not_flagged": 0,
+   "truth_lines": 381,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 1.0
+  },
+  "xlsx": {
+   "lines": 273,
+   "correct": 273,
+   "oz_only_correct": 273,
+   "review": 1,
+   "wrong_not_flagged": 0,
+   "truth_lines": 273,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 1.0
+  },
+  "pdf_text": {
+   "lines": 428,
+   "correct": 428,
+   "oz_only_correct": 286,
+   "review": 7,
+   "wrong_not_flagged": 0,
+   "truth_lines": 428,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 0.6682
+  },
+  "ocr": {
+   "lines": 339,
+   "correct": 339,
+   "oz_only_correct": 195,
+   "review": 18,
+   "wrong_not_flagged": 0,
+   "truth_lines": 339,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 0.5752
+  }
+ },
+ "versions": {
+  "correct": 64
+ },
+ "review": {
+  "true_auto": 143,
+  "true_needs_review": 69,
+  "false_needs_review": 9
+ },
+ "misses": [
+  {
+   "bid": "T02-B1",
+   "route": "gaeb",
+   "type": "price_outlier",
+   "oz": "08.0020",
+   "detail": "x0.16 of the bidder's normal price"
+  },
+  {
+   "bid": "T03-B3",
+   "route": "ocr",
+   "type": "arithmetic_error",
+   "oz": "04.0050",
+   "detail": "GP 9014.91 instead of 9041.91"
+  }
+ ],
+ "false_alarms": [
+  {
+   "bid": "T03-B3",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "01.0030",
+   "message": "No price for 01.0030 “Fassadengerüst stellen, vorhalten 4 Wochen”."
+  },
+  {
+   "bid": "T06-B5",
+   "route": "ocr",
+   "type": "arithmetic_error",
+   "oz": "08.0010",
+   "message": "08.0010: 4.17 × 5683 = 23,709.48, but the total says 26,823.76; the unit price prevails."
+  },
+  {
+   "bid": "T06-B5",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "08.0030",
+   "message": "No price for 08.0030 “Deckenflächen streichen”."
+  },
+  {
+   "bid": "T07-B2",
+   "route": "ocr",
+   "type": "arithmetic_error",
+   "oz": "10.0050",
+   "message": "10.0050: 4.12 × 1034 = 4,260.08, but the total says 7,982.48; the unit price prevails."
+  },
+  {
+   "bid": "T07-B3",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "03.0080",
+   "message": "No price for 03.0080 “Fertigteiltreppe einbauen”."
+  },
+  {
+   "bid": "T09-B1",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "09.0020",
+   "message": "No price for 09.0020 “Perimeterdämmung aus XPS verlegen”."
+  },
+  {
+   "bid": "T09-B4",
+   "route": "ocr",
+   "type": "arithmetic_error",
+   "oz": "05.0030",
+   "message": "05.0030: 57.17 × 555 = 31,731.57, but the total says 32,045.70; the unit price prevails."
+  },
+  {
+   "bid": "T10-B2",
+   "route": "ocr",
+   "type": "spec_change",
+   "oz": "03.0070",
+   "message": "Long text of 03.0070 differs: “500” → “5008”"
+  },
+  {
+   "bid": "T12-B4",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "06.0010",
+   "message": "No price for 06.0010 “Zementestrich auf Dämmschicht herstellen”."
+  }
+ ]
+}

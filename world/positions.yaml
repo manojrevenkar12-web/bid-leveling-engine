@@ -1,0 +1,236 @@
+# Position library for the synthetic tender world (simulator only; the engine never reads this).
+# Each template becomes a BoQ position. {slots} in the long text take values from `attrs`; for every
+# attribute, `better` says which direction is the stronger specification, so a planted "spec
+# downgrade" can move it the wrong way. ep: plausible unit price range (EUR, net); qty: quantity
+# range; risk: how likely the quantity is to grow during construction (bidders who price
+# speculatively load their margin onto high-risk positions).
+trades:
+  "01": Baustelleneinrichtung
+  "02": Erdarbeiten
+  "03": Beton- und Stahlbetonarbeiten
+  "04": Mauerarbeiten
+  "05": Trockenbauarbeiten
+  "06": Estricharbeiten
+  "07": Fliesen- und Plattenarbeiten
+  "08": Maler- und Lackierarbeiten
+  "09": Abdichtungsarbeiten
+  "10": Tischlerarbeiten
+
+positions:
+  # 01 Baustelleneinrichtung
+  - {id: be-einrichten, trade: "01", unit: psch, ep: [8000, 25000], qty: [1, 1], risk: 0.1,
+     short: "Baustelleneinrichtung einrichten und räumen",
+     long: "Baustelleneinrichtung einschließlich aller erforderlichen Geräte, Unterkünfte und Lagerflächen einrichten, vorhalten für die gesamte Bauzeit und nach Abschluss der Arbeiten räumen."}
+  - {id: be-bauzaun, trade: "01", unit: m, ep: [6, 14], qty: [80, 300], risk: 0.3,
+     short: "Bauzaun aufstellen und vorhalten",
+     long: "Mobilen Bauzaun, Höhe {hoehe} m, mit Fußplatten aufstellen, für die Dauer der Bauzeit vorhalten und wieder abbauen.",
+     attrs: {hoehe: {values: ["2,00", "1,80"], better: higher}}}
+  - {id: be-geruest, trade: "01", unit: m2, ep: [8, 16], qty: [300, 1500], risk: 0.4,
+     short: "Fassadengerüst stellen, vorhalten 4 Wochen",
+     long: "Arbeits- und Schutzgerüst als Fassadengerüst, Lastklasse {lk}, Breitenklasse W09, stellen, 4 Wochen Gebrauchsüberlassung vorhalten und abbauen.",
+     attrs: {lk: {values: ["4", "3"], better: higher}}}
+  - {id: be-baustrom, trade: "01", unit: psch, ep: [1500, 4500], qty: [1, 1], risk: 0.1,
+     short: "Baustromverteiler anschließen und vorhalten",
+     long: "Baustromverteiler einschließlich Anschluss an das öffentliche Netz bereitstellen, vorhalten und nach Fertigstellung zurückbauen."}
+  # 02 Erdarbeiten
+  - {id: erd-oberboden, trade: "02", unit: m2, ep: [3, 7], qty: [300, 2000], risk: 0.3,
+     short: "Oberboden abtragen und seitlich lagern",
+     long: "Oberboden in einer Stärke von {staerke} cm abtragen und auf der Baustelle seitlich in Mieten lagern.",
+     attrs: {staerke: {values: ["30", "20"], better: higher}}}
+  - {id: erd-baugrube, trade: "02", unit: m3, ep: [9, 22], qty: [400, 3500], risk: 0.7,
+     short: "Baugrube ausheben, Boden laden und abfahren",
+     long: "Baugrube ausheben, Homogenbereich {hb}, Boden laden und zur Deponie abfahren, einschließlich Deponiegebühren.",
+     attrs: {hb: {values: ["B2", "B1"], better: higher}}}
+  - {id: erd-verfuellen, trade: "02", unit: m3, ep: [14, 30], qty: [100, 900], risk: 0.5,
+     short: "Arbeitsraum verfüllen und verdichten",
+     long: "Arbeitsraum lagenweise mit Liefermaterial verfüllen und auf Dpr {dpr} % verdichten.",
+     attrs: {dpr: {values: ["100", "97"], better: higher}}}
+  - {id: erd-schotter, trade: "02", unit: m3, ep: [35, 60], qty: [50, 400], risk: 0.4,
+     short: "Schottertragschicht 0/32 herstellen",
+     long: "Schottertragschicht aus Mineralgemisch 0/32, Dicke {dicke} cm, einbauen und verdichten, Ev2 mindestens 120 MN/m².",
+     attrs: {dicke: {values: ["30", "25", "20"], better: higher}}}
+  - {id: erd-wasserhaltung, trade: "02", unit: h, ep: [35, 70], qty: [100, 800], risk: 0.8,
+     short: "Offene Wasserhaltung betreiben",
+     long: "Offene Wasserhaltung mit Tauchpumpen einschließlich Pumpensumpf betreiben, abgerechnet nach Betriebsstunden."}
+  - {id: erd-entsorgung-z2, trade: "02", unit: t, ep: [25, 65], qty: [50, 600], risk: 0.8,
+     short: "Belasteten Boden Z2 entsorgen",
+     long: "Boden der Zuordnungsklasse Z2 nach LAGA laden, abfahren und fachgerecht entsorgen, einschließlich Nachweisen."}
+  # 03 Beton- und Stahlbetonarbeiten
+  - {id: stb-sauberkeit, trade: "03", unit: m2, ep: [12, 22], qty: [150, 900], risk: 0.3,
+     short: "Sauberkeitsschicht aus Beton C8/10",
+     long: "Sauberkeitsschicht aus unbewehrtem Beton C8/10, Dicke {dicke} cm, herstellen.",
+     attrs: {dicke: {values: ["5", "3"], better: higher}}}
+  - {id: stb-bodenplatte, trade: "03", unit: m3, ep: [180, 290], qty: [80, 600], risk: 0.3,
+     short: "Bodenplatte aus Stahlbeton herstellen",
+     long: "Bodenplatte aus Stahlbeton, Festigkeitsklasse {cls}, Expositionsklasse XC2, Dicke {dicke} cm, herstellen, einschließlich Abschalung.",
+     attrs: {cls: {values: ["C30/37", "C25/30", "C20/25"], better: higher}, dicke: {values: ["30", "25", "20"], better: higher}}}
+  - {id: stb-aussenwand, trade: "03", unit: m2, ep: [95, 160], qty: [200, 1400], risk: 0.2,
+     short: "Stahlbetonwand außen herstellen",
+     long: "Außenwand aus Stahlbeton, Festigkeitsklasse {cls}, Dicke {dicke} cm, einschließlich zweiseitiger Schalung, glatt.",
+     attrs: {cls: {values: ["C30/37", "C25/30"], better: higher}, dicke: {values: ["25", "24", "20"], better: higher}}}
+  - {id: stb-innenwand, trade: "03", unit: m2, ep: [80, 140], qty: [150, 1200], risk: 0.2,
+     short: "Stahlbetonwand innen herstellen",
+     long: "Innenwand aus Stahlbeton, Festigkeitsklasse {cls}, Dicke {dicke} cm, Sichtbetonklasse SB2.",
+     attrs: {cls: {values: ["C25/30", "C20/25"], better: higher}, dicke: {values: ["20", "18"], better: higher}}}
+  - {id: stb-decke, trade: "03", unit: m2, ep: [85, 150], qty: [300, 2500], risk: 0.2,
+     short: "Stahlbetondecke als Ortbetondecke herstellen",
+     long: "Stahlbetondecke als Ortbetondecke, Festigkeitsklasse {cls}, Dicke {dicke} cm, Feuerwiderstandsklasse {fk}, einschließlich Schalung.",
+     attrs: {cls: {values: ["C30/37", "C25/30"], better: higher}, dicke: {values: ["24", "22", "20"], better: higher}, fk: {values: ["REI 90", "REI 60", "REI 30"], better: higher}}}
+  - {id: stb-stuetze, trade: "03", unit: m, ep: [120, 260], qty: [40, 300], risk: 0.2,
+     short: "Stahlbetonstütze rechteckig herstellen",
+     long: "Stahlbetonstütze, Querschnitt {qs} cm, Festigkeitsklasse {cls}, einschließlich Schalung.",
+     attrs: {qs: {values: ["30/30", "25/25"], better: higher}, cls: {values: ["C35/45", "C30/37"], better: higher}}}
+  - {id: stb-bewehrung, trade: "03", unit: t, ep: [1300, 2100], qty: [20, 200], risk: 0.7,
+     short: "Betonstahl B500B liefern und verlegen",
+     long: "Betonstahl B500B als Stabstahl und Matten liefern, schneiden, biegen und verlegen."}
+  - {id: stb-treppe, trade: "03", unit: St, ep: [2200, 5200], qty: [2, 12], risk: 0.1,
+     short: "Fertigteiltreppe einbauen",
+     long: "Treppenlauf als Stahlbeton-Fertigteil, gerade, liefern und einbauen, Trittschalldämmung mit Elastomerlager, Schallschutz {db} dB.",
+     attrs: {db: {values: ["30", "25"], better: higher}}}
+  - {id: stb-fugenband, trade: "03", unit: m, ep: [18, 40], qty: [60, 400], risk: 0.4,
+     short: "Fugenband in Arbeitsfugen einbauen",
+     long: "Innenliegendes Fugenband in Arbeitsfugen der wasserundurchlässigen Konstruktion liefern und einbauen, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {fab: {values: ["Sika Waterbar", "Max Frank Fugenband"], product: true}}}
+  # 04 Mauerarbeiten
+  - {id: mw-ks-innen, trade: "04", unit: m2, ep: [45, 85], qty: [100, 900], risk: 0.2,
+     short: "Kalksandstein-Innenwand mauern",
+     long: "Innenwand aus Kalksandstein KS {rdk}, Dicke {dicke} cm, im Dünnbettmörtel mauern.",
+     attrs: {rdk: {values: ["20-2,0", "12-1,8"], better: higher}, dicke: {values: ["17,5", "11,5"], better: higher}}}
+  - {id: mw-ziegel-aussen, trade: "04", unit: m2, ep: [70, 125], qty: [150, 1100], risk: 0.2,
+     short: "Ziegelmauerwerk außen, wärmedämmend",
+     long: "Außenwand aus wärmedämmenden Hochlochziegeln, Dicke {dicke} cm, Wärmeleitfähigkeit λ = {lam} W/(mK), mauern.",
+     attrs: {dicke: {values: ["42,5", "36,5"], better: higher}, lam: {values: ["0,08", "0,09", "0,12"], better: lower}}}
+  - {id: mw-sturz, trade: "04", unit: St, ep: [40, 120], qty: [20, 150], risk: 0.3,
+     short: "Fertigteilsturz einbauen",
+     long: "Fertigteilsturz für Öffnungsbreiten bis {breite} m liefern und einbauen.",
+     attrs: {breite: {values: ["1,51", "1,26"], better: higher}}}
+  - {id: mw-schlitz, trade: "04", unit: m, ep: [8, 22], qty: [50, 600], risk: 0.7,
+     short: "Schlitze in Mauerwerk herstellen",
+     long: "Schlitze für Installationen in Mauerwerk fräsen, Querschnitt bis 5 x 5 cm, Schutt beseitigen."}
+  - {id: mw-brandwand, trade: "04", unit: m2, ep: [90, 160], qty: [40, 300], risk: 0.1,
+     short: "Brandwand aus Kalksandstein mauern",
+     long: "Brandwand aus Kalksandstein, Dicke {dicke} cm, Feuerwiderstandsklasse {fk}, nach DIN 4102-4 mauern.",
+     attrs: {dicke: {values: ["24", "17,5"], better: higher}, fk: {values: ["F 90-A", "F 60-A", "F 30-A"], better: higher}}}
+  # 05 Trockenbauarbeiten
+  - {id: tb-trennwand, trade: "05", unit: m2, ep: [45, 85], qty: [200, 1800], risk: 0.3,
+     short: "Gipskarton-Ständerwand, doppelt beplankt",
+     long: "Nichttragende Trennwand als Metallständerwand, Profil CW {cw}, doppelt beplankt mit Gipsplatten GKB 12,5 mm, Mineralwolle {mw} mm, Schalldämmmaß Rw = {rw} dB.",
+     attrs: {cw: {values: ["100", "75", "50"], better: higher}, mw: {values: ["80", "60", "40"], better: higher}, rw: {values: ["52", "47", "42"], better: higher}}}
+  - {id: tb-brandschutzwand, trade: "05", unit: m2, ep: [70, 130], qty: [50, 500], risk: 0.2,
+     short: "Brandschutz-Ständerwand herstellen",
+     long: "Trennwand mit Feuerwiderstandsklasse {fk} als Metallständerwand, beidseitig doppelt beplankt mit Feuerschutzplatten GKF, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {fk: {values: ["EI 90", "EI 60", "EI 30"], better: higher}, fab: {values: ["Knauf W112", "Rigips 3.25.40"], product: true}}}
+  - {id: tb-abhangdecke, trade: "05", unit: m2, ep: [40, 75], qty: [200, 1600], risk: 0.3,
+     short: "Abgehängte Gipskartondecke herstellen",
+     long: "Abgehängte Unterdecke mit Gipskartonplatten GKB 12,5 mm auf Metallunterkonstruktion, Abhängehöhe bis {ah} cm, Oberflächenqualität Q{q}.",
+     attrs: {ah: {values: ["50", "30"], better: higher}, q: {values: ["3", "2"], better: higher}}}
+  - {id: tb-akustikdecke, trade: "05", unit: m2, ep: [55, 110], qty: [80, 700], risk: 0.2,
+     short: "Akustikdecke aus Lochplatten herstellen",
+     long: "Akustik-Unterdecke aus gelochten Gipsplatten, Schallabsorptionsgrad αw = {aw}, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {aw: {values: ["0,70", "0,60", "0,50"], better: higher}, fab: {values: ["Knauf Cleaneo", "Rigips Rigiton"], product: true}}}
+  - {id: tb-vorsatzschale, trade: "05", unit: m2, ep: [35, 65], qty: [50, 500], risk: 0.3,
+     short: "Installationsvorsatzschale herstellen",
+     long: "Vorsatzschale für Sanitärinstallationen, Profil CW 50, einfach beplankt mit imprägnierten Gipsplatten GKBI 12,5 mm."}
+  - {id: tb-revision, trade: "05", unit: St, ep: [80, 220], qty: [10, 120], risk: 0.5,
+     short: "Revisionsöffnung in Decke einbauen",
+     long: "Revisionsklappe {groesse} mm in Gipskartondecke einbauen, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {groesse: {values: ["600 x 600", "400 x 400"], better: higher}, fab: {values: ["Knauf Revo", "Fermacell Revisionsklappe"], product: true}}}
+  # 06 Estricharbeiten
+  - {id: est-zementestrich, trade: "06", unit: m2, ep: [22, 40], qty: [300, 2500], risk: 0.2,
+     short: "Zementestrich auf Dämmschicht herstellen",
+     long: "Schwimmender Zementestrich CT-C25-F4, Nenndicke {dicke} mm, auf Trittschalldämmung, einschließlich Randdämmstreifen.",
+     attrs: {dicke: {values: ["65", "55", "45"], better: higher}}}
+  - {id: est-heizestrich, trade: "06", unit: m2, ep: [28, 48], qty: [200, 1800], risk: 0.2,
+     short: "Heizestrich für Fußbodenheizung herstellen",
+     long: "Heizestrich CT-C30-F5 auf Fußbodenheizung, Rohrüberdeckung {ued} mm, einschließlich Belegreifheizen nach Protokoll.",
+     attrs: {ued: {values: ["45", "35"], better: higher}}}
+  - {id: est-daemmung, trade: "06", unit: m2, ep: [9, 22], qty: [300, 2500], risk: 0.2,
+     short: "Trittschalldämmung unter Estrich verlegen",
+     long: "Trittschalldämmung aus Mineralwolle, Dicke {dicke} mm, dynamische Steifigkeit s' ≤ {s} MN/m³, verlegen.",
+     attrs: {dicke: {values: ["30", "20"], better: higher}, s: {values: ["10", "20"], better: lower}}}
+  - {id: est-gefaelle, trade: "06", unit: m2, ep: [30, 55], qty: [30, 300], risk: 0.4,
+     short: "Gefälleestrich in Nassräumen herstellen",
+     long: "Gefälleestrich in Nassbereichen, Gefälle {gef} %, im Verbund herstellen.",
+     attrs: {gef: {values: ["2", "1,5"], better: higher}}}
+  - {id: est-randstreifen, trade: "06", unit: m, ep: [1.5, 4], qty: [300, 3000], risk: 0.3,
+     short: "Randdämmstreifen setzen",
+     long: "Randdämmstreifen aus PE-Schaum, Höhe 100 mm, an aufgehenden Bauteilen setzen."}
+  # 07 Fliesen- und Plattenarbeiten
+  - {id: fl-boden, trade: "07", unit: m2, ep: [55, 110], qty: [80, 900], risk: 0.2,
+     short: "Bodenfliesen im Dünnbett verlegen",
+     long: "Bodenfliesen aus Feinsteinzeug, Format {fmt} cm, Rutschhemmung {r}, im Dünnbett verlegen und verfugen, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {fmt: {values: ["60 x 60", "30 x 60"], better: higher}, r: {values: ["R11", "R10", "R9"], better: higher}, fab: {values: ["Villeroy & Boch Pure Line", "Agrob Buchtal Valley"], product: true}}}
+  - {id: fl-wand, trade: "07", unit: m2, ep: [50, 100], qty: [100, 1000], risk: 0.2,
+     short: "Wandfliesen im Dünnbett verlegen",
+     long: "Wandfliesen, Format {fmt} cm, im Dünnbett verlegen und mit Fugenmörtel CG2 WA verfugen.",
+     attrs: {fmt: {values: ["30 x 60", "20 x 40"], better: higher}}}
+  - {id: fl-abdichtung, trade: "07", unit: m2, ep: [18, 38], qty: [80, 800], risk: 0.3,
+     short: "Verbundabdichtung in Nassräumen",
+     long: "Flüssig aufzubringende Verbundabdichtung, Wassereinwirkungsklasse {w}, zweilagig, einschließlich Dichtbändern.",
+     attrs: {w: {values: ["W2-I", "W1-I"], better: higher}}}
+  - {id: fl-sockel, trade: "07", unit: m, ep: [12, 26], qty: [100, 1000], risk: 0.3,
+     short: "Sockelfliesen verlegen",
+     long: "Sockel aus geschnittenen Bodenfliesen, Höhe 8 cm, verlegen und verfugen."}
+  - {id: fl-silikon, trade: "07", unit: m, ep: [4, 10], qty: [100, 1200], risk: 0.4,
+     short: "Elastische Fugen mit Silikon schließen",
+     long: "Anschluss- und Bewegungsfugen mit Sanitärsilikon schließen, Farbe nach Wahl des Auftraggebers."}
+  # 08 Maler- und Lackierarbeiten
+  - {id: mal-dispersion, trade: "08", unit: m2, ep: [5, 11], qty: [800, 6000], risk: 0.3,
+     short: "Dispersionsanstrich auf Wänden",
+     long: "Innenwände mit Dispersionsfarbe, Nassabriebklasse {nak}, Deckvermögen Klasse 1, zweimal streichen.",
+     attrs: {nak: {values: ["1", "2", "3"], better: lower}}}
+  - {id: mal-spachtel, trade: "08", unit: m2, ep: [6, 14], qty: [500, 4000], risk: 0.3,
+     short: "Wandflächen spachteln Q3",
+     long: "Gipskartonflächen in Oberflächenqualität Q{q} spachteln und schleifen.",
+     attrs: {q: {values: ["3", "2"], better: higher}}}
+  - {id: mal-decke, trade: "08", unit: m2, ep: [5, 10], qty: [500, 4000], risk: 0.3,
+     short: "Deckenflächen streichen",
+     long: "Deckenflächen mit Dispersionsfarbe, Nassabriebklasse {nak}, zweimal streichen.",
+     attrs: {nak: {values: ["2", "3"], better: lower}}}
+  - {id: mal-lack-tuer, trade: "08", unit: St, ep: [60, 140], qty: [10, 120], risk: 0.2,
+     short: "Stahlzargen lackieren",
+     long: "Stahlzargen schleifen, grundieren und zweimal mit Kunstharzlack lackieren."}
+  - {id: mal-boden-beschichtung, trade: "08", unit: m2, ep: [18, 40], qty: [100, 900], risk: 0.2,
+     short: "Bodenbeschichtung Epoxidharz",
+     long: "Bodenbeschichtung aus Epoxidharz, Schichtdicke {sd} mm, rutschhemmend {r}, auf Betonboden.",
+     attrs: {sd: {values: ["2,0", "1,5", "1,0"], better: higher}, r: {values: ["R10", "R9"], better: higher}}}
+  # 09 Abdichtungsarbeiten
+  - {id: abd-bitumen, trade: "09", unit: m2, ep: [28, 55], qty: [150, 1200], risk: 0.3,
+     short: "Bauwerksabdichtung mit Bitumenbahnen",
+     long: "Abdichtung erdberührter Wände mit Polymerbitumen-Schweißbahnen, Wassereinwirkungsklasse {w}, {lagen}-lagig.",
+     attrs: {w: {values: ["W2.1-E", "W1.1-E"], better: higher}, lagen: {values: ["2", "1"], better: higher}}}
+  - {id: abd-perimeter, trade: "09", unit: m2, ep: [22, 45], qty: [150, 1200], risk: 0.3,
+     short: "Perimeterdämmung aus XPS verlegen",
+     long: "Perimeterdämmung aus XPS-Platten, Dicke {dicke} mm, Wärmeleitfähigkeit λ = {lam} W/(mK), verkleben.",
+     attrs: {dicke: {values: ["160", "120", "100"], better: higher}, lam: {values: ["0,032", "0,035", "0,040"], better: lower}}}
+  - {id: abd-dach, trade: "09", unit: m2, ep: [45, 90], qty: [200, 1500], risk: 0.2,
+     short: "Flachdachabdichtung mit Kunststoffbahn",
+     long: "Flachdachabdichtung mit FPO-Kunststoffbahn, Dicke {dicke} mm, mechanisch befestigt, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {dicke: {values: ["2,0", "1,5", "1,2"], better: higher}, fab: {values: ["Sika Sarnafil TG 66", "Bauder Thermofin F"], product: true}}}
+  - {id: abd-dachdaemmung, trade: "09", unit: m2, ep: [30, 60], qty: [200, 1500], risk: 0.2,
+     short: "Gefälledämmung Flachdach verlegen",
+     long: "Gefälledämmung aus EPS DAA dh, mittlere Dicke {dicke} mm, Wärmeleitfähigkeit λ = {lam} W/(mK).",
+     attrs: {dicke: {values: ["200", "160"], better: higher}, lam: {values: ["0,031", "0,035"], better: lower}}}
+  - {id: abd-kehle, trade: "09", unit: m, ep: [15, 35], qty: [50, 400], risk: 0.4,
+     short: "Hohlkehle und Anschluss abdichten",
+     long: "Hohlkehle aus Dichtschlämme an Wand-Boden-Anschlüssen herstellen und Abdichtung anschließen."}
+  # 10 Tischlerarbeiten
+  - {id: ti-innentuer, trade: "10", unit: St, ep: [450, 950], qty: [10, 120], risk: 0.1,
+     short: "Innentür mit Stahlzarge liefern und montieren",
+     long: "Innentür, Röhrenspanplatte, Oberfläche CPL, Klimaklasse {kk}, mit Stahlumfassungszarge, Leitfabrikat {fab} oder gleichwertig.",
+     attrs: {kk: {values: ["III", "II", "I"], better: higher}, fab: {values: ["Hörmann ZK", "Schörghuber Ductus"], product: true}}}
+  - {id: ti-brandschutztuer, trade: "10", unit: St, ep: [1100, 2400], qty: [2, 30], risk: 0.1,
+     short: "Brandschutztür T30 liefern und montieren",
+     long: "Feuerhemmende Tür {fk}, einflügelig, selbstschließend, mit Zulassung, liefern und montieren.",
+     attrs: {fk: {values: ["T90-1-RS", "T30-1-RS"], better: higher}}}
+  - {id: ti-fensterbank, trade: "10", unit: m, ep: [35, 80], qty: [30, 300], risk: 0.2,
+     short: "Innenfensterbank aus Holzwerkstoff",
+     long: "Innenfensterbank aus Holzwerkstoff, Dicke {dicke} mm, Tiefe bis 30 cm, liefern und einbauen.",
+     attrs: {dicke: {values: ["25", "19"], better: higher}}}
+  - {id: ti-einbauschrank, trade: "10", unit: St, ep: [800, 2200], qty: [2, 25], risk: 0.1,
+     short: "Einbauschrank nach Zeichnung herstellen",
+     long: "Einbauschrank nach Zeichnung des Architekten, Korpus melaminharzbeschichtet, Fronten HPL, herstellen und montieren."}
+  - {id: ti-sockelleiste, trade: "10", unit: m, ep: [6, 15], qty: [200, 1500], risk: 0.3,
+     short: "Sockelleisten aus Holz montieren",
+     long: "Sockelleisten aus Massivholz, Höhe {h} mm, lackiert, montieren.",
+     attrs: {h: {values: ["60", "40"], better: higher}}}

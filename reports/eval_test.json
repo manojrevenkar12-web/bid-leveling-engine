@@ -1,0 +1,242 @@
+{
+ "findings": {
+  "arithmetic_error": {
+   "tp": 14,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.9333,
+   "recall": 1.0
+  },
+  "extra_position": {
+   "tp": 26,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "included_price": {
+   "tp": 16,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "missing_position": {
+   "tp": 5,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "missing_price": {
+   "tp": 6,
+   "fp": 4,
+   "fn": 0,
+   "precision": 0.6,
+   "recall": 1.0
+  },
+  "outdated_version": {
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "price_outlier": {
+   "tp": 17,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "product_alternative": {
+   "tp": 35,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "qty_changed": {
+   "tp": 13,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "reservation": {
+   "tp": 19,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "spec_change": {
+   "tp": 9,
+   "fp": 1,
+   "fn": 1,
+   "precision": 0.9,
+   "recall": 0.9
+  },
+  "speculative_pricing": {
+   "tp": 2,
+   "fp": 0,
+   "fn": 1,
+   "precision": 1.0,
+   "recall": 0.6667
+  },
+  "unit_changed": {
+   "tp": 2,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ },
+ "total": {
+  "tp": 168,
+  "fp": 6,
+  "fn": 2,
+  "precision": 0.9655,
+  "recall": 0.9882
+ },
+ "by_route": {
+  "gaeb": {
+   "tp": 59,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "ocr": {
+   "tp": 25,
+   "fp": 6,
+   "fn": 2,
+   "precision": 0.8065,
+   "recall": 0.9259
+  },
+  "pdf_text": {
+   "tp": 60,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "xlsx": {
+   "tp": 24,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ },
+ "matching": {
+  "pdf_text": {
+   "lines": 389,
+   "correct": 389,
+   "oz_only_correct": 247,
+   "review": 2,
+   "wrong_not_flagged": 0,
+   "truth_lines": 389,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 0.635
+  },
+  "gaeb": {
+   "lines": 341,
+   "correct": 341,
+   "oz_only_correct": 341,
+   "review": 0,
+   "wrong_not_flagged": 0,
+   "truth_lines": 341,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 1.0
+  },
+  "xlsx": {
+   "lines": 133,
+   "correct": 133,
+   "oz_only_correct": 133,
+   "review": 0,
+   "wrong_not_flagged": 0,
+   "truth_lines": 133,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 1.0
+  },
+  "ocr": {
+   "lines": 136,
+   "correct": 136,
+   "oz_only_correct": 88,
+   "review": 5,
+   "wrong_not_flagged": 0,
+   "truth_lines": 136,
+   "accuracy": 1.0,
+   "oz_only_accuracy": 0.6471
+  }
+ },
+ "versions": {
+  "correct": 42
+ },
+ "review": {
+  "true_auto": 134,
+  "true_needs_review": 34,
+  "false_needs_review": 6
+ },
+ "misses": [
+  {
+   "bid": "T55-B6",
+   "route": "ocr",
+   "type": "speculative_pricing",
+   "oz": null,
+   "detail": "margin loaded onto positions likely to grow"
+  },
+  {
+   "bid": "T56-B5",
+   "route": "ocr",
+   "type": "spec_change",
+   "oz": "05.0040",
+   "detail": "aw: 0,70 -> 0,50"
+  }
+ ],
+ "false_alarms": [
+  {
+   "bid": "T53-B4",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "07.0030",
+   "message": "No price for 07.0030 “Verbundabdichtung in Nassräumen”."
+  },
+  {
+   "bid": "T53-B4",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "08.0010",
+   "message": "No price for 08.0010 “Dispersionsanstrich auf Wänden”."
+  },
+  {
+   "bid": "T53-B4",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "09.0040",
+   "message": "No price for 09.0040 “Gefälledämmung Flachdach verlegen”."
+  },
+  {
+   "bid": "T56-B5",
+   "route": "ocr",
+   "type": "spec_change",
+   "oz": "05.0030",
+   "message": "Long text of 05.0030 differs: “q 3” → “03”"
+  },
+  {
+   "bid": "T57-B1",
+   "route": "ocr",
+   "type": "missing_price",
+   "oz": "08.0030",
+   "message": "No price for 08.0030 “Deckenflächen streichen”."
+  },
+  {
+   "bid": "T57-B1",
+   "route": "ocr",
+   "type": "arithmetic_error",
+   "oz": "10.0040",
+   "message": "10.0040: 2418.51 × 3 = 7,255.53, but the total says 71,255.53; the unit price prevails."
+  }
+ ]
+}
