@@ -7,7 +7,7 @@ trap 'echo "::error::e2e failed at line $LINENO: $BASH_COMMAND"; for f in /tmp/b
 T=${1:-T51}
 cd "$(dirname "$0")/.."
 export PLATFORM_API_KEYS="e2e-worker:worker,e2e-reviewer:reviewer"
-(cd platform && PORT=3100 node dist/server.js > /tmp/ble-platform.log 2>&1 &)
+(cd platform && AI_SERVICE_URL=http://127.0.0.1:8101 PORT=3100 node dist/server.js > /tmp/ble-platform.log 2>&1 &)
 BLE_PLATFORM_URL=http://127.0.0.1:3100 BLE_PLATFORM_KEY=e2e-reviewer ble serve --port 8101 > /tmp/ble-ai.log 2>&1 &
 export AI=http://127.0.0.1:8101
 for i in $(seq 1 40); do curl -sf localhost:3100/health >/dev/null && curl -sf $AI/health >/dev/null && break; sleep 0.5; done

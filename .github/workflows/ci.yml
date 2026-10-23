@@ -59,7 +59,8 @@ jobs:
       - name: held-out set (first run is committed and must not change)
         run: |
           ble heldout --version v1
-          git diff --exit-code reports/heldout/v1/first_run.json reports/heldout/v1/FIRST_RUN.md
+          ble heldout --version v2
+          git diff --exit-code reports/heldout/v1/first_run.json reports/heldout/v1/FIRST_RUN.md reports/heldout/v2/first_run.json reports/heldout/v2/FIRST_RUN.md
       - name: end to end
         env: { DATABASE_URL: "postgres://ble:ble@127.0.0.1:5432/ble" }
         run: |

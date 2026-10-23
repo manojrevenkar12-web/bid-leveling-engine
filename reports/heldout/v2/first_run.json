@@ -1,0 +1,411 @@
+{
+ "set": "v2",
+ "ran_at": "2026-10-23 23:49:17",
+ "score": {
+  "findings": {
+   "arithmetic_error": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6667
+   },
+   "extra_position": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "included_price": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "missing_position": {
+    "tp": 2,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.6667,
+    "recall": 1.0
+   },
+   "missing_price": {
+    "tp": 2,
+    "fp": 3,
+    "fn": 0,
+    "precision": 0.4,
+    "recall": 1.0
+   },
+   "outdated_version": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "price_outlier": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "product_alternative": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "qty_changed": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "reservation": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 4,
+    "precision": 1.0,
+    "recall": 0.6923
+   },
+   "spec_change": {
+    "tp": 2,
+    "fp": 2,
+    "fn": 0,
+    "precision": 0.5,
+    "recall": 1.0
+   },
+   "speculative_pricing": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "unit_changed": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  "total": {
+   "tp": 33,
+   "fp": 6,
+   "fn": 5,
+   "precision": 0.8462,
+   "recall": 0.8684
+  },
+  "by_route": {
+   "gaeb": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.8
+   },
+   "ocr": {
+    "tp": 9,
+    "fp": 4,
+    "fn": 1,
+    "precision": 0.6923,
+    "recall": 0.9
+   },
+   "pdf_text": {
+    "tp": 11,
+    "fp": 2,
+    "fn": 1,
+    "precision": 0.8462,
+    "recall": 0.9167
+   },
+   "xlsx": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 2,
+    "precision": 1.0,
+    "recall": 0.8182
+   }
+  },
+  "matching": {
+   "gaeb": {
+    "lines": 65,
+    "correct": 65,
+    "oz_only_correct": 65,
+    "review": 0,
+    "wrong_not_flagged": 0,
+    "truth_lines": 65,
+    "accuracy": 1.0,
+    "oz_only_accuracy": 1.0
+   },
+   "pdf_text": {
+    "lines": 131,
+    "correct": 131,
+    "oz_only_correct": 66,
+    "review": 10,
+    "wrong_not_flagged": 0,
+    "truth_lines": 131,
+    "accuracy": 1.0,
+    "oz_only_accuracy": 0.5038
+   },
+   "xlsx": {
+    "lines": 95,
+    "correct": 95,
+    "oz_only_correct": 0,
+    "review": 30,
+    "wrong_not_flagged": 0,
+    "truth_lines": 95,
+    "accuracy": 1.0,
+    "oz_only_accuracy": 0.0
+   },
+   "ocr": {
+    "lines": 64,
+    "correct": 64,
+    "oz_only_correct": 1,
+    "review": 55,
+    "wrong_not_flagged": 0,
+    "truth_lines": 65,
+    "accuracy": 1.0,
+    "oz_only_accuracy": 0.0156
+   }
+  },
+  "versions": {
+   "correct": 11
+  },
+  "review": {
+   "true_auto": 17,
+   "true_needs_review": 16,
+   "false_auto": 2,
+   "false_needs_review": 4
+  },
+  "misses": [
+   {
+    "bid": "H93-B1",
+    "route": "gaeb",
+    "type": "reservation",
+    "oz": null,
+    "detail": "escalation"
+   },
+   {
+    "bid": "H93-B5",
+    "route": "pdf_text",
+    "type": "reservation",
+    "oz": null,
+    "detail": "liability"
+   },
+   {
+    "bid": "H94-B3",
+    "route": "ocr",
+    "type": "arithmetic_error",
+    "oz": "05.0010",
+    "detail": "31.75 x 820 = 26035.00, printed 26305.00"
+   },
+   {
+    "bid": "H94-B4",
+    "route": "xlsx",
+    "type": "reservation",
+    "oz": null,
+    "detail": "liability"
+   },
+   {
+    "bid": "H94-B5",
+    "route": "xlsx",
+    "type": "reservation",
+    "oz": null,
+    "detail": "schedule"
+   }
+  ],
+  "false_alarms": [
+   {
+    "bid": "H93-B5",
+    "route": "pdf_text",
+    "type": "spec_change",
+    "oz": "02.0010",
+    "message": "Long text of 02.0010 differs: “angebotenes fabrikat” → “”"
+   },
+   {
+    "bid": "H94-B3",
+    "route": "ocr",
+    "type": "missing_price",
+    "oz": "04.0030",
+    "message": "No price for 04.0030 “Asphalttragschicht AC 32 T S, d = 10 cm”."
+   },
+   {
+    "bid": "H94-B3",
+    "route": "ocr",
+    "type": "missing_price",
+    "oz": "05.0010",
+    "message": "No price for 05.0010 “Hochbordstein Beton 15/30”."
+   },
+   {
+    "bid": "H94-B3",
+    "route": "ocr",
+    "type": "missing_price",
+    "oz": "05.0050",
+    "message": "No price for 05.0050 “Straßenablauf 500/500, Aufsatz D 400”."
+   },
+   {
+    "bid": "H94-B3",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "01.0010",
+    "message": "01.0010 “Baustelleneinrichtung” is not in the bid."
+   },
+   {
+    "bid": "H94-B6",
+    "route": "pdf_text",
+    "type": "spec_change",
+    "oz": "03.0060",
+    "message": "Long text of 03.0060 differs: “angebotenes fabrikat” → “”"
+   }
+  ]
+ },
+ "tenders": {
+  "H93": {
+   "bids": 5,
+   "findings": 17,
+   "ranking": [
+    {
+     "rank": 1,
+     "bid_id": "H93-B4",
+     "company": "Hans Rieger Bauunternehmung e.K.",
+     "comparable_total": 525921.5,
+     "stated_rank": 1
+    },
+    {
+     "rank": 2,
+     "bid_id": "H93-B2",
+     "company": "Ausbau Kessler GmbH",
+     "comparable_total": 531862.55,
+     "stated_rank": 2
+    },
+    {
+     "rank": 3,
+     "bid_id": "H93-B5",
+     "company": "Nordhessische Ausbau-Union GmbH",
+     "comparable_total": 547009.25,
+     "stated_rank": 3
+    },
+    {
+     "rank": 4,
+     "bid_id": "H93-B1",
+     "company": "Fassadentechnik Brenner GmbH & Co. KG",
+     "comparable_total": 584163.63,
+     "stated_rank": 4
+    },
+    {
+     "rank": 5,
+     "bid_id": "H93-B3",
+     "company": "Wolff Bau- und Fenstertechnik GmbH",
+     "comparable_total": 607299.61,
+     "stated_rank": 5
+    }
+   ]
+  },
+  "H94": {
+   "bids": 6,
+   "findings": 22,
+   "ranking": [
+    {
+     "rank": 1,
+     "bid_id": "H94-B3",
+     "company": "Erdbau Lindner & Söhne GmbH",
+     "comparable_total": 552003.29,
+     "stated_rank": 1
+    },
+    {
+     "rank": 2,
+     "bid_id": "H94-B4",
+     "company": "BKS Bau Kraus-Schäfer GmbH",
+     "comparable_total": 570207.97,
+     "stated_rank": 2
+    },
+    {
+     "rank": 3,
+     "bid_id": "H94-B1",
+     "company": "Tiefbau Gebr. Hartmann GmbH",
+     "comparable_total": 575921.21,
+     "stated_rank": 3
+    },
+    {
+     "rank": 4,
+     "bid_id": "H94-B5",
+     "company": "Wegebau Mertens GmbH",
+     "comparable_total": 590861.96,
+     "stated_rank": 4
+    },
+    {
+     "rank": 5,
+     "bid_id": "H94-B2",
+     "company": "Kanal- und Straßenbau Seitz GmbH",
+     "comparable_total": 605505.66,
+     "stated_rank": 5
+    },
+    {
+     "rank": 6,
+     "bid_id": "H94-B6",
+     "company": "Stumpf Tiefbau GmbH & Co. KG",
+     "comparable_total": 631095.82,
+     "stated_rank": 6
+    }
+   ]
+  }
+ },
+ "search": {
+  "plain": {
+   "queries": 25,
+   "hit@1": 0.2,
+   "hit@3": 0.24,
+   "failures": [
+    "Steinwolle Fassadendämmung",
+    "Fensterbretter außen alu",
+    "Eingangstür mit Panikschloss",
+    "Attikablech",
+    "Dachgully",
+    "Regenrohr Zink",
+    "Fußleiste Fliese",
+    "Gummiboden",
+    "Schmutzfangmatte Eingang",
+    "Kippgebühren belasteter Aushub",
+    "Grundwasser abpumpen",
+    "Baustellenampel",
+    "Betonrohr Regenkanal",
+    "Kanaldeckel",
+    "Kamerabefahrung",
+    "Hausanschlüsse Kanal",
+    "Randsteine",
+    "Gehwegplatten Pflaster",
+    "Gullys Straße"
+   ]
+  },
+  "construction": {
+   "queries": 25,
+   "hit@1": 0.24,
+   "hit@3": 0.32,
+   "failures": [
+    "Steinwolle Fassadendämmung",
+    "Eingangstür mit Panikschloss",
+    "Attikablech",
+    "Dachgully",
+    "Regenrohr Zink",
+    "Fußleiste Fliese",
+    "Gummiboden",
+    "Schmutzfangmatte Eingang",
+    "Kippgebühren belasteter Aushub",
+    "Grundwasser abpumpen",
+    "Baustellenampel",
+    "Kanaldeckel",
+    "Kamerabefahrung",
+    "Hausanschlüsse Kanal",
+    "Randsteine",
+    "Gehwegplatten Pflaster",
+    "Gullys Straße"
+   ]
+  }
+ }
+}

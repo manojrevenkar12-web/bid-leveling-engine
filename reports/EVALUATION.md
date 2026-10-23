@@ -147,10 +147,10 @@ Queries the way estimators type them (compounds split or joined, shorthand, no u
 
 | Route | Bids | Pages | Pages per minute | € per page |
 |---|---|---|---|---|
-| gaeb | 31 | 62 | 4476.5 | 0.00011 |
-| xlsx | 18 | 36 | 4044.9 | 0.00013 |
-| pdf_text | 35 | 87 | 1249.4 | 0.0002 |
-| ocr | 22 | 54 | 11571.4 | 0.002 |
+| gaeb | 31 | 62 | 4460.4 | 0.00011 |
+| xlsx | 18 | 36 | 2967.0 | 0.00013 |
+| pdf_text | 35 | 87 | 1105.5 | 0.0002 |
+| ocr | 22 | 54 | 8.9 | 0.002 |
 
 ## Held-out sets
 
@@ -162,6 +162,7 @@ its later runs (`latest.json`) show the fixes, and only a new set measures the e
 |---|---|---|---|---|---|
 | [v1](heldout/v1/FIRST_RUN.md) | regression (studied after its first run) | first run | 23.6% | 75.6% | 38 of 61 |
 | [v1](heldout/v1/FIRST_RUN.md) | regression (studied after its first run) | latest | 100.0% | 97.8% | 0 of 30 |
+| [v2](heldout/v2/FIRST_RUN.md) | held out | first run | 84.6% | 86.8% | 2 of 19 |
 
 ## Gate
 

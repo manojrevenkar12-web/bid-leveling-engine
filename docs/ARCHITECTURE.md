@@ -52,8 +52,8 @@ and optionally phrasing a chat answer, held to the same evidence by the verifier
 ## Scaling to 10k documents a day
 
 Measured on a 2-core container (`reports/ingest.json`, OCR seconds counted cold): GAEB and XLSX
-read in milliseconds; a digital PDF in about 50 ms a page; OCR about 6 s a page at 300 dpi. At 10,000
-documents a day of ~3 pages with 20% scans, OCR is ~6,000 pages ≈ 10 CPU-hours: a handful of
+read in milliseconds; a digital PDF in about 50 ms a page; OCR about 7 s a page at 300 dpi. At 10,000
+documents a day of ~3 pages with 20% scans, OCR is ~6,000 pages ≈ 11 CPU-hours: a handful of
 workers. The OCR cache is keyed by file hash, page and settings, so re-ingestion is free and
 idempotent. The per-tender workflow is independent across tenders, so it shards by tender
 (Prefect task per tender, `pip install .[prefect]`).
