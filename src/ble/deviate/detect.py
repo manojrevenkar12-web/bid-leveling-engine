@@ -19,8 +19,8 @@ import numpy as np
 
 from ble.config import load
 from ble.ingest.model import BidDoc, Evidence, TenderDoc
-from ble.resolve.match import Resolution
-from ble.text.de import fold, unit
+from ble.resolve.match import Resolution, units_compatible
+from ble.text.de import fold
 
 ROUTE_CONF = {"gaeb": 0.99, "xlsx": 0.98, "pdf_text": 0.96, "ocr": 0.85}
 
@@ -159,6 +159,11 @@ def compare_spec(boq_long: str, bid_long: str) -> list[dict[str, Any]]:
     return out
 
 
+def _short(seg: str) -> bool:
+    """A changed value or class, not a misread stretch of text."""
+    return 0 < len(seg.split()) <= 2
+
+
 LEIT = re.compile(r"leitfabrikat:?\s*(.+?)\s+oder\s+gleichwertig", re.I)
 
 
@@ -218,7 +223,7 @@ def detect_bid(bid: BidDoc, res: Resolution, versions: list[TenderDoc]) -> list[
                     bid, "qty_changed", m.oz, f"Quantity for {m.oz} changed from {p.qty:g} to {ln.qty:g}.", evs, conf, expected=p.qty, found=ln.qty, detail=dk
                 )
             )
-        if ln.unit and unit(ln.unit) != unit(p.unit):
+        if ln.unit and not units_compatible(ln.unit, p.unit):
             out.append(
                 _make(bid, "unit_changed", m.oz, f"Unit for {m.oz} changed from {p.unit} to {ln.unit}.", evs, conf, expected=p.unit, found=ln.unit, detail=dk)
             )
@@ -242,7 +247,7 @@ def detect_bid(bid: BidDoc, res: Resolution, versions: list[TenderDoc]) -> list[
         if ln.long and p.long:
             diffs = compare_spec(p.long, ln.long)
             if bid.route == "ocr":  # OCR changes words; only number and class changes count
-                diffs = [d for d in diffs if _level(d["was"] or "x") is not None and _level(d["now"] or "x") is not None]
+                diffs = [d for d in diffs if _short(d["was"]) and _short(d["now"]) and _level(d["was"]) is not None and _level(d["now"]) is not None]
             if diffs:
                 worse = [d for d in diffs if d["direction"] == "worse"]
                 lead = worse[0] if worse else diffs[0]

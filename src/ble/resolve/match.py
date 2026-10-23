@@ -48,6 +48,29 @@ def _oz(s: str) -> str:
     return re.sub(r"\s", "", s)
 
 
+def oz_key(s: str) -> tuple[int, ...] | None:
+    """Position numbers compared by value, so a bidder's "3.10" is the BoQ's "03.0010"."""
+    parts = re.findall(r"\d+", s)
+    return tuple(int(x) for x in parts) if len(parts) >= 2 else None
+
+
+def same_oz(shown: str, oz: str) -> bool:
+    if not shown:
+        return False
+    if _oz(shown) == oz:
+        return True
+    k = oz_key(shown)
+    return k is not None and k == oz_key(oz)
+
+
+def units_compatible(a: str, b: str) -> bool:
+    """Same canonical unit; an OCR'd "m?" (superscript not read) fits an area or a volume."""
+    ua, ub = unit(a), unit(b)
+    if ua == ub:
+        return True
+    return (a == "m?" and ub in ("m2", "m3")) or (b == "m?" and ua in ("m2", "m3"))
+
+
 @dataclass
 class PairFeatures:
     X: np.ndarray  # lines x positions x features
@@ -77,13 +100,13 @@ def features(bid: BidDoc, boq: TenderDoc) -> np.ndarray:
                 known = 1.0
                 q = math.exp(-5 * abs(math.log(ln.qty / p.qty)))
             X[i, j] = [
-                float(bool(ln.shown_no) and _oz(ln.shown_no) == p.oz),
+                float(same_oz(ln.shown_no, p.oz)),
                 _cos(lc, pc[j], idf_c),
                 _cos(lp, pp[j], idf_p),
                 len(lt & ptri[j]) / len(lt | ptri[j]) if lt and ptri[j] else 0.0,
                 q,
                 known,
-                float(unit(ln.unit) == unit(p.unit)),
+                float(units_compatible(ln.unit, p.unit)),
                 0.5 if not ln.trade_hint else float(ln.trade_hint == p.trade),
                 1 - abs(i / max(len(L) - 1, 1) - j / max(n - 1, 1)),
             ]
@@ -159,16 +182,54 @@ def _same_qty(a: float | None, b: float | None) -> bool:
     return bool(a and b and abs(a - b) <= 0.005 * b)
 
 
+def residual(bid: BidDoc, boq: TenderDoc, X: np.ndarray, a: list[int]) -> set[int]:
+    """Second pass over what the assignment left: a line that matched nothing and a position nobody
+    priced are paired when the bid says they are the same thing: the same quantity and unit (only
+    one such position left), or the only free position between the line's matched neighbours with
+    a compatible unit and some shared text. Returns the lines paired this way; they go to review."""
+    free = {j for j in range(len(boq.positions))} - {j for j in a if j >= 0}
+    paired: set[int] = set()
+    while True:  # each pairing narrows the gaps around the next, so repeat until nothing changes
+        n = len(paired)
+        _residual_pass(bid, boq, X, a, free, paired)
+        if len(paired) == n:
+            return paired
+
+
+def _residual_pass(bid: BidDoc, boq: TenderDoc, X: np.ndarray, a: list[int], free: set[int], paired: set[int]) -> None:
+    T = FEATURES.index("text_construction")
+    for i in [i for i, j in enumerate(a) if j < 0]:
+        ln = bid.lines[i]
+        ok = [j for j in free if units_compatible(ln.unit, boq.positions[j].unit)]
+        same = [j for j in ok if _same_qty(ln.qty, boq.positions[j].qty)]
+        pick = None
+        if len(same) == 1 and X[i, same[0], T] > 0.0:
+            pick = same[0]
+        else:
+            before = [a[k] for k in range(i - 1, -1, -1) if a[k] >= 0][:1]
+            after = [a[k] for k in range(i + 1, len(a)) if a[k] >= 0][:1]
+            lo, hi = (before[0] if before else -1), (after[0] if after else len(boq.positions))
+            gap = [j for j in ok if lo < j < hi]
+            if lo < hi and len(gap) == 1 and (X[i, gap[0], T] >= 0.1 or _same_qty(ln.qty, boq.positions[gap[0]].qty)):
+                pick = gap[0]
+        if pick is not None:
+            a[i] = pick
+            free.discard(pick)
+            paired.add(i)
+
+
 def resolve(bid: BidDoc, versions: list[TenderDoc], matcher: Matcher | None = None) -> Resolution:
     cfg = load("rules")["matching"]
     m = matcher or Matcher.load()
-    best: tuple[float, str, list[int], np.ndarray] | None = None
+    best: tuple[float, str, list[int], np.ndarray, set[int]] | None = None
     scores: dict[str, float] = {}
     for boq in versions:
         if not bid.lines or not boq.positions:
             continue
-        P = m.proba(features(bid, boq))
+        X = features(bid, boq)
+        P = m.proba(X)
         a = assign(P, cfg["p_none"])
+        second = residual(bid, boq, X, a)
         matched = [(i, j) for i, j in enumerate(a) if j >= 0]
         # how well the bid fits this version: matches that agree on quantity, against everything left over
         agree = sum(1 for i, j in matched if _same_qty(bid.lines[i].qty, boq.positions[j].qty))
@@ -176,10 +237,10 @@ def resolve(bid: BidDoc, versions: list[TenderDoc], matcher: Matcher | None = No
         s = (agree - left) / max(len(boq.positions), 1)
         scores[boq.version] = round(s, 4)
         if best is None or s > best[0]:
-            best = (s, boq.version, a, P)
+            best = (s, boq.version, a, P, second)
     if best is None:
         return Resolution(bid.bid_id, versions[-1].version if versions else "", {}, 0.0, [], [])
-    _, ver, a, P = best
+    _, ver, a, P, second = best
     boq = next(v for v in versions if v.version == ver)
     srt = sorted(scores.values(), reverse=True)
     margin = srt[0] - srt[1] if len(srt) > 1 else 1.0
@@ -192,7 +253,12 @@ def resolve(bid: BidDoc, versions: list[TenderDoc], matcher: Matcher | None = No
             ru = next((k for k in top2 if k != j), None)
             p_ru = float(row[ru]) if ru is not None else 0.0
             p = float(row[j])
-            review = p < cfg["review_below"] or (p - p_ru) < cfg["review_margin"] or bid.lines[i].confidence < load("ingest")["ocr"]["low_confidence_line"]
+            review = (
+                i in second
+                or p < cfg["review_below"]
+                or (p - p_ru) < cfg["review_margin"]
+                or bid.lines[i].confidence < load("ingest")["ocr"]["low_confidence_line"]
+            )
             matches.append(Match(i, boq.positions[j].oz, round(p, 4), boq.positions[ru].oz if ru is not None else None, round(p_ru, 4), bool(review)))
         else:
             p0 = float(row[top2[0]]) if len(top2) else 0.0

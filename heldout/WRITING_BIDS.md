@@ -69,3 +69,23 @@ position in these BoQs, each with the OZ of the right answers:
 queries:
   - {tender: H91, q: "Stahlbetondecke", expect: ["03.0050"]}
 ```
+
+## Writing the tenders too (set v2 onwards)
+
+From set v2 the tenders are written blind as well. For each tender write
+`heldout/<set>/tenders/<tender>/LV_v1.yaml` (and `LV_v2.yaml` for an addendum: the client's revised
+BoQ, with some quantities changed, a position added or removed, or a long text changed):
+
+```yaml
+project: Neubau Feuerwehrgerätehaus Musterstadt
+date: 2026-10-01                # issue date of this version
+label: LV Rohbau v1
+trades: {"01": Baustelleneinrichtung, "02": Erdarbeiten}   # Titel number -> name
+positions:
+  - {oz: "02.0010", short: "Oberboden abtragen", long: "Oberboden ... lagern.", qty: 850, unit: m2}
+```
+
+Position numbers are `TT.PPPP` (Titel, position). Units: m, m2, m3, St, psch, t, kg, h. Write
+the short and long texts the way a German planner writes an LV, with specification details
+(classes, thicknesses, fire ratings, reference products as "Leitfabrikat: X oder gleichwertig").
+The project renders the GAEB file from this; bids are then written against it as above.

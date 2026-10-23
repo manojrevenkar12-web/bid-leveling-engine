@@ -1,0 +1,798 @@
+{
+ "set": "v1",
+ "ran_at": "2026-10-23 21:10:50",
+ "score": {
+  "findings": {
+   "arithmetic_error": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6667
+   },
+   "extra_position": {
+    "tp": 3,
+    "fp": 41,
+    "fn": 0,
+    "precision": 0.0682,
+    "recall": 1.0
+   },
+   "included_price": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6667
+   },
+   "missing_position": {
+    "tp": 3,
+    "fp": 69,
+    "fn": 0,
+    "precision": 0.0417,
+    "recall": 1.0
+   },
+   "missing_price": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "outdated_version": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "price_outlier": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6667
+   },
+   "product_alternative": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "qty_changed": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6667
+   },
+   "reservation": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 5,
+    "precision": 1.0,
+    "recall": 0.5455
+   },
+   "spec_change": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "speculative_pricing": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.5
+   },
+   "unit_changed": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.5
+   }
+  },
+  "total": {
+   "tp": 34,
+   "fp": 110,
+   "fn": 11,
+   "precision": 0.2361,
+   "recall": 0.7556
+  },
+  "by_route": {
+   "gaeb": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.8889
+   },
+   "ocr": {
+    "tp": 6,
+    "fp": 56,
+    "fn": 3,
+    "precision": 0.0968,
+    "recall": 0.6667
+   },
+   "pdf_text": {
+    "tp": 14,
+    "fp": 14,
+    "fn": 3,
+    "precision": 0.5,
+    "recall": 0.8235
+   },
+   "xlsx": {
+    "tp": 6,
+    "fp": 40,
+    "fn": 4,
+    "precision": 0.1304,
+    "recall": 0.6
+   }
+  },
+  "matching": {
+   "gaeb": {
+    "lines": 87,
+    "correct": 87,
+    "oz_only_correct": 87,
+    "review": 0,
+    "wrong_not_flagged": 0,
+    "truth_lines": 87,
+    "accuracy": 1.0,
+    "oz_only_accuracy": 1.0
+   },
+   "pdf_text": {
+    "lines": 121,
+    "correct": 114,
+    "oz_only_correct": 61,
+    "review": 17,
+    "wrong_not_flagged": 4,
+    "truth_lines": 121,
+    "accuracy": 0.9421,
+    "oz_only_accuracy": 0.5041
+   },
+   "xlsx": {
+    "lines": 59,
+    "correct": 39,
+    "oz_only_correct": 30,
+    "review": 13,
+    "wrong_not_flagged": 16,
+    "truth_lines": 59,
+    "accuracy": 0.661,
+    "oz_only_accuracy": 0.5085
+   },
+   "ocr": {
+    "lines": 31,
+    "correct": 17,
+    "oz_only_correct": 0,
+    "review": 15,
+    "wrong_not_flagged": 9,
+    "truth_lines": 59,
+    "accuracy": 0.5484,
+    "oz_only_accuracy": 0.0
+   }
+  },
+  "versions": {
+   "correct": 11
+  },
+  "review": {
+   "true_auto": 23,
+   "true_needs_review": 11,
+   "false_needs_review": 72,
+   "false_auto": 38
+  },
+  "misses": [
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "speculative_pricing",
+    "oz": null,
+    "detail": "Aushub, Wasserhaltung, Z2-Entsorgung, Betonstahl und Schlitze ca. +48 %, Rest ca. -10 %"
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "price_outlier",
+    "oz": "04.0030",
+    "detail": "EP 6,80 EUR/St, marktüblich ca. 65-70 EUR"
+   },
+   {
+    "bid": "H91-B5",
+    "route": "pdf_text",
+    "type": "reservation",
+    "oz": null,
+    "detail": "liability: Haftung für Folgeschäden auf Auftragssumme begrenzt"
+   },
+   {
+    "bid": "H92-B1",
+    "route": "gaeb",
+    "type": "reservation",
+    "oz": null,
+    "detail": "validity: Angebot nur bis 15.11.2026 gültig"
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "reservation",
+    "oz": null,
+    "detail": "escalation: Preisgleitung Zement/Estrich bei Auftrag nach 31.12.2026"
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "qty_changed",
+    "oz": "08.0010",
+    "detail": "3824 -> 3284"
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "unit_changed",
+    "oz": "03.0060",
+    "detail": "m -> St"
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "included_price",
+    "oz": "06.0050",
+    "detail": "als enthalten angegeben"
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "arithmetic_error",
+    "oz": "05.0010",
+    "detail": "GP mit 877 statt 887 m2 gerechnet"
+   },
+   {
+    "bid": "H92-B4",
+    "route": "ocr",
+    "type": "reservation",
+    "oz": null,
+    "detail": "payment: Abschläge binnen 10 Tagen ohne Abzug"
+   },
+   {
+    "bid": "H92-B5",
+    "route": "pdf_text",
+    "type": "reservation",
+    "oz": null,
+    "detail": "schedule: Fristen nur bei Zuschlag bis 15.12.2026"
+   }
+  ],
+  "false_alarms": [
+   {
+    "bid": "H91-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Stb.-Decke Ortbeton”."
+   },
+   {
+    "bid": "H91-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "03.0050",
+    "message": "03.0050 “Stahlbetondecke als Ortbetondecke herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Z2-Material entsorgen”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Rechteckstütze”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Stürze”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Schlitze”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Hohlkehlen”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Innentüren”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Brandschutztüren”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Fensterbänke innen”."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "02.0010",
+    "message": "02.0010 “Oberboden abtragen und seitlich lagern” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "02.0020",
+    "message": "02.0020 “Baugrube ausheben, Boden laden und abfahren” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "02.0030",
+    "message": "02.0030 “Arbeitsraum verfüllen und verdichten” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "02.0040",
+    "message": "02.0040 “Schottertragschicht 0/32 herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "02.0060",
+    "message": "02.0060 “Belasteten Boden Z2 entsorgen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "03.0010",
+    "message": "03.0010 “Sauberkeitsschicht aus Beton C8/10” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "03.0020",
+    "message": "03.0020 “Bodenplatte aus Stahlbeton herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "03.0030",
+    "message": "03.0030 “Stahlbetonwand außen herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "03.0040",
+    "message": "03.0040 “Stahlbetonwand innen herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "03.0050",
+    "message": "03.0050 “Stahlbetondecke als Ortbetondecke herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "03.0060",
+    "message": "03.0060 “Stahlbetonstütze rechteckig herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "04.0010",
+    "message": "04.0010 “Kalksandstein-Innenwand mauern” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "04.0020",
+    "message": "04.0020 “Ziegelmauerwerk außen, wärmedämmend” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "04.0030",
+    "message": "04.0030 “Fertigteilsturz einbauen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "04.0040",
+    "message": "04.0040 “Schlitze in Mauerwerk herstellen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "04.0050",
+    "message": "04.0050 “Brandwand aus Kalksandstein mauern” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "09.0010",
+    "message": "09.0010 “Bauwerksabdichtung mit Bitumenbahnen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "09.0020",
+    "message": "09.0020 “Perimeterdämmung aus XPS verlegen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "09.0030",
+    "message": "09.0030 “Flachdachabdichtung mit Kunststoffbahn” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "09.0040",
+    "message": "09.0040 “Gefälledämmung Flachdach verlegen” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "09.0050",
+    "message": "09.0050 “Hohlkehle und Anschluss abdichten” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "10.0010",
+    "message": "10.0010 “Innentür mit Stahlzarge liefern und montieren” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "10.0020",
+    "message": "10.0020 “Brandschutztür T30 liefern und montieren” is not in the bid."
+   },
+   {
+    "bid": "H91-B4",
+    "route": "ocr",
+    "type": "missing_position",
+    "oz": "10.0030",
+    "message": "10.0030 “Innenfensterbank aus Holzwerkstoff” is not in the bid."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Decke Ortbeton REI 90”."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Stütze Stb. 30/30”."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Treppenlauf FT”."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “GK-Unterdecke abgeh.”."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Dispersion Wand 2x”."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Deckenanstrich”."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "03.0050",
+    "message": "03.0050 “Stahlbetondecke als Ortbetondecke herstellen” is not in the bid."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "03.0060",
+    "message": "03.0060 “Stahlbetonstütze rechteckig herstellen” is not in the bid."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "03.0080",
+    "message": "03.0080 “Fertigteiltreppe einbauen” is not in the bid."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "05.0030",
+    "message": "05.0030 “Abgehängte Gipskartondecke herstellen” is not in the bid."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "08.0010",
+    "message": "08.0010 “Dispersionsanstrich auf Wänden” is not in the bid."
+   },
+   {
+    "bid": "H92-B2",
+    "route": "pdf_text",
+    "type": "missing_position",
+    "oz": "08.0030",
+    "message": "08.0030 “Deckenflächen streichen” is not in the bid."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “BP C30/37 XC2 30cm”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “AW STB 25cm glatt”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “IW STB 20cm SB2”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “DE STB 24cm REI90”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “STÜ 30x30 C35/45”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “FT-Treppe”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “MSW CW75 2x GKB”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Akustik-UD gelocht”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “VSS CW50 GKBI”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “Revi-Klappe 60x60”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “ZE CT-C25-F4 55mm”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “HE CT-C30-F5”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “TSD MW 30mm”."
+   },
+   {
+    "bid": "H92-B3",
+    "route": "xlsx",
+    "type": "extra_position",
+    "oz": null,
+    "message": "Added position not in the BoQ: “RDS PE 100mm”."
+   }
+  ]
+ },
+ "tenders": {
+  "H91": {
+   "bids": 5,
+   "findings": 53,
+   "ranking": [
+    {
+     "rank": 1,
+     "bid_id": "H91-B1",
+     "company": "Krüger & Söhne Bauunternehmung GmbH",
+     "comparable_total": 1339023.2,
+     "stated_rank": 1
+    },
+    {
+     "rank": 2,
+     "bid_id": "H91-B5",
+     "company": "Wolff Bauausführung GmbH",
+     "comparable_total": 1378095.34,
+     "stated_rank": 2
+    },
+    {
+     "rank": 3,
+     "bid_id": "H91-B3",
+     "company": "Märkische Bau- und Sanierungsgesellschaft mbH",
+     "comparable_total": 1405072.98,
+     "stated_rank": 4
+    },
+    {
+     "rank": 4,
+     "bid_id": "H91-B2",
+     "company": "Hoch- und Tiefbau Lindemann GmbH",
+     "comparable_total": 1495966.07,
+     "stated_rank": 5
+    },
+    {
+     "rank": 5,
+     "bid_id": "H91-B4",
+     "company": "Fehrmann Bau GmbH & Co. KG",
+     "comparable_total": 1576172.39,
+     "stated_rank": 3
+    }
+   ]
+  },
+  "H92": {
+   "bids": 6,
+   "findings": 91,
+   "ranking": [
+    {
+     "rank": 1,
+     "bid_id": "H92-B2",
+     "company": "Bau-Union Spree GmbH",
+     "comparable_total": 1514224.42,
+     "stated_rank": 2
+    },
+    {
+     "rank": 2,
+     "bid_id": "H92-B1",
+     "company": "Generalbau Havelland GmbH",
+     "comparable_total": 1517720.31,
+     "stated_rank": 4
+    },
+    {
+     "rank": 3,
+     "bid_id": "H92-B6",
+     "company": "Nordberliner Baugesellschaft mbH",
+     "comparable_total": 1528148.99,
+     "stated_rank": 3
+    },
+    {
+     "rank": 4,
+     "bid_id": "H92-B4",
+     "company": "Ernst Pätzold Bauunternehmen e.K.",
+     "comparable_total": 1567217.69,
+     "stated_rank": 1
+    },
+    {
+     "rank": 5,
+     "bid_id": "H92-B5",
+     "company": "Rüdiger Hochbau GmbH",
+     "comparable_total": 1577988.86,
+     "stated_rank": 5
+    },
+    {
+     "rank": 6,
+     "bid_id": "H92-B3",
+     "company": "Kowalski Innenausbau & Hochbau GmbH",
+     "comparable_total": 1637383.34,
+     "stated_rank": 6
+    }
+   ]
+  }
+ },
+ "search": {
+  "plain": {
+   "queries": 20,
+   "hit@1": 0.75,
+   "hit@3": 0.9,
+   "failures": [
+    "Mutterboden abschieben",
+    "Sockelleiste"
+   ]
+  },
+  "construction": {
+   "queries": 20,
+   "hit@1": 0.9,
+   "hit@3": 0.95,
+   "failures": [
+    "Mutterboden abschieben"
+   ]
+  }
+ }
+}

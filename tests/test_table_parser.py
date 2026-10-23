@@ -99,3 +99,11 @@ def test_repair_fixes_one_glyph_and_leaves_real_errors():
     assert real.ep == 12.34 and real.gp == 1243.00
     assert derived.ep == 12.5
     assert n == 2
+
+
+def test_ocr_units_without_superscript_and_l_misread():
+    from ble.ingest.table import _unit_token
+
+    assert _unit_token("m?") == "m?" and _unit_token("m*") == "m?"
+    assert _unit_token("Ifdm") == "lfdm" and _unit_token("cbm") == "cbm" and _unit_token("Stck.") == "Stck"
+    assert _unit_token("Wand") is None

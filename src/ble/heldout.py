@@ -27,8 +27,21 @@ def _boq(path: Path, tid: str, version: str) -> BoQ:
     return BoQ(tid, d.project, version, d.categories, pos)
 
 
+def tenders_from_yaml(base: Path) -> None:
+    """A held-out BoQ written as YAML (heldout/WRITING_BIDS.md) becomes the GAEB X83 file the client
+    would issue, and a Markdown copy for bid writers."""
+    from ble import gaeb
+
+    for f in sorted((base / "tenders").glob("*/LV_*.yaml")):
+        t = yaml.safe_load(f.read_text(encoding="utf-8"))
+        items = [gaeb.GaebItem(str(p["oz"]), str(p["short"]), str(p.get("long", "")), float(p["qty"]), str(p["unit"])) for p in t["positions"]]
+        trades = {str(k).zfill(2): str(v) for k, v in t["trades"].items()}
+        f.with_suffix(".x83").write_text(gaeb.write(83, t["project"], t.get("label", f.stem), str(t["date"]), trades, items), encoding="utf-8")
+
+
 def render_set(version: str) -> list[str]:
     base = ROOT / "heldout" / version
+    tenders_from_yaml(base)
     tids = []
     for tdir in sorted((base / "tenders").iterdir()):
         tid = tdir.name

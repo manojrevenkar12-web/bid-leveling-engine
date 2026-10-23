@@ -147,10 +147,21 @@ Queries the way estimators type them (compounds split or joined, shorthand, no u
 
 | Route | Bids | Pages | Pages per minute | € per page |
 |---|---|---|---|---|
-| gaeb | 31 | 62 | 5360.2 | 0.00011 |
-| xlsx | 18 | 36 | 3262.8 | 0.00013 |
-| pdf_text | 35 | 87 | 1195.6 | 0.0002 |
-| ocr | 22 | 54 | 12607.0 | 0.002 |
+| gaeb | 31 | 62 | 4476.5 | 0.00011 |
+| xlsx | 18 | 36 | 4044.9 | 0.00013 |
+| pdf_text | 35 | 87 | 1249.4 | 0.0002 |
+| ocr | 22 | 54 | 11571.4 | 0.002 |
+
+## Held-out sets
+
+Bids written by an agent that never saw the engine (set v1: BoQs by the engine's author; from v2 the BoQs are blind too).
+The first run of each set is kept as written. A set whose failures were studied becomes a regression set;
+its later runs (`latest.json`) show the fixes, and only a new set measures the engine again.
+
+| Set | Status | Run | Precision | Recall | Wrong findings auto-confirmed |
+|---|---|---|---|---|---|
+| [v1](heldout/v1/FIRST_RUN.md) | regression (studied after its first run) | first run | 23.6% | 75.6% | 38 of 61 |
+| [v1](heldout/v1/FIRST_RUN.md) | regression (studied after its first run) | latest | 100.0% | 97.8% | 0 of 30 |
 
 ## Gate
 

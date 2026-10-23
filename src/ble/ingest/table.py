@@ -30,6 +30,27 @@ EP_HDR = {"ep", "einheitspreis", "ep€"}
 GP_HDR = {"gp", "gesamtpreis", "gp€"}
 UNIT_HDR = {"me", "einheit", "einh."}
 UNITS = {"m", "m2", "m²", "m3", "m³", "st", "stk", "psch", "pauschal", "t", "kg", "h", "std", "wo", "tag", "lfm", "qm"}
+# OCR rarely reads a superscript: "m²" / "m³" come back as "m?", "m*", "m'" ... The unit is then
+# known to be an area or a volume but not which; matching settles it against the BoQ position.
+OCR_SUP = re.compile(r"^m[?²³*'’\"°]$")
+UNKNOWN_SUP = "m?"
+
+
+def _units() -> set[str]:
+    from ble.config import load
+
+    return UNITS | {v.lower() for vs in load("lexicon")["units"].values() for v in vs}
+
+
+def _unit_token(t: str) -> str | None:
+    low = t.lower().rstrip(".")
+    if low in _units():
+        return t.rstrip(".")
+    if t[:1] in ("I", "|", "1") and ("l" + low[1:]) in _units():  # OCR reads "lfdm" as "Ifdm"
+        return "l" + t[1:].rstrip(".")
+    return UNKNOWN_SUP if OCR_SUP.match(t) else None
+
+
 ABBR_END = {"z.", "b.", "inkl.", "zzgl.", "ca.", "evtl.", "ggf.", "bzw.", "nr.", "str.", "abs.", "gem.", "lt.", "u.", "d."}
 
 
@@ -134,7 +155,7 @@ def parse_table(words: list[Word], doc_id: str, scale_tol: float = 1.0) -> tuple
 
         def is_cell(w: Word) -> bool:
             t = w.text.strip().lower().strip(".")
-            return de_num(w.text) is not None or t in UNITS or t in ("enthalten", "enth", "inkl")
+            return de_num(w.text) is not None or _unit_token(w.text.strip()) is not None or t in ("enthalten", "enth", "inkl")
 
         nums = [w for w in ln if w.x0 >= anchors.qty_right - 70 and w not in no and is_cell(w)]
         text = [w for w in ln if w not in no and w not in nums]
@@ -172,8 +193,8 @@ def parse_table(words: list[Word], doc_id: str, scale_tol: float = 1.0) -> tuple
                 elif _near(w.x1, anchors.gp_right, T) or (anchors.gp_right == float("inf") and w.x1 > anchors.ep_right + T):
                     gp = v
                 continue
-            if t.lower() in UNITS and w.x0 >= anchors.unit_left - T:
-                unit = t
+            if _unit_token(t) and w.x0 >= anchors.unit_left - T:
+                unit = _unit_token(t) or ""
         is_item = bool(unit) and (qty is not None or ep is not None or gp is not None or included)
         if is_item:
             out.append(BidLine(len(out), no_txt, trade, txt, "", qty, unit, ep, gp, included or (ep == 0 and gp == 0), None, ev, round(conf, 3)))

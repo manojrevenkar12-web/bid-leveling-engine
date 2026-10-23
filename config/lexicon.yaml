@@ -45,6 +45,34 @@ abbreviations:                 # bidder shorthand -> words (applied before split
   tsd: trittschalldämmung
   wdvs: wärmedämmverbundsystem
   lv: leistungsverzeichnis
+  # common estimator shorthand (added after the held-out set v1 was studied; v1 is now a regression set)
+  aw: außenwand
+  iw: innenwand
+  bp: bodenplatte
+  de: decke
+  stü: stütze
+  bew: bewehrung
+  ft: fertigteil
+  msw: metallständerwand
+  vss: vorsatzschale
+  ze: zementestrich
+  he: heizestrich
+  rds: randdämmstreifen
+  sks: sauberkeitsschicht
+  disp: dispersion
+  revi: revision
+  wd: wärmedämmung
+  kst: kunststoff
+  hws: holzwerkstoff
+  abtr: abtragen
+  verf: verfüllen
+  seitl: seitlich
+  lack: lackieren
+  abgeh: abgehängt
+  dopp: doppelt
+  bepl: beplankt
+  flg: flügelig
+  gkbi: gipskarton bauplatte imprägniert
 synonyms:                      # same building part, different words (both directions are indexed)
   bewehrung: betonstahl
   betonstahl: bewehrung
@@ -55,6 +83,10 @@ synonyms:                      # same building part, different words (both direc
   streichen: anstrich
   aushub: ausheben
   ausheben: aushub
+  mutterboden: oberboden
+  oberboden: mutterboden
+  abschieben: abtragen
+  abtragen: abschieben
 units:                         # spellings -> canonical unit
   m2: [m2, m², qm, m^2]
   m3: [m3, m³, cbm, m^3]

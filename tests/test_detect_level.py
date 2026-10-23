@@ -120,3 +120,15 @@ def test_leveling_reprices_and_reranks():
     assert by["X01-B1"]["stated_total"] < by["X01-B2"]["stated_total"]
     assert [r["bid_id"] for r in s.ranking] == ["X01-B2", "X01-B1", "X01-B3"]
     assert s.ranking[0]["stated_rank"] == 2 and by["X01-B1"]["positions_valued_at_highest_other_price"] == 1
+
+
+def test_reservations_span_dates_and_other_word_orders():
+    b = clean_bid(
+        letter=[
+            "Dieses Angebot ist bis zum 15.11.2026 gültig.",
+            "Abschlagsrechnungen sind innerhalb von 10 Tagen ohne Abzug zu zahlen.",
+            "Unsere Haftung für Folgeschäden beschränken wir auf die Höhe der Auftragssumme.",
+            "Sämtliche Positionen des Leistungsverzeichnisses sind bepreist.",
+        ]
+    )
+    assert [f.detail["kinds"][0] for f in reservations(b)] == ["price_validity", "payment_terms", "liability"]

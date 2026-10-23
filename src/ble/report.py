@@ -115,16 +115,29 @@ def write_report() -> str:
         for k, v in ing.items():
             L.append(f"| {k} | {v['bids']} | {v['pages']} | {v['pages_per_minute']} | {v['eur_per_page']} |")
         L.append("")
-    for v in ("v1", "v2"):
-        ho = _read(f"heldout/{v}/first_run.json")
-        if ho:
-            t = ho["score"]["total"]
-            L += [
-                f"## Held-out set {v} (first run, kept as written)",
-                "",
-                f"Precision {_p(t['precision'])}, recall {_p(t['recall'])}. See [heldout/{v}/FIRST_RUN.md](heldout/{v}/FIRST_RUN.md).",
-                "",
-            ]
+    sets = sorted(p.parent.name for p in (REPORTS / "heldout").glob("*/first_run.json")) if (REPORTS / "heldout").exists() else []
+    if sets:
+        L += [
+            "## Held-out sets",
+            "",
+            "Bids written by an agent that never saw the engine (set v1: BoQs by the engine's author; from v2 the BoQs are blind too).",
+            "The first run of each set is kept as written. A set whose failures were studied becomes a regression set;",
+            "its later runs (`latest.json`) show the fixes, and only a new set measures the engine again.",
+            "",
+            "| Set | Status | Run | Precision | Recall | Wrong findings auto-confirmed |",
+            "|---|---|---|---|---|---|",
+        ]
+        for v in sets:
+            status = (REPORTS.parent / "heldout" / v / "STATUS").read_text().strip() if (REPORTS.parent / "heldout" / v / "STATUS").exists() else "held out"
+            for run, name in (("first_run", "first run"), ("latest", "latest")):
+                ho = _read(f"heldout/{v}/{run}.json")
+                if ho:
+                    t, rv = ho["score"]["total"], ho["score"].get("review", {})
+                    auto = rv.get("true_auto", 0) + rv.get("false_auto", 0)
+                    L.append(
+                        f"| [{v}](heldout/{v}/FIRST_RUN.md) | {status} | {name} | {_p(t['precision'])} | {_p(t['recall'])} | {rv.get('false_auto', 0)} of {auto} |"
+                    )
+        L.append("")
     g = _read("gate.json")
     if g:
         L += (

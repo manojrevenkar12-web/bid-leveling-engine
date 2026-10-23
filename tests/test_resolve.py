@@ -60,3 +60,22 @@ def test_matcher_save_load(tmp_path):
     m.save(tmp_path / "m.json")
     assert Matcher.load(tmp_path / "m.json") == m
     assert Matcher.load(tmp_path / "missing.json").trained_on["source"] == "default"
+
+
+def test_position_numbers_compare_by_value():
+    from ble.resolve.match import same_oz, units_compatible
+
+    assert same_oz("3.10", "03.0010") and same_oz("03.0010", "03.0010") and not same_oz("1.1", "01.0010") and not same_oz("", "01.0010")
+    assert units_compatible("qm", "m2") and units_compatible("m?", "m3") and not units_compatible("m?", "St") and not units_compatible("t", "kg")
+
+
+def test_second_pass_pairs_a_line_by_quantity_and_neighbours():
+    boq = tender()
+    bid = clean_bid()
+    for ln in bid.lines:
+        ln.shown_no = ""
+    bid.lines[4].short = "Wandscheibe Ortbeton"  # 03.0020 described in words the BoQ does not use
+    bid.lines[4].long = ""
+    r = resolve(bid, [boq], Matcher.default())
+    assert r.matches[4].oz == "03.0020" and r.matches[4].needs_review
+    assert r.unmatched_positions == []

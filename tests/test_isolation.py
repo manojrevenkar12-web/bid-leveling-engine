@@ -39,7 +39,19 @@ def test_engine_files_exist():
 
 
 def test_heldout_first_run_is_never_overwritten(tmp_path):
-    first = {"set": "v1", "ran_at": "t0", "score": {"total": {"precision": 0.9, "recall": 0.8, "tp": 9, "fp": 1, "fn": 2}, "findings": {}, "matching": {}, "versions": {}, "misses": [], "false_alarms": []}, "search": {"construction": {"queries": 0, "hit@1": None, "hit@3": None, "failures": []}}}
+    first = {
+        "set": "v1",
+        "ran_at": "t0",
+        "score": {
+            "total": {"precision": 0.9, "recall": 0.8, "tp": 9, "fp": 1, "fn": 2},
+            "findings": {},
+            "matching": {},
+            "versions": {},
+            "misses": [],
+            "false_alarms": [],
+        },
+        "search": {"construction": {"queries": 0, "hit@1": None, "hit@3": None, "failures": []}},
+    }
     assert write_result(tmp_path, first).name == "first_run.json"
     md = (tmp_path / "FIRST_RUN.md").read_text()
     later = json.loads(json.dumps(first))
